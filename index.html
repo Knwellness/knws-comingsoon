@@ -3,49 +3,175 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming Soon</title>
+  <title>Your Wellness Studio</title>
   <style>
+    /* Global Styles */
     body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #8b9585;
-      color: #333;
-      text-align: center;
-    }
-    img {
-      max-width: 180px;
-      margin-bottom: 25px;
-    }
-    h1 {
-      font-size: 28px;
       margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #8b9585; /* keep your original sage tone */
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    h1, h2, h3 {
+      margin: 0 0 10px 0;
     }
     p {
-      margin: 10px 0 25px;
-      font-size: 18px;
+      margin: 0 0 15px 0;
     }
-    .email {
-      padding: 10px;
-      width: 250px;
-      font-size: 16px;
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
     }
-    .submit {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
+
+    /* Logo */
+    .logo {
+      display: block;
+      max-width: 180px;
+      margin: 40px auto 20px auto;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: #f0f0f0;
+    }
+    .hero .btn {
+      display: inline-block;
+      background-color: #6b705c; 
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1em;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .hero .btn:hover {
+      background-color: #557153;
+    }
+
+    /* Section Titles */
+    .section-title {
+      text-align: center;
+      margin: 50px 0 30px 0;
+      font-size: 2em;
+      color: #fff;
+    }
+
+    /* Services Section */
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .service {
+      background-color: #f0f4ef;
+      padding: 25px;
+      border-radius: 12px;
+      flex: 1 1 250px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      text-align: center;
+      color: #333;
+    }
+    .service h3 {
+      color: #557153;
+      margin-bottom: 10px;
+    }
+
+    /* About Section */
+    .about {
+      background-color: #f0f4ef;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin: 50px 0;
+      text-align: center;
+    }
+
+    /* Contact Section */
+    .contact {
+      text-align: center;
+      padding: 40px 20px;
+      color: #fff;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 5px 10px;
+      color: #f0f0f0;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media(max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+      .hero p {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <img src="your-logo.png" alt="Logo">
-  <h1>Rest • Recover • Perform</h1>
-  <p>Professional massage, fitness & sport injury rehab — coming soon.</p>
+  <!-- Logo -->
+  <img src="your-logo.png" alt="Your Wellness Studio Logo" class="logo">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Rest • Recover • Perform</h1>
+    <p>Professional massage, rehabilitation & fitness support in a private, one-to-one setting.</p>
+    <a href="#contact" class="btn">Book Your Session</a>
+  </section>
+
+  <!-- Services Section -->
+  <section class="container">
+    <h2 class="section-title">How We Help</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Relax & Reset</h3>
+        <p>Therapeutic and deep tissue massage, plus facial treatments to ease tension and restore balance.</p>
+      </div>
+      <div class="service">
+        <h3>Recover & Rebuild</h3>
+        <p>Sports massage and injury rehabilitation focused on improving mobility and reducing pain.</p>
+      </div>
+      <div class="service">
+        <h3>Strengthen & Perform</h3>
+        <p>Personal training and weight management support designed to build strength and long-term results.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about container">
+    <h2 class="section-title">About Me</h2>
+    <p>Hi, I’m [Your Name], a qualified massage therapist and fitness instructor with [X] years of experience helping clients feel their best. My approach combines relaxation, rehabilitation, and performance support, tailored to your goals.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact container" id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <p>Ready to book or have a question? Reach out today.</p>
+    <a href="tel:1234567890">Call</a> | 
+    <a href="mailto:youremail@example.com">Email</a> | 
+    <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+  </section>
 
 </body>
 </html>
