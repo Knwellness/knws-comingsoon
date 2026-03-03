@@ -1,256 +1,263 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KN Wellness Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KN Wellness Studio</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome for social icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- Font Awesome CSS for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-h20CPfM0b6TdK7m+Z3c+QrX2/nu5p+Ur5fFWpTnWxHg1JqDFtU0j3Qw4+9b5vdyIblqI6B+Xh0n5L2xD1f2amg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <style>
-    /* Global Styles */
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Lato', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      background-color: #8b9585;
-      line-height: 1.6;
-      padding-top: 50px; /* space for fixed top bar */
-    }
-    a { text-decoration: none; color: inherit; transition: color 0.3s; }
-    a:hover { color: #6b705c; }
-    h1, h2, h3 { margin: 0 0 10px 0; font-family: 'Playfair Display', serif; }
-    p { margin: 0 0 15px 0; }
-    .container { max-width: 900px; margin: auto; padding: 20px; }
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Lato', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #8b9585;
+    line-height: 1.6;
+    padding-top: 50px; /* space for fixed top bar */
+  }
+  a { text-decoration: none; color: inherit; transition: color 0.3s; }
+  a:hover { color: #6b705c; }
+  h1, h2, h3 { margin: 0 0 10px 0; font-family: 'Playfair Display', serif; }
+  p { margin: 0 0 15px 0; }
+  .container { max-width: 900px; margin: auto; padding: 20px; }
 
-    /* Logo */
-    .logo { display: block; max-width: 180px; margin: 40px auto 20px auto; }
+  /* Logo */
+  .logo { display: block; max-width: 180px; margin: 40px auto 20px auto; }
 
-    /* Fixed Top Contact + Social Bar */
-    .top-contact-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(139, 149, 133, 0.95);
-      color: #fff;
-      text-align: center;
-      padding: 8px 0;
-      z-index: 999;
-      font-weight: bold;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    .top-contact-bar a {
-      margin: 0 10px;
-      color: #fff;
-      font-size: 0.95em;
-      transition: color 0.3s;
-    }
-    .top-contact-bar a:hover { color: #f0f0f0; }
-    .top-contact-bar i { margin-left: 4px; }
+  /* Fixed Top Contact + Social Bar */
+  .top-contact-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(139, 149, 133, 0.95);
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    z-index: 999;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  .top-contact-bar a { margin: 0 5px; font-size: 0.95em; }
+  .social-icon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #6b705c;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 5px;
+    transition: background 0.3s, color 0.3s;
+  }
+  .social-icon:hover { background-color: #6b705c; color: #fff; }
 
-    /* Hero Section */
-    .hero {
-      position: relative;
-      text-align: center;
-      padding: 60px 20px;
-      color: #fff;
-      background: linear-gradient(135deg, #8b9585, #6b705c);
-      overflow: hidden;
-    }
-    .hero h1 { font-size: 2.8em; margin-bottom: 15px; position: relative; z-index: 2; }
-    .hero p { font-size: 1.2em; margin-bottom: 15px; position: relative; z-index: 2; }
-    .hero .location { font-size: 1em; margin-bottom: 25px; font-style: italic; position: relative; z-index: 2; }
-    .hero .btn {
-      display: inline-block;
-      background-color: #fff;
-      color: #6b705c;
-      padding: 15px 30px;
-      font-size: 1em;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s, transform 0.3s;
-      position: relative;
-      z-index: 2;
-    }
-    .hero .btn:hover { background-color: #f0f4ef; transform: translateY(-2px); }
+  /* Hero Section */
+  .hero {
+    position: relative;
+    text-align: center;
+    padding: 60px 20px;
+    color: #fff;
+    background: linear-gradient(135deg, #8b9585, #6b705c);
+    overflow: hidden;
+  }
+  .hero h1 { font-size: 2.8em; margin-bottom: 15px; position: relative; z-index: 2; }
+  .hero p { font-size: 1.2em; margin-bottom: 15px; position: relative; z-index: 2; }
+  .hero .location { font-size: 1em; margin-bottom: 25px; font-style: italic; position: relative; z-index: 2; }
+  .hero .btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #6b705c;
+    padding: 15px 30px;
+    font-size: 1em;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    position: relative;
+    z-index: 2;
+  }
+  .hero .btn:hover { background-color: #f0f4ef; transform: translateY(-2px); }
 
-    /* Floating leaf shapes */
-    .leaf {
-      position: absolute;
-      background-image: url('leaf.svg'); /* replace with your leaf SVG path */
-      background-size: contain;
-      background-repeat: no-repeat;
-      opacity: 0.1;
-      animation: floatLeaf 25s infinite ease-in-out alternate;
-      z-index: 1;
-    }
-    @keyframes floatLeaf {
-      0% { transform: translateY(0px) translateX(0px) rotate(0deg); }
-      25% { transform: translateY(-20px) translateX(10px) rotate(5deg); }
-      50% { transform: translateY(-35px) translateX(-5px) rotate(-10deg); }
-      75% { transform: translateY(-20px) translateX(5px) rotate(7deg); }
-      100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
-    }
+  /* Floating leaf shapes */
+  .leaf {
+    position: absolute;
+    opacity: 0.1;
+    z-index: 1;
+    animation: floatLeaf 25s infinite ease-in-out alternate;
+  }
+  @keyframes floatLeaf {
+    0% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+    25% { transform: translateY(-20px) translateX(10px) rotate(5deg); }
+    50% { transform: translateY(-35px) translateX(-5px) rotate(-10deg); }
+    75% { transform: translateY(-20px) translateX(5px) rotate(7deg); }
+    100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  }
 
-    /* Section Titles */
-    .section-title {
-      text-align: center;
-      margin: 50px 0 30px 0;
-      font-size: 2em;
-      color: #fff;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s ease;
-    }
-    .section-title.visible { opacity: 1; transform: translateY(0); }
+  /* Section Titles */
+  .section-title {
+    text-align: center;
+    margin: 50px 0 30px 0;
+    font-size: 2em;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+  }
+  .section-title.visible { opacity: 1; transform: translateY(0); }
 
-    /* Boxes (Services, About, Testimonials) */
-    .service, .about, .testimonials .service {
-      background-color: #fff;
-      color: #8b9585;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-      margin-bottom: 20px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s, transform 0.6s;
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    .service h3, .about h2, .testimonials h2 { color: #8b9585; }
+  /* Boxes */
+  .service, .about, .testimonials .service {
+    background-color: #fff;
+    color: #8b9585;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s, transform 0.6s;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .service h3, .about h2, .testimonials h2 { color: #8b9585; }
+  .service:hover, .testimonials .service:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+  .services { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
 
-    /* Hover effect */
-    .service:hover, .testimonials .service:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
+  /* Contact Section */
+  .contact { text-align: center; padding: 40px 20px; color: #fff; }
+  .contact a { display: inline-block; margin: 5px 10px; color: #f0f0f0; font-weight: bold; }
+  .contact a:hover { color: #dcdcdc; }
 
-    /* Services Section */
-    .services { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-
-    /* Contact Section */
-    .contact {
-      text-align: center;
-      padding: 40px 20px;
-      color: #fff;
-    }
-    .contact a { display: inline-block; margin: 5px 10px; color: #f0f0f0; font-weight: bold; }
-    .contact a:hover { color: #dcdcdc; }
-
-    /* Responsive */
-    @media(max-width: 600px) {
-      .hero h1 { font-size: 2em; }
-      .hero p, .hero .location { font-size: 1em; }
-      section, .hero { padding: 40px 15px; }
-      .about, .services, .testimonials { margin: 30px 0; }
-      .services { flex-direction: column; gap: 15px; }
-    }
-  </style>
+  @media(max-width: 600px) {
+    .hero h1 { font-size: 2em; }
+    .hero p, .hero .location { font-size: 1em; }
+    section, .hero { padding: 40px 15px; }
+    .about, .services, .testimonials { margin: 30px 0; }
+    .services { flex-direction: column; gap: 15px; }
+  }
+</style>
 </head>
 <body>
 
-  <!-- Fixed Top Contact + Social Bar -->
-  <div class="top-contact-bar">
-    <a href="tel:1234567890">Call</a>
-    <a href="mailto:youremail@example.com">Email</a>
-    <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
-    <a href="https://instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://facebook.com/yourusername" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<!-- Fixed Top Contact + Social Bar -->
+<div class="top-contact-bar">
+  <a href="tel:1234567890">Call</a>
+  <a href="mailto:youremail@example.com">Email</a>
+  <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+  <a href="https://instagram.com/yourusername" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+  <a href="https://facebook.com/yourusername" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+</div>
+
+<!-- Logo -->
+<img src="your-logo.png" alt="KN Wellness Studio Logo" class="logo">
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Rest • Recover • Perform</h1>
+  <p>Professional massage, rehabilitation & fitness support in a private, one-to-one setting.</p>
+  <p class="location">Serving Doncaster and the surrounding area</p>
+  <a href="#contact" class="btn">Book Your Session</a>
+
+  <!-- Floating leaf shapes using inline SVG -->
+  <div class="leaf" style="top:10%; left:15%; width:80px; height:80px; animation-duration:25s;">
+    <svg viewBox="0 0 64 64" fill="#6b705c" xmlns="http://www.w3.org/2000/svg">
+      <path d="M32 2C14 20 2 32 2 32s12 12 30 30c18-18 30-30 30-30S50 20 32 2z"/>
+    </svg>
   </div>
+  <div class="leaf" style="top:30%; left:70%; width:60px; height:60px; animation-duration:20s;">
+    <svg viewBox="0 0 64 64" fill="#6b705c" xmlns="http://www.w3.org/2000/svg">
+      <path d="M32 2C14 20 2 32 2 32s12 12 30 30c18-18 30-30 30-30S50 20 32 2z"/>
+    </svg>
+  </div>
+  <div class="leaf" style="top:60%; left:40%; width:90px; height:90px; animation-duration:22s;">
+    <svg viewBox="0 0 64 64" fill="#6b705c" xmlns="http://www.w3.org/2000/svg">
+      <path d="M32 2C14 20 2 32 2 32s12 12 30 30c18-18 30-30 30-30S50 20 32 2z"/>
+    </svg>
+  </div>
+  <div class="leaf" style="top:80%; left:80%; width:60px; height:60px; animation-duration:18s;">
+    <svg viewBox="0 0 64 64" fill="#6b705c" xmlns="http://www.w3.org/2000/svg">
+      <path d="M32 2C14 20 2 32 2 32s12 12 30 30c18-18 30-30 30-30S50 20 32 2z"/>
+    </svg>
+  </div>
+</section>
 
-  <!-- Logo -->
-  <img src="your-logo.png" alt="KN Wellness Studio Logo" class="logo">
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Rest • Recover • Perform</h1>
-    <p>Professional massage, rehabilitation & fitness support in a private, one-to-one setting.</p>
-    <p class="location">Serving Doncaster and the surrounding area</p>
-    <a href="#contact" class="btn">Book Your Session</a>
-
-    <!-- Floating leaf shapes -->
-    <div class="leaf" style="top: 10%; left: 15%; width:100px; height:100px; animation-duration: 25s;"></div>
-    <div class="leaf" style="top: 30%; left: 70%; width:80px; height:80px; animation-duration: 20s;"></div>
-    <div class="leaf" style="top: 60%; left: 40%; width:90px; height:90px; animation-duration: 22s;"></div>
-    <div class="leaf" style="top: 80%; left: 80%; width:60px; height:60px; animation-duration: 18s;"></div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="container">
-    <h2 class="section-title">How We Help</h2>
-    <div class="services">
-      <div class="service">
-        <h3>Relax & Reset</h3>
-        <p>Therapeutic and deep tissue massage, plus facial treatments to ease tension and restore balance.</p>
-      </div>
-      <div class="service">
-        <h3>Recover & Rebuild</h3>
-        <p>Sports massage and injury rehabilitation focused on improving mobility and reducing pain.</p>
-      </div>
-      <div class="service">
-        <h3>Strengthen & Perform</h3>
-        <p>Personal training and weight management support designed to build strength and long-term results.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about container">
-    <h2 class="section-title">About Me</h2>
-    <p>Hi, I’m Kayla! I’m passionate about helping clients feel their best. My approach combines relaxation, rehabilitation, and performance support, tailored to your goals.</p>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="testimonials container">
-    <h2 class="section-title">What My Clients Say</h2>
+<!-- Services Section -->
+<section class="container">
+  <h2 class="section-title">How We Help</h2>
+  <div class="services">
     <div class="service">
-      <p>"Amazing experience! Kayla really knows how to help you feel better."</p>
-      <span>- Sarah W.</span>
+      <h3>Relax & Reset</h3>
+      <p>Therapeutic and deep tissue massage, plus facial treatments to ease tension and restore balance.</p>
     </div>
     <div class="service">
-      <p>"I feel stronger and more relaxed after every session."</p>
-      <span>- John D.</span>
+      <h3>Recover & Rebuild</h3>
+      <p>Sports massage and injury rehabilitation focused on improving mobility and reducing pain.</p>
     </div>
     <div class="service">
-      <p>"KN Wellness Studio is my go-to for recovery and relaxation. Highly recommend!"</p>
-      <span>- Emily R.</span>
+      <h3>Strengthen & Perform</h3>
+      <p>Personal training and weight management support designed to build strength and long-term results.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section class="contact container" id="contact">
-    <h2 class="section-title">Get In Touch</h2>
-    <p>Ready to book or have a question? Reach out today.</p>
-    <a href="tel:1234567890">Call</a> | 
-    <a href="mailto:youremail@example.com">Email</a> | 
-    <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
-  </section>
+<!-- About Section -->
+<section class="about container">
+  <h2 class="section-title">About Me</h2>
+  <p>Hi, I’m Kayla! I’m passionate about helping clients feel their best. My approach combines relaxation, rehabilitation, and performance support, tailored to your goals.</p>
+</section>
 
-  <script>
-    // Fade-in for section titles and boxes
-    const titles = document.querySelectorAll('.section-title');
-    const boxes = document.querySelectorAll('.service, .about');
+<!-- Testimonials Section -->
+<section class="testimonials container">
+  <h2 class="section-title">What My Clients Say</h2>
+  <div class="service">
+    <p>"Amazing experience! Kayla really knows how to help you feel better."</p>
+    <span>- Sarah W.</span>
+  </div>
+  <div class="service">
+    <p>"I feel stronger and more relaxed after every session."</p>
+    <span>- John D.</span>
+  </div>
+  <div class="service">
+    <p>"KN Wellness Studio is my go-to for recovery and relaxation. Highly recommend!"</p>
+    <span>- Emily R.</span>
+  </div>
+</section>
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.2 });
+<!-- Contact Section -->
+<section class="contact container" id="contact">
+  <h2 class="section-title">Get In Touch</h2>
+  <p>Ready to book or have a question? Reach out today.</p>
+  <a href="tel:1234567890">Call</a> | 
+  <a href="mailto:youremail@example.com">Email</a> | 
+  <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+</section>
 
-    titles.forEach(title => observer.observe(title));
-    boxes.forEach(box => observer.observe(box));
-  </script>
+<script>
+  // Fade-in for section titles and boxes
+  const titles = document.querySelectorAll('.section-title');
+  const boxes = document.querySelectorAll('.service, .about');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.2 });
+
+  titles.forEach(title => observer.observe(title));
+  boxes.forEach(box => observer.observe(box));
+</script>
 
 </body>
 </html>
