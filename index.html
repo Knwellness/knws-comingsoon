@@ -55,6 +55,16 @@ p { margin: 0 0 15px 0; }
   overflow: hidden;
 }
 .hero h1 { font-size:2.8em; margin-bottom:15px; position:relative; z-index:2; }
+
+/* Mini About Me */
+.mini-about {
+  font-size: 1.2em;
+  margin: 15px 0 20px 0;
+  color: #f0f0f0;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
 .hero p { font-size:1.2em; margin-bottom:15px; position:relative; z-index:2; }
 .hero .location { font-size:1em; margin-bottom:25px; font-style:italic; position:relative; z-index:2; }
 .hero .btn {
@@ -89,7 +99,7 @@ p { margin: 0 0 15px 0; }
 /* Section Titles */
 .section-title {
   text-align:center;
-  margin:50px 0 30px 0;
+  margin:40px 0 20px 0; /* reduced top margin to remove large whitespace */
   font-size:2em;
   color:#fff;
   opacity:0;
@@ -115,6 +125,9 @@ p { margin: 0 0 15px 0; }
 .service:hover, .testimonials .service:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.1); }
 .services { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
 
+/* About Section Fix */
+.about p { margin:0; }
+
 /* Contact Section */
 .contact { text-align:center; padding:40px 20px; color:#fff; }
 .contact a { display:inline-block; margin:5px 10px; color:#f0f0f0; font-weight:bold; }
@@ -133,11 +146,10 @@ p { margin: 0 0 15px 0; }
 
 <!-- Top Contact + Social Bar -->
 <div class="top-contact-bar">
-  <a href="tel:07368582502">Call</a>
-  <a href="mailto:Kn.wellnessstudio@gmail.com">Email</a>
-  <a href="https://wa.me/+4407368582502" target="_blank">WhatsApp</a>
-  <!-- Inline SVG social icons -->
-  <a href="https://instagram.com/kn.wellnessstudio" target="_blank">
+  <a href="tel:1234567890">Call</a>
+  <a href="mailto:youremail@example.com">Email</a>
+  <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+  <a href="https://instagram.com/yourusername" target="_blank">
     <svg viewBox="0 0 448 512"><path d="M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.9-30.9C284.9,124.06,224,124,224,124s-60.9,0.06-93.81,6.76a54,54,0,0,0-30.9,30.9C93.06,157.1,93,224,93,224s0.06,66.9,6.76,99.81a54,54,0,0,0,30.9,30.9C163.1,380.94,224,381,224,381s60.9-.06,93.81-6.76a54,54,0,0,0,30.9-30.9C354.94,290.9,355,224,355,224S354.94,157.1,348.71,161.66ZM224,338a84,84,0,1,1,84-84A84,84,0,0,1,224,338Z"/></svg>
   </a>
   <a href="https://facebook.com/yourusername" target="_blank">
@@ -151,6 +163,10 @@ p { margin: 0 0 15px 0; }
 <!-- Hero Section -->
 <section class="hero">
   <h1>Rest • Recover • Perform</h1>
+
+  <!-- Mini About Me -->
+  <p class="mini-about">Hi, I’m Kayla – helping you relax, recover, and perform at your best.</p>
+
   <p>Professional massage, rehabilitation & fitness support in a private, one-to-one setting.</p>
   <p class="location">Serving Doncaster and the surrounding area</p>
   <a href="#contact" class="btn">Book Your Session</a>
@@ -162,29 +178,29 @@ p { margin: 0 0 15px 0; }
   <div class="leaf" style="top:80%; left:80%; width:60px; height:60px; animation-duration:20s;"></div>
 </section>
 
-<!-- Services Section -->
-<section class="container">
-  <h2 class="section-title">How We Help</h2>
-  <div class="services">
-    <div class="service">
-      <h3>Relax & Reset</h3>
-      <p>Therapeutic and deep tissue massage, plus facial treatments to ease tension and restore balance.</p>
-    </div>
-    <div class="service">
-      <h3>Recover & Rebuild</h3>
-      <p>Sports massage and injury rehabilitation focused on improving mobility and reducing pain.</p>
-    </div>
-    <div class="service">
-      <h3>Strengthen & Perform</h3>
-      <p>Personal training and weight management support designed to build strength and long-term results.</p>
-    </div>
-  </div>
-</section>
-
 <!-- About Section -->
 <section class="about container">
   <h2 class="section-title">About Me</h2>
-  <p>Hi, I’m Kayla! I’m passionate about helping clients feel their best. My approach combines relaxation, rehabilitation, and performance support, tailored to your goals.</p>
+  <p>Hi, I’m Kayla! I help clients feel their best through a blend of relaxation, rehabilitation, and performance support. Whether you’re easing tension, recovering from injury, or aiming to improve strength and mobility, I’ll guide you with one-to-one sessions tailored to your goals.</p>
+</section>
+
+<!-- Services Section -->
+<section class="container">
+  <h2 class="section-title">How I Can Help</h2>
+  <div class="services">
+    <div class="service">
+      <h3>Relax & Reset</h3>
+      <p>Enjoy therapeutic and deep tissue massage, plus soothing treatments designed to release tension and restore balance.</p>
+    </div>
+    <div class="service">
+      <h3>Recover & Rebuild</h3>
+      <p>Sports massage and injury rehabilitation focused on improving mobility, reducing pain, and helping your body heal.</p>
+    </div>
+    <div class="service">
+      <h3>Strengthen & Perform</h3>
+      <p>One-to-one training and weight management support tailored to build strength, boost energy, and enhance overall performance.</p>
+    </div>
+  </div>
 </section>
 
 <!-- Contact Section -->
