@@ -8,53 +8,81 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      line-height: 1.6;
+      background: #8b9585; /* keep original background */
       color: #333;
-    }
-    h2, h3 {
-      color: #2c3e50;
-    }
-    section {
-      padding: 60px 20px;
       text-align: center;
     }
-    .services-section .service {
-      margin: 20px 0;
+
+    img {
+      max-width: 180px;
+      margin-bottom: 25px;
     }
-    .testimonials-section .testimonial {
-      background: #f0f0f0;
-      padding: 20px;
-      margin: 10px auto;
+
+    h1 {
+      font-size: 28px;
+      margin: 0 0 10px 0;
+      color: #fff; /* contrast with background */
+    }
+
+    p {
+      margin: 10px 0 25px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .about-section h2,
+    .services-section h2,
+    .testimonials-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .service, .testimonial {
       max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
       border-radius: 10px;
+      background: rgba(255,255,255,0.9); /* subtle white for readability */
+      color: #333;
     }
-    .testimonials-section span {
+
+    .testimonial span {
       display: block;
       margin-top: 10px;
       font-weight: bold;
-      color: #555;
     }
-    .cta-section {
-      background: #2c3e50;
-      color: white;
-    }
+
     .cta-button {
       display: inline-block;
-      margin-top: 20px;
-      padding: 15px 30px;
+      margin-top: 25px;
+      padding: 18px 35px;
       background: #e67e22;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
       font-weight: bold;
+      transition: all 0.3s ease;
     }
+
     .cta-button:hover {
       background: #d35400;
+      transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
+
+  <!-- Header / Logo -->
+  <header>
+    <img src="your-logo.png" alt="KN Wellness Studio Logo">
+    <h1>Rest • Recover • Perform</h1>
+    <p>Professional massage, fitness & sport injury rehab</p>
+  </header>
 
   <!-- About Section -->
   <section id="about" class="about-section">
@@ -98,7 +126,6 @@
 
   <!-- Call to Action -->
   <section id="book" class="cta-section">
-    <h2>Ready to feel your best?</h2>
     <a href="#contact" class="cta-button">Book a Session</a>
   </section>
 
