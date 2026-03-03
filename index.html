@@ -1,126 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KN Wellness Studio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
   <style>
     /* Global Styles */
+    html { scroll-behavior: smooth; }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Lato', Arial, sans-serif;
       margin: 0;
       padding: 0;
       color: #333;
-      background-color: #8b9585; /* original sage tone */
+      background-color: #8b9585;
       line-height: 1.6;
     }
     a {
       text-decoration: none;
       color: inherit;
+      transition: color 0.3s;
     }
-    h1, h2, h3 {
-      margin: 0 0 10px 0;
-    }
-    p {
-      margin: 0 0 15px 0;
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
+    a:hover { color: #6b705c; }
+    h1, h2, h3 { margin: 0 0 10px 0; font-family: 'Playfair Display', serif; }
+    p { margin: 0 0 15px 0; }
+    .container { max-width: 900px; margin: auto; padding: 20px; }
 
     /* Logo */
-    .logo {
-      display: block;
-      max-width: 180px;
-      margin: 40px auto 20px auto;
-    }
+    .logo { display: block; max-width: 180px; margin: 40px auto 20px auto; }
 
     /* Hero Section */
     .hero {
       text-align: center;
       padding: 60px 20px;
-    }
-    .hero h1 {
-      font-size: 2.8em;
-      margin-bottom: 15px;
       color: #fff;
+      background: linear-gradient(135deg, #8b9585, #6b705c);
     }
-    .hero p {
-      font-size: 1.2em;
-      margin-bottom: 25px;
-      color: #f0f0f0;
-    }
+    .hero h1 { font-size: 2.8em; margin-bottom: 15px; }
+    .hero p { font-size: 1.2em; margin-bottom: 15px; }
+    .hero .location { font-size: 1em; margin-bottom: 25px; font-style: italic; }
     .hero .btn {
       display: inline-block;
-      background-color: #6b705c; 
-      color: #fff;
+      background-color: #fff;
+      color: #6b705c;
       padding: 15px 30px;
       font-size: 1em;
       border-radius: 8px;
-      transition: background 0.3s;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
     }
-    .hero .btn:hover {
-      background-color: #557153;
-    }
+    .hero .btn:hover { background-color: #f0f4ef; transform: translateY(-2px); }
 
     /* Section Titles */
     .section-title {
       text-align: center;
       margin: 50px 0 30px 0;
       font-size: 2em;
-      color: #fff;
+      color: #8b9585;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+    .section-title.visible { opacity: 1; transform: translateY(0); }
+
+    /* Boxes (Services, About, Testimonials) */
+    .service, .about, .testimonials .service {
+      background-color: #fff;
+      color: #8b9585;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s, transform 0.6s;
+      opacity: 0;
+      transform: translateY(20px);
+      background-image: repeating-linear-gradient(
+        45deg,
+        rgba(139,149,133,0.03),
+        rgba(139,149,133,0.03) 1px,
+        #fff 1px,
+        #fff 10px
+      );
+    }
+    .service h3, .about h2, .testimonials h2 { color: #8b9585; }
+
+    /* Hover effect */
+    .service:hover, .testimonials .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
     /* Services Section */
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .service {
-      background-color: #f0f4ef;
-      padding: 25px;
-      border-radius: 12px;
-      flex: 1 1 250px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      text-align: center;
-      color: #333;
-    }
-    .service h3 {
-      color: #557153;
-      margin-bottom: 10px;
-    }
-
-    /* About Section */
-    .about {
-      background-color: #f0f4ef;
-      padding: 40px 20px;
-      border-radius: 12px;
-      margin: 50px 0;
-      text-align: center;
-    }
-
-    /* Testimonials Section */
-    .testimonials {
-      background-color: #f0f4ef;
-      padding: 40px 20px;
-      border-radius: 12px;
-      margin: 50px 0;
-      text-align: center;
-    }
-    .testimonials .service {
-      margin-bottom: 20px;
-    }
-    .testimonials span {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-      color: #333;
-    }
+    .services { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
 
     /* Contact Section */
     .contact {
@@ -128,27 +103,16 @@
       padding: 40px 20px;
       color: #fff;
     }
-    .contact a {
-      display: inline-block;
-      margin: 5px 10px;
-      color: #f0f0f0;
-      font-weight: bold;
-    }
+    .contact a { display: inline-block; margin: 5px 10px; color: #f0f0f0; font-weight: bold; }
+    .contact a:hover { color: #dcdcdc; }
 
     /* Responsive */
     @media(max-width: 600px) {
-      .hero h1 {
-        font-size: 2em;
-      }
-      .hero p {
-        font-size: 1em;
-      }
-      section, .hero {
-        padding: 40px 15px; /* smaller gaps on mobile */
-      }
-      .about, .services, .testimonials {
-        margin: 30px 0; /* reduce extra margins on mobile */
-      }
+      .hero h1 { font-size: 2em; }
+      .hero p, .hero .location { font-size: 1em; }
+      section, .hero { padding: 40px 15px; }
+      .about, .services, .testimonials { margin: 30px 0; }
+      .services { flex-direction: column; gap: 15px; }
     }
   </style>
 </head>
@@ -161,6 +125,7 @@
   <section class="hero">
     <h1>Rest • Recover • Perform</h1>
     <p>Professional massage, rehabilitation & fitness support in a private, one-to-one setting.</p>
+    <p class="location">Serving Doncaster and the surrounding area</p>
     <a href="#contact" class="btn">Book Your Session</a>
   </section>
 
@@ -214,6 +179,25 @@
     <a href="mailto:youremail@example.com">Email</a> | 
     <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
   </section>
+
+  <script>
+    // Fade-in for section titles and boxes
+    const titles = document.querySelectorAll('.section-title');
+    const boxes = document.querySelectorAll('.service, .about');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.2 });
+
+    titles.forEach(title => observer.observe(title));
+    boxes.forEach(box => observer.observe(box));
+  </script>
 
 </body>
 </html>
