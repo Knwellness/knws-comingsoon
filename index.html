@@ -19,11 +19,7 @@
       background-color: #8b9585;
       line-height: 1.6;
     }
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: color 0.3s;
-    }
+    a { text-decoration: none; color: inherit; transition: color 0.3s; }
     a:hover { color: #6b705c; }
     h1, h2, h3 { margin: 0 0 10px 0; font-family: 'Playfair Display', serif; }
     p { margin: 0 0 15px 0; }
@@ -34,14 +30,16 @@
 
     /* Hero Section */
     .hero {
+      position: relative;
       text-align: center;
       padding: 60px 20px;
       color: #fff;
       background: linear-gradient(135deg, #8b9585, #6b705c);
+      overflow: hidden;
     }
-    .hero h1 { font-size: 2.8em; margin-bottom: 15px; }
-    .hero p { font-size: 1.2em; margin-bottom: 15px; }
-    .hero .location { font-size: 1em; margin-bottom: 25px; font-style: italic; }
+    .hero h1 { font-size: 2.8em; margin-bottom: 15px; position: relative; z-index: 2; }
+    .hero p { font-size: 1.2em; margin-bottom: 15px; position: relative; z-index: 2; }
+    .hero .location { font-size: 1em; margin-bottom: 25px; font-style: italic; position: relative; z-index: 2; }
     .hero .btn {
       display: inline-block;
       background-color: #fff;
@@ -51,15 +49,31 @@
       border-radius: 8px;
       font-weight: bold;
       transition: background 0.3s, transform 0.3s;
+      position: relative;
+      z-index: 2;
     }
     .hero .btn:hover { background-color: #f0f4ef; transform: translateY(-2px); }
+
+    /* Floating circles behind hero */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      animation: float 20s infinite ease-in-out alternate;
+      z-index: 1;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px) translateX(0px); }
+      50% { transform: translateY(-30px) translateX(20px); }
+      100% { transform: translateY(0px) translateX(0px); }
+    }
 
     /* Section Titles */
     .section-title {
       text-align: center;
       margin: 50px 0 30px 0;
       font-size: 2em;
-      color: #8b9585;
+      color: #fff;
       opacity: 0;
       transform: translateY(20px);
       transition: all 0.8s ease;
@@ -78,13 +92,6 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s, transform 0.6s;
       opacity: 0;
       transform: translateY(20px);
-      background-image: repeating-linear-gradient(
-        45deg,
-        rgba(139,149,133,0.03),
-        rgba(139,149,133,0.03) 1px,
-        #fff 1px,
-        #fff 10px
-      );
     }
     .service h3, .about h2, .testimonials h2 { color: #8b9585; }
 
@@ -127,6 +134,12 @@
     <p>Professional massage, rehabilitation & fitness support in a private, one-to-one setting.</p>
     <p class="location">Serving Doncaster and the surrounding area</p>
     <a href="#contact" class="btn">Book Your Session</a>
+
+    <!-- Floating circles -->
+    <div class="circle" style="width: 120px; height: 120px; top: 10%; left: 15%; animation-duration: 25s;"></div>
+    <div class="circle" style="width: 80px; height: 80px; top: 30%; left: 70%; animation-duration: 18s;"></div>
+    <div class="circle" style="width: 100px; height: 100px; top: 60%; left: 40%; animation-duration: 22s;"></div>
+    <div class="circle" style="width: 60px; height: 60px; top: 80%; left: 80%; animation-duration: 20s;"></div>
   </section>
 
   <!-- Services Section -->
