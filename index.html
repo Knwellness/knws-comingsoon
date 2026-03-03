@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,128 +6,213 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KN Wellness Studio</title>
   <style>
+    /* Global Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #8b9585; /* keep original background */
+      padding: 0;
       color: #333;
+      background-color: #8b9585; /* original sage tone */
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    h1, h2, h3 {
+      margin: 0 0 10px 0;
+    }
+    p {
+      margin: 0 0 15px 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Logo */
+    .logo {
+      display: block;
+      max-width: 180px;
+      margin: 40px auto 20px auto;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+      color: #f0f0f0;
+    }
+    .hero .btn {
+      display: inline-block;
+      background-color: #6b705c; 
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 1em;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .hero .btn:hover {
+      background-color: #557153;
+    }
+
+    /* Section Titles */
+    .section-title {
+      text-align: center;
+      margin: 50px 0 30px 0;
+      font-size: 2em;
+      color: #fff;
+    }
+
+    /* Services Section */
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .service {
+      background-color: #f0f4ef;
+      padding: 25px;
+      border-radius: 12px;
+      flex: 1 1 250px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      text-align: center;
+      color: #333;
+    }
+    .service h3 {
+      color: #557153;
+      margin-bottom: 10px;
+    }
+
+    /* About Section */
+    .about {
+      background-color: #f0f4ef;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin: 50px 0;
       text-align: center;
     }
 
-    img {
-      max-width: 180px;
-      margin-bottom: 25px;
+    /* Testimonials Section */
+    .testimonials {
+      background-color: #f0f4ef;
+      padding: 40px 20px;
+      border-radius: 12px;
+      margin: 50px 0;
+      text-align: center;
     }
-
-    h1 {
-      font-size: 28px;
-      margin: 0 0 10px 0;
-      color: #fff; /* contrast with background */
-    }
-
-    p {
-      margin: 10px 0 25px;
-      font-size: 18px;
-      color: #fff;
-    }
-
-    section {
-      padding: 60px 20px;
-    }
-
-    .about-section h2,
-    .services-section h2,
-    .testimonials-section h2 {
-      font-size: 28px;
+    .testimonials .service {
       margin-bottom: 20px;
-      color: #fff;
     }
-
-    .service, .testimonial {
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.9); /* subtle white for readability */
-      color: #333;
-    }
-
-    .testimonial span {
+    .testimonials span {
       display: block;
       margin-top: 10px;
       font-weight: bold;
+      color: #333;
     }
 
-    .cta-button {
+    /* Contact Section */
+    .contact {
+      text-align: center;
+      padding: 40px 20px;
+      color: #fff;
+    }
+    .contact a {
       display: inline-block;
-      margin-top: 25px;
-      padding: 18px 35px;
-      background: #e67e22;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
+      margin: 5px 10px;
+      color: #f0f0f0;
       font-weight: bold;
-      transition: all 0.3s ease;
     }
 
-    .cta-button:hover {
-      background: #d35400;
-      transform: translateY(-2px);
+    /* Responsive */
+    @media(max-width: 600px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+      .hero p {
+        font-size: 1em;
+      }
+      section, .hero {
+        padding: 40px 15px; /* smaller gaps on mobile */
+      }
+      .about, .services, .testimonials {
+        margin: 30px 0; /* reduce extra margins on mobile */
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header / Logo -->
-  <header>
-    <img src="your-logo.png" alt="KN Wellness Studio Logo">
-    <h1>Rest • Recover • Perform</h1>
-    <p>Professional massage, fitness & sport injury rehab</p>
-  </header>
+  <!-- Logo -->
+  <img src="your-logo.png" alt="KN Wellness Studio Logo" class="logo">
 
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <h2>Hi, I'm Kayla</h2>
-    <p>Welcome to KN Wellness Studio! I’m passionate about helping you relax, recover, and perform at your best. Every service is designed to leave you feeling revitalized and cared for.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Rest • Recover • Perform</h1>
+    <p>Professional massage, rehabilitation & fitness support in a private, one-to-one setting.</p>
+    <a href="#contact" class="btn">Book Your Session</a>
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="services-section">
-    <h2>Our Services</h2>
-    <div class="service">
-      <h3>Relax & Reset</h3>
-      <p>Professional massage therapy to help you unwind and rejuvenate.</p>
-    </div>
-    <div class="service">
-      <h3>Recover & Rebuild</h3>
-      <p>Rehabilitation and support to help your body heal and strengthen.</p>
-    </div>
-    <div class="service">
-      <h3>Strengthen & Perform</h3>
-      <p>Targeted fitness and performance programs to help you feel your best.</p>
+  <section class="container">
+    <h2 class="section-title">How We Help</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Relax & Reset</h3>
+        <p>Therapeutic and deep tissue massage, plus facial treatments to ease tension and restore balance.</p>
+      </div>
+      <div class="service">
+        <h3>Recover & Rebuild</h3>
+        <p>Sports massage and injury rehabilitation focused on improving mobility and reducing pain.</p>
+      </div>
+      <div class="service">
+        <h3>Strengthen & Perform</h3>
+        <p>Personal training and weight management support designed to build strength and long-term results.</p>
+      </div>
     </div>
   </section>
 
+  <!-- About Section -->
+  <section class="about container">
+    <h2 class="section-title">About Me</h2>
+    <p>Hi, I’m Kayla! I’m passionate about helping clients feel their best. My approach combines relaxation, rehabilitation, and performance support, tailored to your goals.</p>
+  </section>
+
   <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials-section">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial">
+  <section class="testimonials container">
+    <h2 class="section-title">What My Clients Say</h2>
+    <div class="service">
       <p>"Amazing experience! Kayla really knows how to help you feel better."</p>
       <span>- Sarah W.</span>
     </div>
-    <div class="testimonial">
+    <div class="service">
       <p>"I feel stronger and more relaxed after every session."</p>
       <span>- John D.</span>
     </div>
-    <div class="testimonial">
+    <div class="service">
       <p>"KN Wellness Studio is my go-to for recovery and relaxation. Highly recommend!"</p>
       <span>- Emily R.</span>
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <section id="book" class="cta-section">
-    <a href="#contact" class="cta-button">Book a Session</a>
+  <!-- Contact Section -->
+  <section class="contact container" id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <p>Ready to book or have a question? Reach out today.</p>
+    <a href="tel:1234567890">Call</a> | 
+    <a href="mailto:youremail@example.com">Email</a> | 
+    <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
   </section>
 
 </body>
