@@ -1,55 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>KN Wellness Studio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
 
-html { scroll-behavior:smooth; }
+html{
+scroll-behavior:smooth;
+}
 
 body{
-font-family:'Lato',sans-serif;
 margin:0;
+font-family:'Lato',sans-serif;
 background:#8b9585;
 color:#333;
-line-height:1.6;
 }
 
 h1,h2,h3{
 font-family:'Playfair Display',serif;
+margin-bottom:10px;
 }
 
 .container{
-max-width:900px;
+max-width:1000px;
 margin:auto;
 padding:20px;
 }
 
-/* NAVBAR */
+/* HEADER */
 
-.navbar{
+.header{
+background:#8b9585;
 position:sticky;
 top:0;
-background:#8b9585;
-padding:12px 20px;
 z-index:1000;
-display:flex;
-justify-content:center;
-gap:25px;
-box-shadow:0 2px 6px rgba(0,0,0,0.15);
+box-shadow:0 2px 8px rgba(0,0,0,0.2);
 }
 
-.navbar a{
+.nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+max-width:1100px;
+margin:auto;
+padding:12px 20px;
+}
+
+.logo img{
+height:55px;
+}
+
+.menu{
+display:flex;
+gap:25px;
+}
+
+.menu a{
 color:white;
 font-weight:bold;
 font-size:14px;
 }
 
-.navbar a:hover{
+.menu a:hover{
 opacity:0.8;
 }
 
@@ -57,7 +75,7 @@ opacity:0.8;
 
 .hero{
 text-align:center;
-padding:80px 20px;
+padding:100px 20px;
 background:linear-gradient(135deg,#8b9585,#6b705c);
 color:white;
 }
@@ -67,18 +85,22 @@ font-size:2.8em;
 }
 
 .hero p{
-max-width:600px;
+max-width:650px;
 margin:auto;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 .btn{
 display:inline-block;
 background:white;
 color:#6b705c;
-padding:14px 28px;
+padding:14px 30px;
 border-radius:8px;
 font-weight:bold;
+}
+
+.btn:hover{
+opacity:0.9;
 }
 
 /* SECTIONS */
@@ -90,19 +112,21 @@ margin:40px 0 20px 0;
 font-size:2em;
 }
 
+/* CARDS */
+
 .card{
 background:white;
-color:#8b9585;
+color:#6b9585;
 padding:25px;
 border-radius:12px;
 text-align:center;
-box-shadow:0 3px 10px rgba(0,0,0,0.08);
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
 .grid{
 display:flex;
-flex-wrap:wrap;
 gap:20px;
+flex-wrap:wrap;
 justify-content:center;
 }
 
@@ -119,7 +143,7 @@ margin-bottom:10px;
 
 /* INSTAGRAM */
 
-.instagram-section{
+.instagram{
 text-align:center;
 color:white;
 }
@@ -131,7 +155,7 @@ border-radius:12px;
 background:white;
 }
 
-/* FLOATING BUTTON */
+/* FLOAT BUTTON */
 
 .book-float{
 position:fixed;
@@ -142,7 +166,7 @@ color:#6b705c;
 padding:14px 22px;
 border-radius:30px;
 font-weight:bold;
-box-shadow:0 6px 15px rgba(0,0,0,0.25);
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
 z-index:999;
 }
 
@@ -150,12 +174,22 @@ z-index:999;
 
 @media(max-width:700px){
 
-.grid{
+.nav{
 flex-direction:column;
+gap:10px;
+}
+
+.menu{
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .hero h1{
 font-size:2em;
+}
+
+.grid{
+flex-direction:column;
 }
 
 }
@@ -165,14 +199,26 @@ font-size:2em;
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- HEADER -->
 
-<div class="navbar">
+<div class="header">
+
+<div class="nav">
+
+<div class="logo">
+<img src="your-logo.png" alt="KN Wellness Studio">
+</div>
+
+<div class="menu">
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#reviews">Reviews</a>
 <a href="#contact">Book</a>
+</div>
+
+</div>
+
 </div>
 
 <!-- HERO -->
@@ -181,9 +227,11 @@ font-size:2em;
 
 <h1>Rest • Recover • Perform</h1>
 
-<p>Hi, I'm Kayla. I help clients relax, recover and perform at their best with professional massage and rehabilitation support.</p>
+<p>
+Hi, I'm Kayla. Helping you relax, recover and perform at your best through professional massage, rehabilitation and one-to-one support.
+</p>
 
-<a href="#contact" class="btn">Book Now</a>
+<a href="#contact" class="btn">Book Your Session</a>
 
 </section>
 
@@ -196,9 +244,7 @@ font-size:2em;
 <div class="card">
 
 <p>
-Hi, I'm Kayla. I work one-to-one with clients to improve recovery,
-reduce pain, increase mobility and support overall wellbeing.
-Every session is tailored to your body and your goals.
+Hi, I'm Kayla. I help clients reduce pain, improve mobility and recover properly through personalised treatment and support. Every session is tailored to your body and your goals so you can feel and perform at your best.
 </p>
 
 </div>
@@ -220,12 +266,12 @@ Every session is tailored to your body and your goals.
 
 <div class="card">
 <h3>Recover & Rebuild</h3>
-<p>Sports massage and rehabilitation focused on improving mobility and reducing pain.</p>
+<p>Sports massage and rehabilitation focused on improving mobility, recovery and reducing pain.</p>
 </div>
 
 <div class="card">
 <h3>Strengthen & Perform</h3>
-<p>One-to-one support to build strength, improve movement and enhance performance.</p>
+<p>One-to-one support to build strength, improve movement and enhance overall performance.</p>
 </div>
 
 </div>
@@ -264,7 +310,7 @@ Every session is tailored to your body and your goals.
 
 <!-- INSTAGRAM -->
 
-<section class="container instagram-section">
+<section class="container instagram">
 
 <h2 class="section-title">Follow KN Wellness Studio</h2>
 
@@ -299,10 +345,9 @@ frameborder="0">
 
 </section>
 
-<!-- FLOATING BUTTON -->
+<!-- FLOATING BOOK BUTTON -->
 
 <a href="#contact" class="book-float">Book Now</a>
 
 </body>
 </html>
-```
