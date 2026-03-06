@@ -30,6 +30,37 @@ h1, h2, h3 {
   padding: 20px;
 }
 
+/* CONTACT TOP BAR */
+.contact-bar {
+  background: #7c8676;
+  text-align: center;
+  padding: 6px 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+.contact-bar a {
+  color: white;
+  text-decoration: none;
+  padding: 0 6px;
+}
+
+.contact-bar a:hover {
+  opacity: 0.8;
+}
+
+.contact-divider {
+  border-left: 1px solid rgba(255,255,255,0.6);
+  height: 16px;
+  display: inline-block;
+  margin: 0 6px;
+  vertical-align: middle;
+}
+
 /* NAVBAR */
 .navbar {
   position: sticky;
@@ -176,11 +207,25 @@ h1, h2, h3 {
   .logo img {
     width: 180px;
   }
+  .contact-bar {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .contact-divider {
+    display: none;
+  }
 }
 </style>
 
 </head>
 <body>
+
+<!-- CONTACT BAR -->
+<div class="contact-bar">
+  <a href="mailto:hello@knwellness.studio">Email</a>
+  <span class="contact-divider"></span>
+  <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+</div>
 
 <!-- NAVBAR -->
 <div class="navbar">
