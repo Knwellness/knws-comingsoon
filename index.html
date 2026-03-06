@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -11,9 +12,7 @@
 
 <style>
 
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 
 body{
 margin:0;
@@ -28,54 +27,52 @@ margin-bottom:10px;
 }
 
 .container{
-max-width:1000px;
+max-width:900px;
 margin:auto;
 padding:20px;
 }
 
-/* HEADER */
+/* NAVBAR */
 
-.header{
-background:#8b9585;
+.navbar{
 position:sticky;
 top:0;
-z-index:1000;
+background:#8b9585;
+padding:12px;
+display:flex;
+justify-content:center;
+gap:30px;
 box-shadow:0 2px 8px rgba(0,0,0,0.2);
+z-index:1000;
 }
 
-.nav{
-display:flex;
-align-items:center;
-justify-content:space-between;
-max-width:1100px;
-margin:auto;
-padding:12px 20px;
-}
-
-.logo img{
-height:55px;
-}
-
-.menu{
-display:flex;
-gap:25px;
-}
-
-.menu a{
+.navbar a{
 color:white;
 font-weight:bold;
 font-size:14px;
 }
 
-.menu a:hover{
+.navbar a:hover{
 opacity:0.8;
+}
+
+/* LOGO */
+
+.logo{
+text-align:center;
+padding:40px 20px 10px;
+}
+
+.logo img{
+width:220px;
+max-width:80%;
 }
 
 /* HERO */
 
 .hero{
 text-align:center;
-padding:100px 20px;
+padding:60px 20px;
 background:linear-gradient(135deg,#8b9585,#6b705c);
 color:white;
 }
@@ -103,7 +100,7 @@ font-weight:bold;
 opacity:0.9;
 }
 
-/* SECTIONS */
+/* SECTION TITLES */
 
 .section-title{
 text-align:center;
@@ -116,7 +113,7 @@ font-size:2em;
 
 .card{
 background:white;
-color:#6b9585;
+color:#6b705c;
 padding:25px;
 border-radius:12px;
 text-align:center;
@@ -155,7 +152,7 @@ border-radius:12px;
 background:white;
 }
 
-/* FLOAT BUTTON */
+/* FLOAT BOOK BUTTON */
 
 .book-float{
 position:fixed;
@@ -166,23 +163,13 @@ color:#6b705c;
 padding:14px 22px;
 border-radius:30px;
 font-weight:bold;
-box-shadow:0 6px 15px rgba(0,0,0,0.3);
+box-shadow:0 6px 15px rgba(0,0,0,0.25);
 z-index:999;
 }
 
 /* MOBILE */
 
 @media(max-width:700px){
-
-.nav{
-flex-direction:column;
-gap:10px;
-}
-
-.menu{
-flex-wrap:wrap;
-justify-content:center;
-}
 
 .hero h1{
 font-size:2em;
@@ -192,24 +179,21 @@ font-size:2em;
 flex-direction:column;
 }
 
+.logo img{
+width:180px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- NAVBAR -->
 
-<div class="header">
-
-<div class="nav">
-
-<div class="logo">
-<img src="your-logo.png" alt="KN Wellness Studio">
-</div>
-
-<div class="menu">
+<div class="navbar">
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
@@ -217,8 +201,10 @@ flex-direction:column;
 <a href="#contact">Book</a>
 </div>
 
-</div>
+<!-- LARGE LOGO -->
 
+<div class="logo">
+<img src="your-logo.png" alt="KN Wellness Studio Logo">
 </div>
 
 <!-- HERO -->
@@ -228,7 +214,7 @@ flex-direction:column;
 <h1>Rest • Recover • Perform</h1>
 
 <p>
-Hi, I'm Kayla. Helping you relax, recover and perform at your best through professional massage, rehabilitation and one-to-one support.
+Hi, I'm Kayla. Helping you relax, recover and perform at your best with professional massage, rehabilitation and one-to-one support.
 </p>
 
 <a href="#contact" class="btn">Book Your Session</a>
@@ -266,12 +252,12 @@ Hi, I'm Kayla. I help clients reduce pain, improve mobility and recover properly
 
 <div class="card">
 <h3>Recover & Rebuild</h3>
-<p>Sports massage and rehabilitation focused on improving mobility, recovery and reducing pain.</p>
+<p>Sports massage and rehabilitation focused on improving mobility and reducing pain.</p>
 </div>
 
 <div class="card">
 <h3>Strengthen & Perform</h3>
-<p>One-to-one support to build strength, improve movement and enhance overall performance.</p>
+<p>One-to-one support to build strength, improve movement and enhance performance.</p>
 </div>
 
 </div>
@@ -350,4 +336,5 @@ frameborder="0">
 <a href="#contact" class="book-float">Book Now</a>
 
 </body>
+
 </html>
