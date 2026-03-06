@@ -113,12 +113,19 @@ font-size:2em;
 /* CARDS */
 
 .card{
-background:white;
+background:rgba(255,255,255,0.95);
 color:#6b705c;
 padding:25px;
-border-radius:12px;
+border-radius:16px;
 text-align:center;
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
+backdrop-filter:blur(6px);
+transition:all 0.3s ease;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 14px 35px rgba(0,0,0,0.2);
 }
 
 .grid{
