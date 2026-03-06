@@ -19,38 +19,27 @@ body{
   line-height:1.6;
 }
 
-/* Top utility bar */
-.top-bar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(139,149,133,0.95);
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  padding: 6px 0;
-  z-index: 1001;
-  font-weight: bold;
+h1,h2,h3{
+  font-family:'Playfair Display',serif;
+  margin-bottom:10px;
 }
-.top-bar a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.9em;
-  transition: opacity 0.3s;
-}
-.top-bar a:hover {
-  opacity: 0.8;
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
 }
 
 /* NAVBAR */
 .navbar{
-  position: sticky;
-  top: 28px; /* below top-bar */
+  position:sticky;
+  top:0;
   background:#8b9585;
   padding:12px;
   display:flex;
   justify-content:center;
-  gap:30px;
+  align-items:center;
+  gap:0;
   box-shadow:0 2px 8px rgba(0,0,0,0.2);
   z-index:1000;
 }
@@ -59,9 +48,18 @@ body{
   color:white;
   font-weight:bold;
   font-size:14px;
+  text-decoration:none;
+  padding:0 10px;
 }
+
 .navbar a:hover{
   opacity:0.8;
+}
+
+.divider{
+  width:1px;
+  height:16px;
+  background: rgba(255,255,255,0.4);
 }
 
 /* LOGO */
@@ -69,6 +67,7 @@ body{
   text-align:center;
   padding:40px 20px 10px;
 }
+
 .logo img{
   width:220px;
   max-width:80%;
@@ -81,14 +80,17 @@ body{
   background:linear-gradient(135deg,#8b9585,#6b705c);
   color:white;
 }
+
 .hero h1{
   font-size:2.8em;
 }
+
 .hero p{
   max-width:650px;
   margin:auto;
   margin-bottom:25px;
 }
+
 .btn{
   display:inline-block;
   background:white;
@@ -97,6 +99,7 @@ body{
   border-radius:8px;
   font-weight:bold;
 }
+
 .btn:hover{
   opacity:0.9;
 }
@@ -122,6 +125,7 @@ body{
   border:1px solid rgba(255,255,255,0.25);
   transition:all 0.35s ease;
 }
+
 .card:hover{
   transform:translateY(-8px);
   box-shadow:0 18px 45px rgba(0,0,0,0.25);
@@ -133,6 +137,7 @@ body{
   flex-wrap:wrap;
   justify-content:center;
 }
+
 .grid .card{
   flex:1 1 250px;
 }
@@ -174,15 +179,22 @@ body{
   .hero h1{
     font-size:2em;
   }
+
   .grid{
     flex-direction:column;
   }
+
   .logo img{
     width:180px;
   }
-  .top-bar{
-    font-size:0.8em;
-    gap:10px;
+
+  .navbar{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .divider{
+    display:none;
   }
 }
 </style>
@@ -190,135 +202,129 @@ body{
 
 <body>
 
-<!-- TOP BAR: WhatsApp & Email -->
-<div class="top-bar">
-  <a href="https://wa.me/447368582502" target="_blank">WhatsApp</a>
+<!-- NAVBAR -->
+<div class="navbar">
+  <a href="#">Home</a><span class="divider"></span>
+  <a href="#about">About</a><span class="divider"></span>
+  <a href="#services">Services</a><span class="divider"></span>
+  <a href="#reviews">Reviews</a><span class="divider"></span>
+  <a href="#contact">Book</a><span class="divider"></span>
+  <a href="https://wa.me/+447368582502" target="_blank">WhatsApp</a><span class="divider"></span>
   <a href="mailto:Kn.wellnessstudio@gmail.com">Email</a>
 </div>
 
-<!-- NAVBAR -->
-<div class="navbar">
-<a href="#">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#reviews">Reviews</a>
-<a href="#contact">Book</a>
-</div>
-
-<!-- LOGO -->
+<!-- LARGE LOGO -->
 <div class="logo">
-<img src="your-logo.png" alt="KN Wellness Studio Logo">
+  <img src="your-logo.png" alt="KN Wellness Studio Logo">
 </div>
 
 <!-- HERO -->
 <section class="hero">
-<h1>Rest • Recover • Perform</h1>
-<p>
-Hi, I’m Kayla — helping you relax, recover, and move at your best with professional massage, rehabilitation and performance support in a calm, private one-to-one setting.
-</p>
-<a href="#contact" class="btn">Book Your Session</a>
+  <h1>Rest • Recover • Perform</h1>
+  <p>
+    Hi, I’m Kayla — helping you relax, recover, and move at your best with professional massage, rehabilitation and performance support in a calm, private one-to-one setting.
+  </p>
+  <a href="#contact" class="btn">Book Your Session</a>
 </section>
 
 <hr style="border:none;height:1px;background:rgba(255,255,255,0.2);margin:60px auto;width:60%;">
 
 <!-- ABOUT -->
 <section class="container" id="about">
-<h2 class="section-title">About Me</h2>
-<div class="card">
-<p>
-At KN Wellness Studio, every session is tailored to your body and your goals.
-
-Treatments combine massage therapy, rehabilitation, and performance support to help reduce pain, improve mobility, and restore balance.
-
-Whether you're looking to relax, recover from injury, or improve physical performance, sessions are delivered in a calm, private one-to-one setting focused entirely on your wellbeing.
-</p>
-</div>
+  <h2 class="section-title">About Me</h2>
+  <div class="card">
+    <p>
+      At KN Wellness Studio, every session is tailored to your body and your goals.
+      Treatments combine massage therapy, rehabilitation, and performance support to help reduce pain, improve mobility, and restore balance.
+      Whether you're looking to relax, recover from injury, or improve physical performance, sessions are delivered in a calm, private one-to-one setting focused entirely on your wellbeing.
+    </p>
+  </div>
 </section>
 
 <hr style="border:none;height:1px;background:rgba(255,255,255,0.2);margin:60px auto;width:60%;">
 
 <!-- SERVICES -->
 <section class="container" id="services">
-<h2 class="section-title">Treatments & Services</h2>
-<div class="grid">
-<div class="card">
-<h3>Relax & Reset</h3>
-<p>Therapeutic and deep tissue massage designed to release tension and restore balance.</p>
-</div>
-<div class="card">
-<h3>Recover & Rebuild</h3>
-<p>Sports massage and rehabilitation focused on improving mobility and reducing pain.</p>
-</div>
-<div class="card">
-<h3>Strengthen & Perform</h3>
-<p>One-to-one support to build strength, improve movement and enhance performance.</p>
-</div>
-</div>
+  <h2 class="section-title">Treatments & Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Relax & Reset</h3>
+      <p>Therapeutic and deep tissue massage designed to release tension and restore balance.</p>
+    </div>
+    <div class="card">
+      <h3>Recover & Rebuild</h3>
+      <p>Sports massage and rehabilitation focused on improving mobility and reducing pain.</p>
+    </div>
+    <div class="card">
+      <h3>Strengthen & Perform</h3>
+      <p>One-to-one support to build strength, improve movement and enhance performance.</p>
+    </div>
+  </div>
 </section>
 
 <hr style="border:none;height:1px;background:rgba(255,255,255,0.2);margin:60px auto;width:60%;">
 
 <!-- TESTIMONIALS -->
 <section class="container" id="reviews">
-<h2 class="section-title">Client Testimonials</h2>
-<div class="grid">
-<div class="card">
-<div class="review-stars">★★★★★</div>
-<p>"Fantastic treatment and very professional. My back felt better immediately."</p>
-<b>— Sarah</b>
-</div>
-<div class="card">
-<div class="review-stars">★★★★★</div>
-<p>"Kayla is extremely knowledgeable and helped my shoulder pain massively."</p>
-<b>— James</b>
-</div>
-<div class="card">
-<div class="review-stars">★★★★★</div>
-<p>"Best massage I've had. Always feel amazing afterwards."</p>
-<b>— Emma</b>
-</div>
-</div>
+  <h2 class="section-title">Client Testimonials</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Fantastic treatment and very professional. My back felt better immediately."</p>
+      <b>— Sarah</b>
+    </div>
+    <div class="card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Kayla is extremely knowledgeable and helped my shoulder pain massively."</p>
+      <b>— James</b>
+    </div>
+    <div class="card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Best massage I've had. Always feel amazing afterwards."</p>
+      <b>— Emma</b>
+    </div>
+  </div>
 </section>
 
 <hr style="border:none;height:1px;background:rgba(255,255,255,0.2);margin:60px auto;width:60%;">
 
 <!-- INSTAGRAM -->
 <section class="container instagram">
-<h2 class="section-title">Follow KN Wellness Studio</h2>
-<p>Wellness tips, recovery advice and studio updates.</p>
-<br>
-<a class="btn" href="https://instagram.com/kn.wellnessstudio" target="_blank">Follow on Instagram</a>
+  <h2 class="section-title">Follow KN Wellness Studio</h2>
+  <p>Wellness tips, recovery advice and studio updates.</p>
+  <br>
+  <a class="btn" href="https://instagram.com/kn.wellnessstudio" target="_blank">Follow on Instagram</a>
 </section>
 
 <hr style="border:none;height:1px;background:rgba(255,255,255,0.2);margin:60px auto;width:60%;">
 
 <!-- TREATMENT EXPERIENCE -->
 <section class="container">
-<h2 class="section-title">Your Treatment Experience</h2>
-<div class="grid">
-<div class="card">
-<h3>Initial Consultation</h3>
-<p>We begin with a short discussion about your lifestyle, injuries, training or areas of tension so the session can be tailored specifically to your needs.</p>
-</div>
-<div class="card">
-<h3>Targeted Treatment</h3>
-<p>Your treatment may include massage therapy, mobility work or rehabilitation techniques designed to relieve tension, improve movement and support recovery.</p>
-</div>
-<div class="card">
-<h3>Aftercare Guidance</h3>
-<p>You’ll receive simple advice or exercises to help maintain results, reduce future discomfort and support your long-term wellbeing.</p>
-</div>
-</div>
+  <h2 class="section-title">Your Treatment Experience</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Initial Consultation</h3>
+      <p>We begin with a short discussion about your lifestyle, injuries, training or areas of tension so the session can be tailored specifically to your needs.</p>
+    </div>
+    <div class="card">
+      <h3>Targeted Treatment</h3>
+      <p>Your treatment may include massage therapy, mobility work or rehabilitation techniques designed to relieve tension, improve movement and support recovery.</p>
+    </div>
+    <div class="card">
+      <h3>Aftercare Guidance</h3>
+      <p>You’ll receive simple advice or exercises to help maintain results, reduce future discomfort and support your long-term wellbeing.</p>
+    </div>
+  </div>
 </section>
 
 <hr style="border:none;height:1px;background:rgba(255,255,255,0.2);margin:60px auto;width:60%;">
 
 <!-- BOOKING -->
 <section class="container booking" id="contact">
-<h2 class="section-title">Book Your Session</h2>
-<p style="text-align:center;color:white;">Choose a time that works for you.</p>
-<br>
-<iframe src="https://knwellness.setmore.com" width="100%" height="750" frameborder="0"></iframe>
+  <h2 class="section-title">Book Your Session</h2>
+  <p style="text-align:center;color:white;">Choose a time that works for you.</p>
+  <br>
+  <iframe src="https://knwellness.setmore.com" width="100%" height="750" frameborder="0"></iframe>
 </section>
 
 <!-- FLOATING BOOK BUTTON -->
