@@ -17,14 +17,11 @@ html{scroll-behavior:smooth;}
 body{
 font-family:'Lato',sans-serif;
 margin:0;
-background:
-linear-gradient(180deg,#8b9585 0%, #7c8676 40%, #6b705c 100%),
-url("https://www.transparenttextures.com/patterns/leaf.png");
-background-blend-mode:overlay;
-background-size:auto;
+background: linear-gradient(180deg,#8b9585 0%, #7c8676 40%, #6b705c 100%);
 color:#333;
 line-height:1.6;
 }
+
 h1,h2,h3{
 font-family:'Playfair Display',serif;
 margin-bottom:10px;
@@ -113,25 +110,33 @@ margin:40px 0 20px 0;
 font-size:2em;
 }
 
-/* CARDS */
+/* PREMIUM GLASS CARDS */
 
 .card{
 background:rgba(255,255,255,0.18);
 color:white;
 padding:30px;
-border-radius:18px;
+border-radius:20px;
 text-align:center;
-box-shadow:0 10px 35px rgba(0,0,0,0.15);
-backdrop-filter:blur(12px);
--webkit-backdrop-filter:blur(12px);
+
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+
 border:1px solid rgba(255,255,255,0.25);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.15),
+inset 0 1px 0 rgba(255,255,255,0.25);
+
 transition:all 0.35s ease;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 18px 45px rgba(0,0,0,0.25);
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 20px 45px rgba(0,0,0,0.25);
 }
+
+/* GRID */
 
 .grid{
 display:flex;
@@ -144,7 +149,7 @@ justify-content:center;
 flex:1 1 250px;
 }
 
-/* TESTIMONIALS */
+/* TESTIMONIAL STARS */
 
 .review-stars{
 font-size:20px;
@@ -162,7 +167,9 @@ color:white;
 
 .booking iframe{
 border-radius:12px;
-background:white;
+width:100%;
+height:750px;
+border:none;
 }
 
 /* FLOAT BOOK BUTTON */
@@ -178,6 +185,27 @@ border-radius:30px;
 font-weight:bold;
 box-shadow:0 6px 15px rgba(0,0,0,0.25);
 z-index:999;
+}
+
+/* SECTION FADE ANIMATION */
+
+section{
+opacity:0;
+transform:translateY(40px);
+animation:fadeUp 1s ease forwards;
+}
+
+section:nth-of-type(1){animation-delay:0.2s;}
+section:nth-of-type(2){animation-delay:0.4s;}
+section:nth-of-type(3){animation-delay:0.6s;}
+section:nth-of-type(4){animation-delay:0.8s;}
+section:nth-of-type(5){animation-delay:1s;}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 /* MOBILE */
@@ -214,7 +242,7 @@ width:180px;
 <a href="#contact">Book</a>
 </div>
 
-<!-- LARGE LOGO -->
+<!-- LOGO -->
 
 <div class="logo">
 <img src="your-logo.png" alt="KN Wellness Studio Logo">
@@ -230,10 +258,12 @@ width:180px;
 Hi, I’m Kayla — helping you relax, recover, and move at your best with professional massage, rehabilitation and performance support in a calm, private one-to-one setting.
 </p>
 
-<a href="#contact" class="btn">Book Your Session</a>
+<a href="#contact" class="btn">Book Your Appointment</a>
 
 </section>
+
 <hr style="border:none;height:1px;background:rgba(255,255,255,0.2);margin:60px auto;width:60%;">
+
 <!-- ABOUT -->
 
 <section class="container" id="about">
@@ -253,6 +283,8 @@ Whether you're looking to relax, recover from injury, or improve physical perfor
 </div>
 
 </section>
+
+<hr style="border:none;height:1px;background:rgba(255,255,255,0.2);margin:60px auto;width:60%;">
 
 <!-- SERVICES -->
 
@@ -280,7 +312,9 @@ Whether you're looking to relax, recover from injury, or improve physical perfor
 </div>
 
 </section>
+
 <hr style="border:none;height:1px;background:rgba(255,255,255,0.2);margin:60px auto;width:60%;">
+
 <!-- TESTIMONIALS -->
 
 <section class="container" id="reviews">
@@ -311,6 +345,8 @@ Whether you're looking to relax, recover from injury, or improve physical perfor
 
 </section>
 
+<hr style="border:none;height:1px;background:rgba(255,255,255,0.2);margin:60px auto;width:60%;">
+
 <!-- INSTAGRAM -->
 
 <section class="container instagram">
@@ -327,7 +363,10 @@ Follow on Instagram
 
 </section>
 
-<!-- BOOKING -->
+<hr style="border:none;height:1px;background:rgba(255,255,255,0.2);margin:60px auto;width:60%;">
+
+<!-- TREATMENT EXPERIENCE -->
+
 <section class="container">
 
 <h2 class="section-title">Your Treatment Experience</h2>
@@ -352,8 +391,13 @@ Follow on Instagram
 </div>
 
 </section>
-<section class="container booking" id="contact">
+
 <hr style="border:none;height:1px;background:rgba(255,255,255,0.2);margin:60px auto;width:60%;">
+
+<!-- BOOKING -->
+
+<section class="container booking" id="contact">
+
 <h2 class="section-title">Book Your Session</h2>
 
 <p style="text-align:center;color:white;">
@@ -362,16 +406,17 @@ Choose a time that works for you.
 
 <br>
 
+<div class="card">
+
 <iframe
-src="https://knwellness.setmore.com"
-width="100%"
-height="750"
-frameborder="0">
+src="https://knwellness.setmore.com">
 </iframe>
+
+</div>
 
 </section>
 
-<!-- FLOATING BOOK BUTTON -->
+<!-- FLOAT BOOK BUTTON -->
 
 <a href="#contact" class="book-float">Book Now</a>
 
