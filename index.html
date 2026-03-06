@@ -1,3 +1,4 @@
+  ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,236 +6,304 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KN Wellness Studio</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 <style>
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Lato', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #8b9585;
-  line-height: 1.6;
-  padding-top: 50px; /* space for top bar */
-}
-a { text-decoration: none; color: inherit; transition: color 0.3s; }
-a:hover { color: #6b705c; }
-h1, h2, h3 { margin: 0 0 10px 0; font-family: 'Playfair Display', serif; }
-p { margin: 0 0 15px 0; }
-.container { max-width: 900px; margin: auto; padding: 20px; }
 
-/* Logo */
-.logo { display: block; max-width: 180px; margin: 40px auto 20px auto; }
+html { scroll-behavior:smooth; }
 
-/* Top Contact + Social Bar */
-.top-contact-bar {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  background-color: rgba(139,149,133,0.95);
-  color: #fff;
-  text-align: center;
-  padding: 8px 0;
-  z-index: 999;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-.top-contact-bar a { margin: 0 5px; font-size: 0.95em; display:inline-flex; align-items:center; }
-.top-contact-bar svg { width:16px; height:16px; margin-left:4px; fill:#fff; transition: fill 0.3s; }
-.top-contact-bar a:hover svg { fill:#6b705c; }
-
-/* Hero Section */
-.hero {
-  position: relative;
-  text-align: center;
-  padding: 60px 20px;
-  color: #fff;
-  background: linear-gradient(135deg, #8b9585, #6b705c);
-  overflow: hidden;
-}
-.hero h1 { font-size:2.8em; margin-bottom:15px; position:relative; z-index:2; }
-
-/* Mini About Me */
-.mini-about {
-  font-size: 1.2em;
-  margin: 15px 0 20px 0;
-  color: #f0f0f0;
-  font-weight: 400;
-  opacity: 0.9;
+body{
+font-family:'Lato',sans-serif;
+margin:0;
+background:#8b9585;
+color:#333;
+line-height:1.6;
 }
 
-.hero p { font-size:1.2em; margin-bottom:15px; position:relative; z-index:2; }
-.hero .location { font-size:1em; margin-bottom:25px; font-style:italic; position:relative; z-index:2; }
-.hero .btn {
-  display:inline-block;
-  background-color:#fff;
-  color:#6b705c;
-  padding:15px 30px;
-  font-size:1em;
-  border-radius:8px;
-  font-weight:bold;
-  transition: background 0.3s, transform 0.3s;
-  position:relative; z-index:2;
-}
-.hero .btn:hover { background-color:#f0f4ef; transform:translateY(-2px); }
-
-/* Floating leaf shapes inline SVG animations */
-.leaf {
-  position: absolute;
-  opacity:0.15;
-  z-index:1;
-  animation: floatLeaf linear infinite;
-  transform-origin: center;
-}
-@keyframes floatLeaf {
-  0% { transform: translate(0px,0px) rotate(0deg) scale(1); opacity:0.15; }
-  25% { transform: translate(10px,-20px) rotate(15deg) scale(0.95); opacity:0.12; }
-  50% { transform: translate(-10px,-40px) rotate(-15deg) scale(1.05); opacity:0.18; }
-  75% { transform: translate(5px,-20px) rotate(10deg) scale(0.9); opacity:0.12; }
-  100% { transform: translate(0px,0px) rotate(0deg) scale(1); opacity:0.15; }
+h1,h2,h3{
+font-family:'Playfair Display',serif;
 }
 
-/* Section Titles */
-.section-title {
-  text-align:center;
-  margin:40px 0 20px 0; /* reduced top margin to remove large whitespace */
-  font-size:2em;
-  color:#fff;
-  opacity:0;
-  transform:translateY(20px);
-  transition: all 0.8s ease;
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
 }
-.section-title.visible { opacity:1; transform:translateY(0); }
 
-/* Boxes */
-.service, .about, .testimonials .service {
-  background-color:#fff;
-  color:#8b9585;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 3px 8px rgba(0,0,0,0.05);
-  margin-bottom:20px;
-  text-align:center;
-  transition:transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s, transform 0.6s;
-  opacity:0;
-  transform:translateY(20px);
+/* NAVBAR */
+
+.navbar{
+position:sticky;
+top:0;
+background:#8b9585;
+padding:12px 20px;
+z-index:1000;
+display:flex;
+justify-content:center;
+gap:25px;
+box-shadow:0 2px 6px rgba(0,0,0,0.15);
 }
-.service h3, .about h2, .testimonials h2 { color:#8b9585; }
-.service:hover, .testimonials .service:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.1); }
-.services { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
 
-/* About Section Fix */
-.about p { margin:0; }
-
-/* Contact Section */
-.contact { text-align:center; padding:40px 20px; color:#fff; }
-.contact a { display:inline-block; margin:5px 10px; color:#f0f0f0; font-weight:bold; }
-.contact a:hover { color:#dcdcdc; }
-
-@media(max-width:600px){
-  .hero h1 { font-size:2em; }
-  .hero p, .hero .location { font-size:1em; }
-  section, .hero { padding:40px 15px; }
-  .about, .services, .testimonials { margin:30px 0; }
-  .services { flex-direction:column; gap:15px; }
+.navbar a{
+color:white;
+font-weight:bold;
+font-size:14px;
 }
+
+.navbar a:hover{
+opacity:0.8;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:80px 20px;
+background:linear-gradient(135deg,#8b9585,#6b705c);
+color:white;
+}
+
+.hero h1{
+font-size:2.8em;
+}
+
+.hero p{
+max-width:600px;
+margin:auto;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+background:white;
+color:#6b705c;
+padding:14px 28px;
+border-radius:8px;
+font-weight:bold;
+}
+
+/* SECTIONS */
+
+.section-title{
+text-align:center;
+color:white;
+margin:40px 0 20px 0;
+font-size:2em;
+}
+
+.card{
+background:white;
+color:#8b9585;
+padding:25px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.grid{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
+.grid .card{
+flex:1 1 250px;
+}
+
+/* TESTIMONIALS */
+
+.review-stars{
+font-size:20px;
+margin-bottom:10px;
+}
+
+/* INSTAGRAM */
+
+.instagram-section{
+text-align:center;
+color:white;
+}
+
+/* BOOKING */
+
+.booking iframe{
+border-radius:12px;
+background:white;
+}
+
+/* FLOATING BUTTON */
+
+.book-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:white;
+color:#6b705c;
+padding:14px 22px;
+border-radius:30px;
+font-weight:bold;
+box-shadow:0 6px 15px rgba(0,0,0,0.25);
+z-index:999;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.grid{
+flex-direction:column;
+}
+
+.hero h1{
+font-size:2em;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
-<!-- Top Contact + Social Bar -->
-<div class="top-contact-bar">
-  <a href="tel:07368582502">Call</a>
-  <a href="mailto:Kn.wellnessstudio@gmail.com">Email</a>
-  <a href="https://wa.me/+447368582502" target="_blank">WhatsApp</a>
-  <a href="https://instagram.com/kn.wellnessstudio" target="_blank">
-    <svg viewBox="0 0 448 512"><path d="M224,202.66A53.34,53.34,0,1,0,277.34,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.9-30.9C284.9,124.06,224,124,224,124s-60.9,0.06-93.81,6.76a54,54,0,0,0-30.9,30.9C93.06,157.1,93,224,93,224s0.06,66.9,6.76,99.81a54,54,0,0,0,30.9,30.9C163.1,380.94,224,381,224,381s60.9-.06,93.81-6.76a54,54,0,0,0,30.9-30.9C354.94,290.9,355,224,355,224S354.94,157.1,348.71,161.66ZM224,338a84,84,0,1,1,84-84A84,84,0,0,1,224,338Z"/></svg>
-  </a>
-  <a href="https://facebook.com/kn.wellnessstudio" target="_blank">
-    <svg viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91V127.42c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S278.43 0 243.36 0c-73.22 0-121.36 44.38-121.36 124.72v70.62H56.89V288h65.11v224h100.17V288z"/></svg>
-  </a>
+<!-- NAVIGATION -->
+
+<div class="navbar">
+<a href="#">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Book</a>
 </div>
 
-<!-- Logo -->
-<img src="your-logo.png" alt="KN Wellness Studio Logo" class="logo">
+<!-- HERO -->
 
-<!-- Hero Section -->
 <section class="hero">
-  <h1>Rest • Recover • Perform</h1>
 
-  <!-- Mini About Me -->
-  <p class="mini-about">Hi, I’m Kayla – helping you relax, recover, and perform at your best.</p>
+<h1>Rest • Recover • Perform</h1>
 
-  <p>Professional massage, rehabilitation & fitness support in a private, one-to-one setting.</p>
-  <p class="location">Serving Doncaster and the surrounding area</p>
-  <a href="#contact" class="btn">Book Your Session</a>
+<p>Hi, I'm Kayla. I help clients relax, recover and perform at their best with professional massage and rehabilitation support.</p>
 
-  <!-- Animated floating leaves -->
-  <div class="leaf" style="top:10%; left:15%; width:80px; height:80px; animation-duration:28s;"></div>
-  <div class="leaf" style="top:30%; left:70%; width:60px; height:60px; animation-duration:22s;"></div>
-  <div class="leaf" style="top:60%; left:40%; width:90px; height:90px; animation-duration:26s;"></div>
-  <div class="leaf" style="top:80%; left:80%; width:60px; height:60px; animation-duration:20s;"></div>
+<a href="#contact" class="btn">Book Now</a>
+
 </section>
 
-<!-- About Section -->
-<section class="about container">
-  <h2 class="section-title">About Me</h2>
-  <p>Hi, I’m Kayla! I help clients feel their best through a blend of relaxation, rehabilitation, and performance support. Whether you’re easing tension, recovering from injury, or aiming to improve strength and mobility, I’ll guide you with one-to-one sessions tailored to your goals.</p>
+<!-- ABOUT -->
+
+<section class="container" id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+
+<p>
+Hi, I'm Kayla. I work one-to-one with clients to improve recovery,
+reduce pain, increase mobility and support overall wellbeing.
+Every session is tailored to your body and your goals.
+</p>
+
+</div>
+
 </section>
 
-<!-- Services Section -->
-<section class="container">
-  <h2 class="section-title">How I Can Help</h2>
-  <div class="services">
-    <div class="service">
-      <h3>Relax & Reset</h3>
-      <p>Enjoy therapeutic and deep tissue massage, plus soothing treatments designed to release tension and restore balance.</p>
-    </div>
-    <div class="service">
-      <h3>Recover & Rebuild</h3>
-      <p>Sports massage and injury rehabilitation focused on improving mobility, reducing pain, and helping your body heal.</p>
-    </div>
-    <div class="service">
-      <h3>Strengthen & Perform</h3>
-      <p>One-to-one training and weight management support tailored to build strength, boost energy, and enhance overall performance.</p>
-    </div>
-  </div>
+<!-- SERVICES -->
+
+<section class="container" id="services">
+
+<h2 class="section-title">How I Can Help</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Relax & Reset</h3>
+<p>Therapeutic and deep tissue massage designed to release tension and restore balance.</p>
+</div>
+
+<div class="card">
+<h3>Recover & Rebuild</h3>
+<p>Sports massage and rehabilitation focused on improving mobility and reducing pain.</p>
+</div>
+
+<div class="card">
+<h3>Strengthen & Perform</h3>
+<p>One-to-one support to build strength, improve movement and enhance performance.</p>
+</div>
+
+</div>
+
 </section>
 
-<!-- Contact Section -->
-<section class="contact container" id="contact">
-  <h2 class="section-title">Get In Touch</h2>
-  <p>Ready to book or have a question? Reach out today.</p>
-  <a href="tel:1234567890">Call</a> | 
-  <a href="mailto:youremail@example.com">Email</a> | 
-  <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+<!-- TESTIMONIALS -->
+
+<section class="container" id="reviews">
+
+<h2 class="section-title">Client Testimonials</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="review-stars">★★★★★</div>
+<p>"Fantastic treatment and very professional. My back felt better immediately."</p>
+<b>— Sarah</b>
+</div>
+
+<div class="card">
+<div class="review-stars">★★★★★</div>
+<p>"Kayla is extremely knowledgeable and helped my shoulder pain massively."</p>
+<b>— James</b>
+</div>
+
+<div class="card">
+<div class="review-stars">★★★★★</div>
+<p>"Best massage I've had. Always feel amazing afterwards."</p>
+<b>— Emma</b>
+</div>
+
+</div>
+
 </section>
 
-<script>
-// Fade-in for section titles and boxes
-const titles = document.querySelectorAll('.section-title');
-const boxes = document.querySelectorAll('.service, .about');
+<!-- INSTAGRAM -->
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.2 });
+<section class="container instagram-section">
 
-titles.forEach(title => observer.observe(title));
-boxes.forEach(box => observer.observe(box));
+<h2 class="section-title">Follow KN Wellness Studio</h2>
 
-// Create leaf SVG dynamically for each floating leaf
-document.querySelectorAll('.leaf').forEach(leaf => {
-  leaf.innerHTML = `<svg viewBox="0 0 64 64" fill="#6b705c" xmlns="http://www.w3.org/2000/svg"><path d="M32 2C14 20 2 32 2 32s12 12 30 30c18-18 30-30 30-30S50 20 32 2z"/></svg>`;
-});
-</script>
+<p>Wellness tips, recovery advice and studio updates.</p>
+
+<br>
+
+<a class="btn" href="https://instagram.com/kn.wellnessstudio" target="_blank">
+Follow on Instagram
+</a>
+
+</section>
+
+<!-- BOOKING -->
+
+<section class="container booking" id="contact">
+
+<h2 class="section-title">Book Your Session</h2>
+
+<p style="text-align:center;color:white;">
+Choose a time that works for you.
+</p>
+
+<br>
+
+<iframe
+src="https://knwellness.setmore.com"
+width="100%"
+height="750"
+frameborder="0">
+</iframe>
+
+</section>
+
+<!-- FLOATING BUTTON -->
+
+<a href="#contact" class="book-float">Book Now</a>
 
 </body>
 </html>
+```
