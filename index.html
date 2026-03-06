@@ -12,7 +12,9 @@
 
 <style>
 
-html{scroll-behavior:smooth;}
+html{
+scroll-behavior:smooth;
+}
 
 body{
 margin:0;
@@ -50,6 +52,7 @@ z-index:1000;
 color:white;
 font-weight:bold;
 font-size:14px;
+text-decoration:none;
 }
 
 .navbar a:hover{
@@ -64,17 +67,19 @@ padding:40px 20px 10px;
 }
 
 .logo img{
-width:220px;
+width:230px;
 max-width:80%;
 }
 
 /* HERO */
 
 .hero{
+position:relative;
 text-align:center;
-padding:60px 20px;
+padding:70px 20px;
 background:linear-gradient(135deg,#8b9585,#6b705c);
 color:white;
+overflow:hidden;
 }
 
 .hero h1{
@@ -94,10 +99,44 @@ color:#6b705c;
 padding:14px 30px;
 border-radius:8px;
 font-weight:bold;
+text-decoration:none;
 }
 
 .btn:hover{
 opacity:0.9;
+}
+
+/* LEAVES */
+
+.leaf{
+position:absolute;
+opacity:0.15;
+z-index:1;
+animation:floatLeaf linear infinite;
+}
+
+@keyframes floatLeaf{
+
+0%{
+transform:translate(0,0) rotate(0deg);
+}
+
+25%{
+transform:translate(20px,-30px) rotate(10deg);
+}
+
+50%{
+transform:translate(-20px,-60px) rotate(-10deg);
+}
+
+75%{
+transform:translate(10px,-30px) rotate(8deg);
+}
+
+100%{
+transform:translate(0,0) rotate(0deg);
+}
+
 }
 
 /* SECTION TITLES */
@@ -165,6 +204,7 @@ border-radius:30px;
 font-weight:bold;
 box-shadow:0 6px 15px rgba(0,0,0,0.25);
 z-index:999;
+text-decoration:none;
 }
 
 /* MOBILE */
@@ -194,17 +234,21 @@ width:180px;
 <!-- NAVBAR -->
 
 <div class="navbar">
+
 <a href="#">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#reviews">Reviews</a>
 <a href="#contact">Book</a>
+
 </div>
 
-<!-- LARGE LOGO -->
+<!-- LOGO -->
 
 <div class="logo">
+
 <img src="your-logo.png" alt="KN Wellness Studio Logo">
+
 </div>
 
 <!-- HERO -->
@@ -214,10 +258,20 @@ width:180px;
 <h1>Rest • Recover • Perform</h1>
 
 <p>
-Hi, I'm Kayla. Helping you relax, recover and perform at your best with professional massage, rehabilitation and one-to-one support.
+Hi, I'm Kayla. Helping you relax, recover and perform at your best with professional massage and rehabilitation support.
 </p>
 
 <a href="#contact" class="btn">Book Your Session</a>
+
+<!-- Floating Leaves -->
+
+<div class="leaf" style="top:10%;left:15%;width:70px;height:70px;animation-duration:28s;"></div>
+
+<div class="leaf" style="top:30%;left:75%;width:60px;height:60px;animation-duration:24s;"></div>
+
+<div class="leaf" style="top:70%;left:40%;width:90px;height:90px;animation-duration:30s;"></div>
+
+<div class="leaf" style="top:85%;left:80%;width:60px;height:60px;animation-duration:26s;"></div>
 
 </section>
 
@@ -230,7 +284,9 @@ Hi, I'm Kayla. Helping you relax, recover and perform at your best with professi
 <div class="card">
 
 <p>
+
 Hi, I'm Kayla. I help clients reduce pain, improve mobility and recover properly through personalised treatment and support. Every session is tailored to your body and your goals so you can feel and perform at your best.
+
 </p>
 
 </div>
@@ -246,18 +302,33 @@ Hi, I'm Kayla. I help clients reduce pain, improve mobility and recover properly
 <div class="grid">
 
 <div class="card">
+
 <h3>Relax & Reset</h3>
-<p>Therapeutic and deep tissue massage designed to release tension and restore balance.</p>
+
+<p>
+Therapeutic and deep tissue massage designed to release tension and restore balance.
+</p>
+
 </div>
 
 <div class="card">
+
 <h3>Recover & Rebuild</h3>
-<p>Sports massage and rehabilitation focused on improving mobility and reducing pain.</p>
+
+<p>
+Sports massage and rehabilitation focused on improving mobility and reducing pain.
+</p>
+
 </div>
 
 <div class="card">
+
 <h3>Strengthen & Perform</h3>
-<p>One-to-one support to build strength, improve movement and enhance performance.</p>
+
+<p>
+One-to-one support to build strength, improve movement and enhance performance.
+</p>
+
 </div>
 
 </div>
@@ -273,21 +344,39 @@ Hi, I'm Kayla. I help clients reduce pain, improve mobility and recover properly
 <div class="grid">
 
 <div class="card">
+
 <div class="review-stars">★★★★★</div>
-<p>"Fantastic treatment and very professional. My back felt better immediately."</p>
+
+<p>
+"Fantastic treatment and very professional. My back felt better immediately."
+</p>
+
 <b>— Sarah</b>
+
 </div>
 
 <div class="card">
+
 <div class="review-stars">★★★★★</div>
-<p>"Kayla is extremely knowledgeable and helped my shoulder pain massively."</p>
+
+<p>
+"Kayla is extremely knowledgeable and helped my shoulder pain massively."
+</p>
+
 <b>— James</b>
+
 </div>
 
 <div class="card">
+
 <div class="review-stars">★★★★★</div>
-<p>"Best massage I've had. Always feel amazing afterwards."</p>
+
+<p>
+"Best massage I've had. Always feel amazing afterwards."
+</p>
+
 <b>— Emma</b>
+
 </div>
 
 </div>
@@ -305,7 +394,9 @@ Hi, I'm Kayla. I help clients reduce pain, improve mobility and recover properly
 <br>
 
 <a class="btn" href="https://instagram.com/kn.wellnessstudio" target="_blank">
+
 Follow on Instagram
+
 </a>
 
 </section>
@@ -331,9 +422,31 @@ frameborder="0">
 
 </section>
 
-<!-- FLOATING BOOK BUTTON -->
+<!-- FLOAT BUTTON -->
 
-<a href="#contact" class="book-float">Book Now</a>
+<a href="#contact" class="book-float">
+
+Book Now
+
+</a>
+
+<!-- Leaf SVG Generator -->
+
+<script>
+
+document.querySelectorAll('.leaf').forEach(leaf => {
+
+leaf.innerHTML = `
+<svg viewBox="0 0 100 100" fill="#6b705c" xmlns="http://www.w3.org/2000/svg">
+<path d="M50 5
+C20 25 10 50 50 95
+C90 50 80 25 50 5Z"/>
+</svg>
+`;
+
+});
+
+</script>
 
 </body>
 
