@@ -151,6 +151,13 @@ h1, h2, h3 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.25) !important;
 }
 
+/* MEET KAYLA TEXT */
+.card p {
+  max-width: 450px; /* narrower text for readability */
+  margin: 10px auto;
+  text-align: left;  /* optional: left-aligned for natural flow */
+}
+
 /* FLOAT BOOK BUTTON */
 .book-float {
   position: fixed;
