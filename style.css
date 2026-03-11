@@ -63,7 +63,7 @@ h1, h2, h3 {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 20px 20px 10px 20px; /* compressed spacing */
+  padding: 20px 20px 10px 20px;
   background: linear-gradient(135deg, #8b9585, #6b705c);
   color: white;
 }
@@ -75,7 +75,7 @@ h1, h2, h3 {
 .hero p {
   max-width: 480px;
   margin: 10px auto 15px auto;
-  text-align: center; /* center text for hero */
+  text-align: center !important;   /* force center alignment */
   line-height: 1.6;
   hyphens: auto;
 }
@@ -154,11 +154,11 @@ h1, h2, h3 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.25) !important;
 }
 
-/* TEXT PARAGRAPHS (center-aligned for About page) */
+/* CARD PARAGRAPHS (center-aligned) */
 .card p {
-  max-width: 500px;  /* slightly wider for natural flow */
+  max-width: 500px;
   margin: 10px auto;
-  text-align: center; /* center-align text */
+  text-align: center !important;  /* force center alignment */
   line-height: 1.6;
   hyphens: auto;
 }
