@@ -63,7 +63,7 @@ h1, h2, h3 {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 30px 20px; /* reduced padding to remove empty space */
   background: linear-gradient(135deg, #8b9585, #6b705c);
   color: white;
 }
@@ -78,6 +78,16 @@ h1, h2, h3 {
   margin-bottom: 25px;
 }
 
+/* HERO for ABOUT page (extra compact) */
+.hero-about {
+  padding: 20px 20px;
+}
+
+.hero-about h1 {
+  font-size: 2em;
+}
+
+/* BUTTONS */
 .btn {
   display: inline-block;
   background: white;
@@ -129,10 +139,17 @@ h1, h2, h3 {
   flex: 1 1 250px;
 }
 
-/* TESTIMONIALS */
-.review-stars {
-  font-size: 20px;
-  margin-bottom: 10px;
+/* PROFILE PHOTO */
+.profile-photo {
+  width: 90px !important;
+  height: 90px !important;
+  max-width: 90px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 auto 15px auto !important;
+  border: 3px solid rgba(255,255,255,0.5) !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25) !important;
 }
 
 /* FLOAT BOOK BUTTON */
@@ -146,19 +163,6 @@ h1, h2, h3 {
   border-radius: 30px;
   font-weight: bold;
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-}
-
-/* PROFILE PHOTO - FORCE CIRCLE */
-.profile-photo {
-  width: 90px !important;
-  height: 90px !important;
-  max-width: 90px !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
-  display: block !important;
-  margin: 0 auto 15px auto !important;
-  border: 3px solid rgba(255,255,255,0.5) !important;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25) !important;
 }
 
 /* MOBILE */
