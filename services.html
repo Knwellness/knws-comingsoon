@@ -5,171 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KN Wellness Studio - Services</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Lato', sans-serif;
-      margin: 0;
-      background: linear-gradient(180deg, #8b9585 0%, #7c8676 40%, #6b705c 100%);
-      color: white;
-      line-height: 1.6;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 10px;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    /* NAVBAR */
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: #8b9585;
-      padding: 12px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 1000;
-    }
-
-    .navbar a {
-      color: white;
-      font-weight: bold;
-      font-size: 14px;
-      text-decoration: none;
-    }
-
-    .navbar a:hover {
-      opacity: 0.8;
-    }
-
-    .navbar .divider {
-      color: white;
-      opacity: 0.6;
-    }
-
-    /* LOGO */
-    .logo {
-      text-align: center;
-      padding: 40px 20px 10px;
-    }
-
-    .logo img {
-      width: 220px;
-      max-width: 80%;
-    }
-
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 40px 20px 20px 20px;
-      background: linear-gradient(135deg, #8b9585, #6b705c);
-      color: white;
-    }
-
-    .hero h1 {
-      font-size: 2.8em;
-    }
-
-    .hero p {
-      max-width: 750px;
-      margin: 0 auto 15px auto;
-      text-align: center;
-      line-height: 1.6;
-    }
-
-    /* SECTION TITLE */
-    .section-title {
-      text-align: center;
-      color: white;
-      margin: 40px 0 20px 0;
-      font-size: 2em;
-    }
-
-    /* CARDS */
-    .card {
-      background: rgba(255,255,255,0.18);
-      color: white;
-      padding: 30px;
-      border-radius: 18px;
-      text-align: center;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.15);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255,255,255,0.25);
-      transition: all 0.35s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 18px 45px rgba(0,0,0,0.25);
-    }
-
-    .grid {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .grid .card {
-      flex: 1 1 250px;
-    }
-
-    .card p {
-      max-width: 600px;
-      margin: 10px auto;
-      text-align: center;
-      line-height: 1.6;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 15px 0 0 0;
-    }
-
-    li {
-      margin: 8px 0;
-      font-weight: bold;
-    }
-
-    /* FLOAT BOOK BUTTON */
-    .book-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: white;
-      color: #6b705c;
-      padding: 14px 22px;
-      border-radius: 30px;
-      font-weight: bold;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-    }
-
-    /* RESPONSIVE */
-    @media(max-width:700px) {
-      .grid { flex-direction: column; }
-      .logo img { width: 180px; }
-      .hero h1 { font-size: 2em; }
-    }
-
-    @media(min-width:1200px){
-      .hero p { max-width:850px; }
-      .card p { max-width:650px; }
-    }
-
-  </style>
+  <!-- Link to your existing CSS file -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -195,10 +32,11 @@
     <p>Discover our range of relaxation and sports massages designed to suit your needs.</p>
   </div>
 
-  <!-- SERVICES -->
+  <!-- SERVICES CARDS -->
   <div class="container">
     <div class="grid">
 
+      <!-- Relaxation Massages -->
       <div class="card">
         <h3>Relaxation Massages</h3>
         <p>Eases tension and promotes deep relaxation.</p>
@@ -210,6 +48,7 @@
         </ul>
       </div>
 
+      <!-- Sports Massages -->
       <div class="card">
         <h3>Sports Massages</h3>
         <p>Supports muscle recovery and relieves strain.</p>
@@ -220,6 +59,7 @@
         </ul>
       </div>
 
+      <!-- Add-Ons -->
       <div class="card">
         <h3>Add-Ons</h3>
         <p>Enhance your session with targeted treatments.</p>
@@ -233,7 +73,7 @@
     </div>
   </div>
 
-  <!-- FLOATING BOOK NOW -->
+  <!-- FLOATING BOOK NOW BUTTON -->
   <a href="contact.html" class="book-float">Book Now</a>
 
 </body>
