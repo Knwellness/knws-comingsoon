@@ -1,4 +1,3 @@
-/* GENERAL STYLES */
 html { scroll-behavior: smooth; }
 
 body {
@@ -72,13 +71,15 @@ h1, h2, h3 {
   font-size: 2.8em;
 }
 
+/* Wider hero text */
 .hero p {
-  max-width: 650px; /* wider to avoid cutting words */
+  max-width: 750px;          /* wider for cleaner look */
   margin: 10px auto 15px auto;
   text-align: center !important;
   line-height: 1.6;
-  hyphens: auto;
-  word-wrap: break-word;
+  hyphens: none;             /* stop broken words */
+  overflow-wrap: normal;
+  word-wrap: normal;
 }
 
 /* HERO for ABOUT page */
@@ -155,14 +156,15 @@ h1, h2, h3 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.25) !important;
 }
 
-/* CARD PARAGRAPHS */
+/* Card paragraphs */
 .card p {
-  max-width: 520px;
+  max-width: 600px;           /* slightly wider for balance */
   margin: 10px auto;
   text-align: center !important;
   line-height: 1.6;
-  hyphens: auto;
-  word-wrap: break-word;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-wrap: normal;
 }
 
 /* FLOAT BOOK BUTTON */
@@ -188,5 +190,15 @@ h1, h2, h3 {
   }
   .logo img {
     width: 180px;
+  }
+}
+
+/* WIDER ON LARGE SCREENS */
+@media(min-width: 1200px) {
+  .hero p {
+    max-width: 850px;         /* desktop wide for less blocky feel */
+  }
+  .card p {
+    max-width: 650px;
   }
 }
