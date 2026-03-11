@@ -1,4 +1,4 @@
-/* GENERAL */
+/* GENERAL STYLES */
 html { scroll-behavior: smooth; }
 
 body {
@@ -148,17 +148,17 @@ h1, h2, h3 {
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
-/* PROFILE PHOTO */
+/* PROFILE PHOTO - FORCE CIRCLE */
 .profile-photo {
-  width: 90px;               /* fixed size */
-  height: 90px;
-  max-width: 100%;            /* prevents it from stretching */
-  border-radius: 50%;         /* makes it circular */
-  object-fit: cover;          /* crop rectangle images nicely */
-  display: block;
-  margin: 0 auto 15px auto;   /* center + spacing */
-  border: 3px solid rgba(255,255,255,0.5);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  width: 90px !important;
+  height: 90px !important;
+  max-width: 90px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 auto 15px auto !important;
+  border: 3px solid rgba(255,255,255,0.5) !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25) !important;
 }
 
 /* MOBILE */
