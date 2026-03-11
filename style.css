@@ -1,3 +1,4 @@
+/* GENERAL */
 html { scroll-behavior: smooth; }
 
 body {
@@ -147,6 +148,19 @@ h1, h2, h3 {
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
+/* PROFILE PHOTO */
+.profile-photo {
+  width: 90px;               /* fixed size */
+  height: 90px;
+  max-width: 100%;            /* prevents it from stretching */
+  border-radius: 50%;         /* makes it circular */
+  object-fit: cover;          /* crop rectangle images nicely */
+  display: block;
+  margin: 0 auto 15px auto;   /* center + spacing */
+  border: 3px solid rgba(255,255,255,0.5);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
 /* MOBILE */
 @media(max-width:700px) {
   .hero h1 {
@@ -158,14 +172,4 @@ h1, h2, h3 {
   .logo img {
     width: 180px;
   }
-}
-.profile-photo {
-  width: 80px;               /* circle width */
-  height: 80px;              /* circle height */
-  max-width: 100%;           /* prevents it from stretching inside cards */
-  border-radius: 50%;        /* makes it circular */
-  object-fit: cover;         /* crops rectangular images nicely */
-  display: block;            
-  margin: 0 auto 15px auto;  /* centers the image above text */
-  border: 3px solid rgba(255,255,255,0.5);  /* optional border */
 }
