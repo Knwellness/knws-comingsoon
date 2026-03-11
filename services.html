@@ -24,17 +24,10 @@
       margin-bottom: 10px;
     }
 
-    a { text-decoration: none; }
-
-    /* LOGO */
-    .logo {
-      text-align: center;
-      padding: 40px 20px 10px;
-    }
-
-    .logo img {
-      width: 220px;
-      max-width: 80%;
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
     /* NAVBAR */
@@ -54,6 +47,7 @@
       color: white;
       font-weight: bold;
       font-size: 14px;
+      text-decoration: none;
     }
 
     .navbar a:hover {
@@ -63,6 +57,17 @@
     .navbar .divider {
       color: white;
       opacity: 0.6;
+    }
+
+    /* LOGO */
+    .logo {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    .logo img {
+      width: 220px;
+      max-width: 80%;
     }
 
     /* HERO */
@@ -75,7 +80,6 @@
 
     .hero h1 {
       font-size: 2.8em;
-      margin-bottom: 10px;
     }
 
     .hero p {
@@ -83,13 +87,6 @@
       margin: 0 auto 15px auto;
       text-align: center;
       line-height: 1.6;
-    }
-
-    /* CONTAINER */
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
     }
 
     /* SECTION TITLE */
@@ -147,7 +144,7 @@
       font-weight: bold;
     }
 
-    /* FLOAT BOOK NOW BUTTON */
+    /* FLOAT BOOK BUTTON */
     .book-float {
       position: fixed;
       bottom: 25px;
@@ -158,9 +155,9 @@
       border-radius: 30px;
       font-weight: bold;
       box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-      z-index: 1000;
     }
 
+    /* RESPONSIVE */
     @media(max-width:700px) {
       .grid { flex-direction: column; }
       .logo img { width: 180px; }
@@ -171,6 +168,7 @@
       .hero p { max-width:850px; }
       .card p { max-width:650px; }
     }
+
   </style>
 </head>
 <body>
@@ -197,11 +195,10 @@
     <p>Discover our range of relaxation and sports massages designed to suit your needs.</p>
   </div>
 
-  <!-- SERVICES CARDS -->
+  <!-- SERVICES -->
   <div class="container">
     <div class="grid">
 
-      <!-- Relaxation Massages -->
       <div class="card">
         <h3>Relaxation Massages</h3>
         <p>Eases tension and promotes deep relaxation.</p>
@@ -213,7 +210,6 @@
         </ul>
       </div>
 
-      <!-- Sports Massages -->
       <div class="card">
         <h3>Sports Massages</h3>
         <p>Supports muscle recovery and relieves strain.</p>
@@ -224,7 +220,6 @@
         </ul>
       </div>
 
-      <!-- Add-Ons -->
       <div class="card">
         <h3>Add-Ons</h3>
         <p>Enhance your session with targeted treatments.</p>
@@ -238,7 +233,7 @@
     </div>
   </div>
 
-  <!-- FLOATING BOOK NOW BUTTON -->
+  <!-- FLOATING BOOK NOW -->
   <a href="contact.html" class="book-float">Book Now</a>
 
 </body>
