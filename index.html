@@ -1,55 +1,178 @@
-<!DOCTYPE html>
-<html lang="en">
+/* GENERAL STYLES */
+html { scroll-behavior: smooth; }
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KN Wellness Studio</title>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #8b9585 0%, #7c8676 40%, #6b705c 100%);
+  color: #333;
+  line-height: 1.6;
+}
 
-<body>
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <a href="index.html">Home</a><span class="divider">|</span>
-  <a href="about.html">About</a><span class="divider">|</span>
-  <a href="services.html">Services</a><span class="divider">|</span>
-  <a href="reviews.html">Reviews</a><span class="divider">|</span>
-  <a href="booking.html">Book</a><span class="divider">|</span>
-  <a href="contact.html">Contact</a>
-</div>
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
 
-<!-- LOGO -->
-<div class="logo">
-  <img src="your-logo.png" alt="KN Wellness Studio Logo">
-</div>
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #8b9585;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Rest • Recover • Perform</h1>
-  <p>Hi, I’m Kayla — helping you relax, recover, and move at your best with professional massage, and performance support in a calm, private one-to-one setting.</p>
-  <a href="booking.html" class="btn">Book Your Session</a>
-</section>
+.navbar a {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
 
-<!-- SERVICES -->
-<section class="container">
-  <h2 class="section-title">Treatments & Services</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Relax & Reset</h3>
-      <p>Therapeutic and deep tissue massage designed to release tension and restore balance.</p>
-    </div>
-    <div class="card">
-      <h3>Strengthen & Perform</h3>
-      <p>One-to-one support to build strength, improve movement and enhance performance.</p>
-    </div>
-  </div>
-</section>
+.navbar a:hover {
+  opacity: 0.8;
+}
 
-<!-- FLOATING BOOK BUTTON -->
-<a href="booking.html" class="book-float">Book Now</a>
+.navbar .divider {
+  color: white;
+  opacity: 0.6;
+}
 
-</body>
-</html>
+/* LOGO */
+.logo {
+  text-align: center;
+  padding: 40px 20px 10px;
+}
+
+.logo img {
+  width: 220px;
+  max-width: 80%;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 20px 20px 10px 20px; /* compressed spacing */
+  background: linear-gradient(135deg, #8b9585, #6b705c);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+}
+
+.hero p {
+  max-width: 550px;
+  margin: 10px auto 15px auto;
+}
+
+/* HERO for ABOUT page */
+.hero-about {
+  padding: 20px 20px;
+}
+
+.hero-about h1 {
+  font-size: 2em;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  background: white;
+  color: #6b705c;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* SECTION TITLES */
+.section-title {
+  text-align: center;
+  color: white;
+  margin: 40px 0 20px 0;
+  font-size: 2em;
+}
+
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.18);
+  color: white;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid .card {
+  flex: 1 1 250px;
+}
+
+/* PROFILE PHOTO */
+.profile-photo {
+  width: 90px !important;
+  height: 90px !important;
+  max-width: 90px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  display: block !important;
+  margin: 0 auto 15px auto !important;
+  border: 3px solid rgba(255,255,255,0.5) !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25) !important;
+}
+
+/* FLOAT BOOK BUTTON */
+.book-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: white;
+  color: #6b705c;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* MOBILE */
+@media(max-width:700px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+  .grid {
+    flex-direction: column;
+  }
+  .logo img {
+    width: 180px;
+  }
+}
