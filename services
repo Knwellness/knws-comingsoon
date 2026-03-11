@@ -1,1 +1,39 @@
+<section id="services" class="container">
+  <h2 class="section-title">Our Services</h2>
 
+  <!-- Relaxation Massages -->
+  <div class="grid">
+    <div class="card">
+      <h3>Relaxation Massages</h3>
+      <p>Eases tension and promotes deep relaxation.</p>
+      <ul>
+        <li>Upper Neck, Back & Shoulders – £30</li>
+        <li>Full Back, Neck & Shoulders – £35</li>
+        <li>Full Back & Legs – £35</li>
+        <li>Full Body Massage – £50</li>
+      </ul>
+    </div>
+
+    <!-- Sports Massages -->
+    <div class="card">
+      <h3>Sports Massages</h3>
+      <p>Supports muscle recovery and relieves strain.</p>
+      <ul>
+        <li>Back, Neck & Shoulders – £35</li>
+        <li>Quads, Hamstrings & Calves – £35</li>
+        <li>Back, Neck, Shoulders & Legs – £45</li>
+      </ul>
+    </div>
+
+    <!-- Add-Ons -->
+    <div class="card">
+      <h3>Add-Ons</h3>
+      <p>Enhance your massage experience with these extras.</p>
+      <ul>
+        <li>Foot Massage – £5</li>
+        <li>Hand Massage – £5</li>
+        <li>Face Massage – £10</li>
+      </ul>
+    </div>
+  </div>
+</section>
