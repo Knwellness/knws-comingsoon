@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ==== GENERAL STYLES ==== */
     html { scroll-behavior: smooth; }
 
     body {
@@ -25,13 +24,75 @@
       margin-bottom: 10px;
     }
 
+    a { text-decoration: none; }
+
+    /* LOGO */
+    .logo {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+
+    .logo img {
+      width: 220px;
+      max-width: 80%;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: #8b9585;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .navbar a:hover {
+      opacity: 0.8;
+    }
+
+    .navbar .divider {
+      color: white;
+      opacity: 0.6;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+      background: linear-gradient(135deg, #8b9585, #6b705c);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: 0 auto 15px auto;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* CONTAINER */
     .container {
       max-width: 900px;
       margin: auto;
       padding: 40px 20px;
     }
 
-    /* SECTION TITLES */
+    /* SECTION TITLE */
     .section-title {
       text-align: center;
       color: white;
@@ -86,19 +147,58 @@
       font-weight: bold;
     }
 
-    @media(max-width:700px) {
-      .grid {
-        flex-direction: column;
-      }
+    /* FLOAT BOOK NOW BUTTON */
+    .book-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: white;
+      color: #6b705c;
+      padding: 14px 22px;
+      border-radius: 30px;
+      font-weight: bold;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      z-index: 1000;
     }
 
+    @media(max-width:700px) {
+      .grid { flex-direction: column; }
+      .logo img { width: 180px; }
+      .hero h1 { font-size: 2em; }
+    }
+
+    @media(min-width:1200px){
+      .hero p { max-width:850px; }
+      .card p { max-width:650px; }
+    }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h2 class="section-title">Our Services</h2>
+  <!-- LOGO -->
+  <div class="logo">
+    <a href="index.html"><img src="logo.png" alt="KN Wellness Studio Logo"></a>
+  </div>
 
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <span class="divider">|</span>
+    <a href="services.html">Services</a>
+    <span class="divider">|</span>
+    <a href="about.html">About</a>
+    <span class="divider">|</span>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Our Services</h1>
+    <p>Discover our range of relaxation and sports massages designed to suit your needs.</p>
+  </div>
+
+  <!-- SERVICES CARDS -->
+  <div class="container">
     <div class="grid">
 
       <!-- Relaxation Massages -->
@@ -137,6 +237,9 @@
 
     </div>
   </div>
+
+  <!-- FLOATING BOOK NOW BUTTON -->
+  <a href="contact.html" class="book-float">Book Now</a>
 
 </body>
 </html>
