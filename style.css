@@ -63,7 +63,7 @@ h1, h2, h3 {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 30px 20px; /* reduced padding to remove empty space */
+  padding: 20px 20px 10px 20px; /* compressed spacing */
   background: linear-gradient(135deg, #8b9585, #6b705c);
   color: white;
 }
@@ -73,12 +73,11 @@ h1, h2, h3 {
 }
 
 .hero p {
-  max-width: 650px;
-  margin: auto;
-  margin-bottom: 25px;
+  max-width: 550px;
+  margin: 10px auto 15px auto;
 }
 
-/* HERO for ABOUT page (extra compact) */
+/* HERO for ABOUT page */
 .hero-about {
   padding: 20px 20px;
 }
