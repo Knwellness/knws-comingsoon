@@ -1,148 +1,217 @@
+/*======================
+  GLOBAL STYLES
+======================*/
 html { scroll-behavior: smooth; }
 
-body{
-font-family:'Lato',sans-serif;
-margin:0;
-background:linear-gradient(180deg,#8b9585 0%,#7c8676 40%,#6b705c 100%);
-color:#333;
-line-height:1.6;
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #8b9585 0%, #7c8676 40%, #6b705c 100%);
+  color: #333;
+  line-height: 1.6;
 }
 
-h1,h2,h3{
-font-family:'Playfair Display',serif;
-margin-bottom:10px;
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
 }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:20px;
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 15px 20px; /* reduced from 20px */
 }
 
-/* NAVBAR */
-
-.navbar{
-position:sticky;
-top:0;
-background:#8b9585;
-padding:12px;
-display:flex;
-justify-content:center;
-gap:20px;
-box-shadow:0 2px 8px rgba(0,0,0,0.2);
-z-index:1000;
+/*======================
+  NAVBAR
+======================*/
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #8b9585;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
-.navbar a{
-color:white;
-font-weight:bold;
-font-size:14px;
-text-decoration:none;
+.navbar a {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
 }
 
-.navbar a:hover{
-opacity:0.8;
+.navbar a:hover {
+  opacity: 0.8;
 }
 
-/* LOGO */
-
-.logo{
-text-align:center;
-padding:40px 20px 10px;
+.navbar .divider {
+  color: white;
+  opacity: 0.6;
 }
 
-.logo img{
-width:220px;
-max-width:80%;
+/*======================
+  LOGO
+======================*/
+.logo {
+  text-align: center;
+  padding: 40px 20px 10px;
 }
 
-/* HERO */
-
-.hero{
-text-align:center;
-padding:70px 20px;
-color:white;
+.logo img {
+  width: 220px;
+  max-width: 80%;
 }
 
-.hero h1{
-font-size:2.6em;
+/*======================
+  HERO
+======================*/
+.hero {
+  text-align: center;
+  padding: 40px 20px; /* reduced from 70px */
+  color: white;
 }
 
-.hero p{
-max-width:650px;
-margin:auto;
-margin-bottom:25px;
+.hero h1 {
+  font-size: 2.6em;
 }
 
-/* BUTTON */
-
-.btn{
-display:inline-block;
-background:white;
-color:#6b705c;
-padding:14px 30px;
-border-radius:8px;
-font-weight:bold;
-text-decoration:none;
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  margin-bottom: 25px;
 }
 
-.btn:hover{
-opacity:0.9;
+/*======================
+  BUTTON
+======================*/
+.btn {
+  display: inline-block;
+  background: white;
+  color: #6b705c;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-/* SECTION TITLES */
-
-.section-title{
-text-align:center;
-color:white;
-margin:50px 0 25px 0;
-font-size:2em;
+.btn:hover {
+  opacity: 0.9;
 }
 
-/* CARDS */
-
-.grid{
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
+/*======================
+  SECTION TITLES
+======================*/
+.section-title {
+  text-align: center;
+  color: white;
+  margin: 30px 0 15px; /* reduced from 50px 0 25px */
+  font-size: 2em;
 }
 
-.card{
-background:rgba(255,255,255,0.18);
-color:white;
-padding:30px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 10px 35px rgba(0,0,0,0.15);
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,0.25);
+/*======================
+  CARDS
+======================*/
+.card {
+  background: rgba(255,255,255,0.18);
+  color: white;
+  padding: 20px; /* reduced from 30px */
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: all 0.35s ease;
 }
 
-.grid .card{
-flex:1 1 250px;
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.25);
 }
 
-/* BOOK BUTTON */
-
-.book-float{
-position:fixed;
-bottom:25px;
-right:25px;
-background:white;
-color:#6b705c;
-padding:14px 22px;
-border-radius:30px;
-font-weight:bold;
-box-shadow:0 6px 15px rgba(0,0,0,0.25);
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-@media(max-width:700px){
+.grid .card {
+  flex: 1 1 250px;
+}
 
-.hero h1{font-size:2em;}
+/* Make <b> in card paragraphs appear on new line with small margin */
+.card p b {
+  display: block;
+  margin-top: 5px;
+}
 
-.grid{flex-direction:column;}
+/*======================
+  TESTIMONIAL STARS
+======================*/
+.review-stars {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
-.logo img{width:180px;}
+/*======================
+  BOOK BUTTON
+======================*/
+.book-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: white;
+  color: #6b705c;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  z-index: 999;
+}
 
+/*======================
+  IFRAME / BOOKING
+======================*/
+.booking iframe {
+  border-radius: 12px;
+  background: white;
+}
+
+/*======================
+  HORIZONTAL RULE
+======================*/
+hr {
+  border: none;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+  margin: 30px auto; /* reduced from 60px */
+  width: 60%;
+}
+
+/*======================
+  INSTAGRAM / BENEFITS
+======================*/
+.instagram, .benefits {
+  text-align: center;
+  color: white;
+}
+
+/*======================
+  MOBILE RESPONSIVENESS
+======================*/
+@media(max-width:700px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+  .grid {
+    flex-direction: column;
+  }
+  .logo img {
+    width: 180px;
+  }
 }
