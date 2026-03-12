@@ -1,231 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KN Wellness Studio | Relaxation, Deep Tissue & Sports Massage</title>
 <meta name="description" content="Relaxation, Deep Tissue & Sports Massage in a calm, private studio. Professional massage to relieve tension, reduce stress, and improve recovery.">
 
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-<style>
-/*======================
-  GLOBAL STYLES
-======================*/
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Lato', sans-serif;
-  margin: 0;
-  background: linear-gradient(180deg, #8b9585 0%, #7c8676 40%, #6b705c 100%);
-  color: #333;
-  line-height: 1.6;
-}
-
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 10px;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 15px 20px;
-}
-
-/*======================
-  NAVBAR
-======================*/
-.navbar {
-  position: sticky;
-  top: 0;
-  background: #8b9585;
-  padding: 12px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  z-index: 1000;
-}
-
-.navbar a {
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  opacity: 0.8;
-}
-
-/*======================
-  LOGO
-======================*/
-.logo {
-  text-align: center;
-  padding: 10px 0 10px; /* reduced top padding */
-  max-width: 100%;
-}
-
-.logo img {
-  width: 280px; /* slightly larger */
-  max-width: 100%;
-}
-
-/*======================
-  HERO
-======================*/
-.hero {
-  text-align: center;
-  padding: 30px 20px 40px; /* closer to logo */
-  color: white;
-}
-
-.hero h1 {
-  font-size: 2.4em;
-}
-
-.hero p {
-  max-width: 650px;
-  margin: auto;
-  margin-bottom: 25px;
-}
-
-/*======================
-  BUTTON
-======================*/
-.btn {
-  display: inline-block;
-  background: white;
-  color: #6b705c;
-  padding: 14px 30px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.btn:hover {
-  opacity: 0.9;
-}
-
-/*======================
-  SECTION TITLES
-======================*/
-.section-title {
-  text-align: center;
-  color: white;
-  margin: 30px 0 15px;
-  font-size: 2em;
-}
-
-/*======================
-  CARDS
-======================*/
-.card {
-  background: rgba(255,255,255,0.18);
-  color: white;
-  padding: 20px;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.25);
-  transition: all 0.35s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.25);
-}
-
-.grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.grid .card {
-  flex: 1 1 250px;
-}
-
-.card p b {
-  display: block;
-  margin-top: 5px;
-}
-
-/*======================
-  TESTIMONIAL STARS
-======================*/
-.review-stars {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-/*======================
-  BOOK BUTTON
-======================*/
-.book-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: white;
-  color: #6b705c;
-  padding: 14px 22px;
-  border-radius: 30px;
-  font-weight: bold;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  z-index: 999;
-}
-
-/*======================
-  IFRAME / BOOKING
-======================*/
-.booking iframe {
-  border-radius: 12px;
-  background: white;
-}
-
-/*======================
-  HORIZONTAL RULE
-======================*/
-hr {
-  border: none;
-  height: 1px;
-  background: rgba(255,255,255,0.2);
-  margin: 30px auto;
-  width: 60%;
-}
-
-/*======================
-  INSTAGRAM / BENEFITS
-======================*/
-.instagram, .benefits {
-  text-align: center;
-  color: white;
-}
-
-/*======================
-  MOBILE RESPONSIVENESS
-======================*/
-@media(max-width:700px) {
-  .hero h1 {
-    font-size: 2em;
-  }
-  .grid {
-    flex-direction: column;
-  }
-  .logo img {
-    width: 180px;
-  }
-}
-</style>
-
+<!-- Link to external CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- NAVBAR -->
@@ -257,17 +43,15 @@ hr {
   <div class="grid">
     <div class="card">
       <h3>Relaxation Massage</h3>
-      <p>Calming full-body massage designed to reduce stress, relax muscles, and restore balance.<b>60 min – £60</b></p>
+      <p>Full-body calming massage to reduce stress, relax muscles, and restore balance.<b>60 min – £60</b></p>
     </div>
-
     <div class="card">
       <h3>Deep Tissue Massage</h3>
       <p>Targets deeper muscle layers to relieve chronic tension and improve movement.<b>60 min – £65</b></p>
     </div>
-
     <div class="card">
       <h3>Sports Massage</h3>
-      <p>Ideal for active clients to reduce fatigue, improve recovery, and prevent injury.<b>60 min – £65</b></p>
+      <p>Supports active clients with recovery, fatigue reduction, and injury prevention.<b>60 min – £65</b></p>
     </div>
   </div>
 </section>
@@ -292,7 +76,7 @@ hr {
 <section class="container" id="about">
   <h2 class="section-title">Meet Your Therapist</h2>
   <div class="card">
-    <p>Hi, I'm Kayla, founder of KN Wellness Studio. I help clients feel their best through personalised relaxation, deep tissue, and sports massage treatments delivered in a calm, private one-to-one environment.</p>
+    <p>Hi, I'm Kayla, founder of KN Wellness Studio. I help clients feel their best through personalised Relaxation, Deep Tissue, and Sports Massage treatments delivered in a calm, private one-to-one environment.</p>
     <a href="about.html" class="btn">Read More About Me</a>
   </div>
 </section>
