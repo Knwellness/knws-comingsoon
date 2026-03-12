@@ -1,237 +1,69 @@
-/*======================
-  GLOBAL
-======================*/
 html { scroll-behavior: smooth; }
-body {
-  font-family: 'Lato', sans-serif;
-  margin: 0;
-  background: linear-gradient(180deg, #8b9585 0%, #7c8676 40%, #6b705c 100%);
-  color: #333;
-  line-height: 1.6;
-}
-h1,h2,h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
-.container { max-width: 900px; margin: auto; padding: 15px 20px; }
+body { font-family: 'Lato', sans-serif; margin:0; background: linear-gradient(180deg, #8b9585 0%, #7c8676 40%, #6b705c 100%); color:#333; line-height:1.6; }
 
-/*======================
-  NAVBAR
-======================*/
-.navbar {
-  position: sticky;
-  top: 0;
-  background: #8b9585;
-  padding: 12px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  z-index: 1000;
-}
-.navbar a { color: white; font-weight: bold; font-size: 14px; text-decoration: none; }
-.navbar a:hover { opacity: 0.8; }
+/* Headings */
+h1,h2,h3,h4 { font-family: 'Playfair Display', serif; margin-bottom:10px; }
 
-/*======================
-  LOGO
-======================*/
-.logo { text-align: center; padding: 10px 0 5px; max-width: 100%; }
-.logo img {
-  display: block;
-  margin: 0 auto;
-  width: 350px;
-  max-width: 100%;
-  height: auto;
-}
+/* Container */
+.container { max-width:900px; margin:auto; padding:20px; }
 
-/*======================
-  HERO
-======================*/
-.hero {
-  text-align: center;
-  padding: 10px 20px 30px;
-  color: white;
-}
-.hero h1 { font-size: 2.6em; margin-top: 5px; }
-.hero p { max-width: 650px; margin: 10px auto 25px; }
+/* NAVBAR */
+.navbar { position: sticky; top:0; background:#8b9585; padding:12px; display:flex; justify-content:center; gap:20px; box-shadow:0 2px 8px rgba(0,0,0,0.2); z-index:1000; }
+.navbar a { color:white; font-weight:bold; font-size:14px; text-decoration:none; }
+.navbar a:hover { opacity:0.8; }
+.navbar .divider { color:white; opacity:0.6; }
 
-/*======================
-  BUTTONS
-======================*/
-.btn {
-  display: inline-block;
-  background: white;
-  color: #6b705c;
-  padding: 14px 30px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-}
-.btn:hover { opacity: 0.9; }
+/* LOGO */
+.logo { text-align:center; padding:20px 20px 10px; }
+.logo img { width:260px; max-width:80%; }
 
-/*======================
-  SECTION TITLES
-======================*/
-.section-title {
-  text-align: center;
-  color: white;
-  margin: 25px 0 15px;
-  font-size: 2em;
-}
+/* HERO */
+.hero { text-align:center; padding:40px 20px; background: linear-gradient(135deg,#8b9585,#6b705c); color:white; }
+.hero h1 { font-size:2.6em; margin-bottom:15px; }
+.hero p { max-width:650px; margin:auto 0 25px; }
+.btn { display:inline-block; background:white; color:#6b705c; padding:14px 30px; border-radius:8px; font-weight:bold; text-decoration:none; }
+.btn:hover { opacity:0.9; }
 
-/*======================
-  CARDS
-======================*/
-.card {
-  background: rgba(255,255,255,0.18);
-  color: white;
-  padding: 20px;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.25);
-  transition: all 0.35s ease;
-}
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.25);
-}
-.grid { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
-.grid .card { flex: 1 1 250px; }
-.card p b { display: block; margin-top: 5px; }
+/* Divider */
+.divider-line { border:none; height:1px; background:rgba(255,255,255,0.2); margin:60px auto; width:60%; }
 
-/*======================
-  BENEFIT CARDS
-======================*/
-.benefits .grid { justify-content: space-around; gap: 15px; }
-.benefit-card {
-  flex: 1 1 160px;
-  padding: 18px;
-}
+/* CARDS */
+.card { background: rgba(255,255,255,0.18); color:white; padding:30px; border-radius:18px; text-align:center; box-shadow:0 10px 35px rgba(0,0,0,0.15); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,0.25); transition: all 0.35s ease; }
+.card:hover { transform:translateY(-8px); box-shadow:0 18px 45px rgba(0,0,0,0.25); }
+.grid { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+.grid .card { flex:1 1 250px; }
 
-/*======================
-  MEET KAYLA
-======================*/
-.about-card { padding: 20px; }
-.about-grid { display: flex; align-items: center; gap: 20px; }
-.about-photo img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-.about-text { flex: 1; }
+/* ABOUT IMAGE */
+.about-card { display:flex; align-items:center; gap:20px; text-align:left; }
+.about-card img { width:160px; height:160px; object-fit:cover; border-radius:50%; }
+
+/* BENEFITS CARDS / TICKS */
+.benefit-card { flex:1 1 160px; padding:25px 20px; border-radius:20px; background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1)); box-shadow:0 15px 35px rgba(0,0,0,0.25); transition:transform 0.35s ease, box-shadow 0.35s ease; text-align:center; }
+.benefit-card:hover { transform:translateY(-10px) scale(1.05); box-shadow:0 25px 45px rgba(0,0,0,0.3); }
+.tick-icon { width:40px; height:40px; margin:0 auto 10px; background: rgba(255,230,184,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; transition:transform 0.3s ease; }
+.benefit-card:hover .tick-icon { transform:scale(1.15); }
+
+/* HEADINGS & TEXT */
+.benefit-card h4, .card h4 { font-size:1.3em; margin-bottom:10px; font-weight:bold; color:white; }
+.benefit-card p, .card p { font-size:1em; line-height:1.4; color:white; }
+
+/* TESTIMONIALS */
+.review-stars { font-size:20px; margin-bottom:10px; }
+
+/* INSTAGRAM */
+.instagram { text-align:center; color:white; }
+
+/* BOOKING */
+.booking iframe { border-radius:12px; background:white; }
+
+/* FLOATING BOOK BUTTON */
+.book-float { position:fixed; bottom:25px; right:25px; background:white; color:#6b705c; padding:14px 22px; border-radius:30px; font-weight:bold; box-shadow:0 6px 15px rgba(0,0,0,0.25); z-index:999; }
+
+/* MOBILE */
 @media(max-width:700px){
-  .about-grid { flex-direction: column; align-items: center; text-align: center; }
-  .about-photo img { width: 150px; height: 150px; }
-}
-
-/*======================
-  TESTIMONIALS
-======================*/
-.review-stars { font-size: 20px; margin-bottom: 10px; }
-
-/*======================
-  BOOK BUTTON
-======================*/
-.book-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: white;
-  color: #6b705c;
-  padding: 14px 22px;
-  border-radius: 30px;
-  font-weight: bold;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  z-index: 999;
-}
-
-/*======================
-  IFRAME / BOOKING
-======================*/
-.booking iframe { border-radius: 12px; background: white; }
-
-/*======================
-  HORIZONTAL RULE
-======================*/
-hr { border: none; height: 1px; background: rgba(255,255,255,0.2); margin: 25px auto; width: 60%; }
-
-/*======================
-  INSTAGRAM / BENEFITS
-======================*/
-.instagram, .benefits { text-align: center; color: white; }
-
-/*======================
-  MOBILE
-======================*/
-@media(max-width:700px){
-  .hero h1 { font-size: 2em; }
-  .grid { flex-direction: column; }
-  .logo img { width: 180px; }
-}
-/* Benefit cards grid */
-.benefits .grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-}
-
-/* Card styling */
-.benefit-card {
-  flex: 1 1 160px;
-  padding: 25px 20px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
-  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  text-align: center;
-}
-
-/* Hover effect to lift card */
-.benefit-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 25px 45px rgba(0,0,0,0.3);
-}
-
-/* Circular gold tick */
-.tick-icon {
-  width: 40px;
-  height: 40px;
-  margin: 0 auto 10px;
-  background: rgba(255, 230, 184, 0.2); /* soft transparent gold background */
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  color: #fceabb; /* soft gold tick color */
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
-
-/* Tick grows slightly on card hover */
-.benefit-card:hover .tick-icon {
-  transform: scale(1.15);
-}
-
-/* Headings and text */
-.benefit-card h4 {
-  font-size: 1.3em;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: white;
-}
-
-.benefit-card p {
-  font-size: 1em;
-  line-height: 1.4;
-  color: white;
-}
-
-/* Mobile responsiveness */
-@media(max-width:700px){
-  .benefits .grid { flex-direction: column; align-items: center; }
-  .benefit-card { width: 90%; }
+  .hero h1 { font-size:2em; }
+  .grid, .benefits .grid { flex-direction:column; }
+  .logo img { width:180px; }
+  .about-card { flex-direction:column; text-align:center; }
+  .about-card img { margin-bottom:15px; }
 }
