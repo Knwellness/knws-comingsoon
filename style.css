@@ -32,11 +32,11 @@ h1,h2,h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
 /*======================
   LOGO
 ======================*/
-.logo { text-align: center; padding: 5px 0 0; max-width: 100%; }
+.logo { text-align: center; padding: 10px 0 5px; max-width: 100%; }
 .logo img {
   display: block;
   margin: 0 auto;
-  width: 350px;       /* larger logo */
+  width: 350px;
   max-width: 100%;
   height: auto;
 }
@@ -46,10 +46,10 @@ h1,h2,h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
 ======================*/
 .hero {
   text-align: center;
-  padding: 0 20px 30px;
+  padding: 10px 20px 30px;
   color: white;
 }
-.hero h1 { font-size: 2.4em; margin-top: 0; }
+.hero h1 { font-size: 2.6em; margin-top: 5px; }
 .hero p { max-width: 650px; margin: 10px auto 25px; }
 
 /*======================
@@ -72,7 +72,7 @@ h1,h2,h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
 .section-title {
   text-align: center;
   color: white;
-  margin: 30px 0 15px;
+  margin: 25px 0 15px;
   font-size: 2em;
 }
 
@@ -95,7 +95,7 @@ h1,h2,h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
   transform: translateY(-8px);
   box-shadow: 0 18px 45px rgba(0,0,0,0.25);
 }
-.grid { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+.grid { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
 .grid .card { flex: 1 1 250px; }
 .card p b { display: block; margin-top: 5px; }
 
@@ -105,17 +105,26 @@ h1,h2,h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
 .benefits .grid { justify-content: space-around; gap: 15px; }
 .benefit-card {
   flex: 1 1 160px;
-  background: rgba(255,255,255,0.18);
-  padding: 20px;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.25);
-  transition: all 0.35s ease;
+  padding: 18px;
 }
-.benefit-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
-.benefit-card .icon { font-size: 36px; margin-bottom: 12px; }
+
+/*======================
+  MEET KAYLA
+======================*/
+.about-card { padding: 20px; }
+.about-grid { display: flex; align-items: center; gap: 20px; }
+.about-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.about-text { flex: 1; }
+@media(max-width:700px){
+  .about-grid { flex-direction: column; align-items: center; text-align: center; }
+  .about-photo img { width: 150px; height: 150px; }
+}
 
 /*======================
   TESTIMONIALS
@@ -146,7 +155,7 @@ h1,h2,h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
 /*======================
   HORIZONTAL RULE
 ======================*/
-hr { border: none; height: 1px; background: rgba(255,255,255,0.2); margin: 30px auto; width: 60%; }
+hr { border: none; height: 1px; background: rgba(255,255,255,0.2); margin: 25px auto; width: 60%; }
 
 /*======================
   INSTAGRAM / BENEFITS
