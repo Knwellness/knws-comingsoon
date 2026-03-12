@@ -19,7 +19,7 @@ h1, h2, h3 {
 .container {
   max-width: 900px;
   margin: auto;
-  padding: 15px 20px; /* reduced from 20px */
+  padding: 15px 20px;
 }
 
 /*======================
@@ -44,26 +44,21 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
-.navbar a:hover {
-  opacity: 0.8;
-}
-
-.navbar .divider {
-  color: white;
-  opacity: 0.6;
-}
+.navbar a:hover { opacity: 0.8; }
 
 /*======================
   LOGO
 ======================*/
 .logo {
   text-align: center;
-  padding: 40px 20px 10px;
+  padding: 5px 0 5px;
+  max-width: 100%;
 }
 
 .logo img {
-  width: 220px;
-  max-width: 80%;
+  width: 300px;
+  max-width: 90%;
+  height: auto;
 }
 
 /*======================
@@ -71,12 +66,13 @@ h1, h2, h3 {
 ======================*/
 .hero {
   text-align: center;
-  padding: 40px 20px; /* reduced from 70px */
+  padding: 10px 20px 30px;
   color: white;
 }
 
 .hero h1 {
-  font-size: 2.6em;
+  font-size: 2.4em;
+  margin-top: 0;
 }
 
 .hero p {
@@ -86,7 +82,7 @@ h1, h2, h3 {
 }
 
 /*======================
-  BUTTON
+  BUTTONS
 ======================*/
 .btn {
   display: inline-block;
@@ -98,9 +94,7 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
-.btn:hover {
-  opacity: 0.9;
-}
+.btn:hover { opacity: 0.9; }
 
 /*======================
   SECTION TITLES
@@ -108,7 +102,7 @@ h1, h2, h3 {
 .section-title {
   text-align: center;
   color: white;
-  margin: 30px 0 15px; /* reduced from 50px 0 25px */
+  margin: 30px 0 15px;
   font-size: 2em;
 }
 
@@ -118,7 +112,7 @@ h1, h2, h3 {
 .card {
   background: rgba(255,255,255,0.18);
   color: white;
-  padding: 20px; /* reduced from 30px */
+  padding: 20px;
   border-radius: 18px;
   text-align: center;
   box-shadow: 0 10px 35px rgba(0,0,0,0.15);
@@ -140,23 +134,14 @@ h1, h2, h3 {
   justify-content: center;
 }
 
-.grid .card {
-  flex: 1 1 250px;
-}
+.grid .card { flex: 1 1 250px; }
 
-/* Make <b> in card paragraphs appear on new line with small margin */
-.card p b {
-  display: block;
-  margin-top: 5px;
-}
+.card p b { display: block; margin-top: 5px; }
 
 /*======================
   TESTIMONIAL STARS
 ======================*/
-.review-stars {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
+.review-stars { font-size: 20px; margin-bottom: 10px; }
 
 /*======================
   BOOK BUTTON
@@ -177,41 +162,23 @@ h1, h2, h3 {
 /*======================
   IFRAME / BOOKING
 ======================*/
-.booking iframe {
-  border-radius: 12px;
-  background: white;
-}
+.booking iframe { border-radius: 12px; background: white; }
 
 /*======================
   HORIZONTAL RULE
 ======================*/
-hr {
-  border: none;
-  height: 1px;
-  background: rgba(255,255,255,0.2);
-  margin: 30px auto; /* reduced from 60px */
-  width: 60%;
-}
+hr { border: none; height: 1px; background: rgba(255,255,255,0.2); margin: 30px auto; width: 60%; }
 
 /*======================
   INSTAGRAM / BENEFITS
 ======================*/
-.instagram, .benefits {
-  text-align: center;
-  color: white;
-}
+.instagram, .benefits { text-align: center; color: white; }
 
 /*======================
   MOBILE RESPONSIVENESS
 ======================*/
 @media(max-width:700px) {
-  .hero h1 {
-    font-size: 2em;
-  }
-  .grid {
-    flex-direction: column;
-  }
-  .logo img {
-    width: 180px;
-  }
+  .hero h1 { font-size: 2em; }
+  .grid { flex-direction: column; }
+  .logo img { width: 180px; }
 }
