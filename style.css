@@ -37,7 +37,7 @@ h1,h2,h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
   display: block;
   margin: 0 auto;
   width: 350px;       /* larger logo */
-  max-width: 100%;    /* responsive */
+  max-width: 100%;
   height: auto;
 }
 
@@ -46,7 +46,7 @@ h1,h2,h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
 ======================*/
 .hero {
   text-align: center;
-  padding: 0 20px 30px; /* tight top spacing */
+  padding: 0 20px 30px;
   color: white;
 }
 .hero h1 { font-size: 2.4em; margin-top: 0; }
@@ -98,6 +98,24 @@ h1,h2,h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
 .grid { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
 .grid .card { flex: 1 1 250px; }
 .card p b { display: block; margin-top: 5px; }
+
+/*======================
+  BENEFIT CARDS
+======================*/
+.benefits .grid { justify-content: space-around; gap: 15px; }
+.benefit-card {
+  flex: 1 1 160px;
+  background: rgba(255,255,255,0.18);
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: all 0.35s ease;
+}
+.benefit-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.2); }
+.benefit-card .icon { font-size: 36px; margin-bottom: 12px; }
 
 /*======================
   TESTIMONIALS
