@@ -1,8 +1,7 @@
 /*======================
-  GLOBAL STYLES
+  GLOBAL
 ======================*/
 html { scroll-behavior: smooth; }
-
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
@@ -10,17 +9,8 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 10px;
-}
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 15px 20px;
-}
+h1,h2,h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
+.container { max-width: 900px; margin: auto; padding: 15px 20px; }
 
 /*======================
   NAVBAR
@@ -36,26 +26,16 @@ h1, h2, h3 {
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   z-index: 1000;
 }
-
-.navbar a {
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-  text-decoration: none;
-}
-
+.navbar a { color: white; font-weight: bold; font-size: 14px; text-decoration: none; }
 .navbar a:hover { opacity: 0.8; }
 
 /*======================
   LOGO
 ======================*/
-.logo {
-  text-align: center;
-  padding: 5px 0 5px;
-  max-width: 100%;
-}
-
+.logo { text-align: center; padding: 5px 0 0; max-width: 100%; }
 .logo img {
+  display: block;
+  margin: 0 auto;
   width: 300px;
   max-width: 90%;
   height: auto;
@@ -66,20 +46,11 @@ h1, h2, h3 {
 ======================*/
 .hero {
   text-align: center;
-  padding: 10px 20px 30px;
+  padding: 0 20px 30px; /* top padding 0 pulls text up */
   color: white;
 }
-
-.hero h1 {
-  font-size: 2.4em;
-  margin-top: 0;
-}
-
-.hero p {
-  max-width: 650px;
-  margin: auto;
-  margin-bottom: 25px;
-}
+.hero h1 { font-size: 2.4em; margin-top: 0; }
+.hero p { max-width: 650px; margin: 10px auto 25px; }
 
 /*======================
   BUTTONS
@@ -93,7 +64,6 @@ h1, h2, h3 {
   font-weight: bold;
   text-decoration: none;
 }
-
 .btn:hover { opacity: 0.9; }
 
 /*======================
@@ -121,25 +91,16 @@ h1, h2, h3 {
   border: 1px solid rgba(255,255,255,0.25);
   transition: all 0.35s ease;
 }
-
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 18px 45px rgba(0,0,0,0.25);
 }
-
-.grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
+.grid { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
 .grid .card { flex: 1 1 250px; }
-
 .card p b { display: block; margin-top: 5px; }
 
 /*======================
-  TESTIMONIAL STARS
+  TESTIMONIALS
 ======================*/
 .review-stars { font-size: 20px; margin-bottom: 10px; }
 
@@ -175,9 +136,9 @@ hr { border: none; height: 1px; background: rgba(255,255,255,0.2); margin: 30px 
 .instagram, .benefits { text-align: center; color: white; }
 
 /*======================
-  MOBILE RESPONSIVENESS
+  MOBILE
 ======================*/
-@media(max-width:700px) {
+@media(max-width:700px){
   .hero h1 { font-size: 2em; }
   .grid { flex-direction: column; }
   .logo img { width: 180px; }
