@@ -14,38 +14,21 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
-  background: linear-gradient(180deg, #7c8676 0%, #6b705c 40%, #5d6350 100%);
-  color: #333;
+  background: linear-gradient(180deg, #7a8770 0%, #6b705c 40%, #5e6550 100%);
+  color: #fefcf6;
   line-height: 1.7;
-  background-image: url('soft-texture.png'); /* subtle spa texture */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  overflow-x: hidden;
 }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-}
-
-/* LAYOUT */
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 50px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease;
-}
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
+.container { max-width: 900px; margin: auto; padding: 20px; }
+section { margin-bottom: 50px; opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
 
 /* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(124,134,118,0.95);
+  background: rgba(122,135,112,0.95);
   padding: 12px;
   display: flex;
   justify-content: center;
@@ -61,39 +44,21 @@ section {
   text-transform: uppercase;
 }
 
-.navbar a:hover {
-  opacity: 0.8;
-}
+.navbar a:hover { opacity: 0.8; }
 
 /* LOGO */
-.logo {
-  text-align: center;
-  padding: 40px 20px 10px;
-}
-
-.logo img {
-  width: 180px;
-}
+.logo { text-align: center; padding: 40px 20px 10px; }
+.logo img { width: 180px; }
 
 /* HERO */
 .hero {
   text-align: center;
   padding: 90px 20px 70px;
   color: white;
-  position: relative;
-  background: linear-gradient(180deg, rgba(124,134,118,0.85) 0%, rgba(91,97,81,0.85) 100%), url('hero-spa.jpg') center/cover no-repeat; /* hero overlay image */
 }
 
-.hero h1 {
-  font-size: 2.6em;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  max-width: 600px;
-  margin: auto;
-  margin-bottom: 20px;
-}
+.hero h1 { font-size: 2.6em; margin-bottom: 15px; }
+.hero p { max-width: 600px; margin: auto; margin-bottom: 20px; }
 
 /* BUTTONS */
 .btn {
@@ -110,137 +75,61 @@ section {
   position: relative;
   overflow: hidden;
 }
-
-.btn::after {
-  content: '';
-  position: absolute;
-  top:0; left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,0.2);
-  transform: skewX(-25deg);
-  transition: all 0.5s ease;
-}
-
-.btn:hover::after {
-  left: 100%;
-}
-
-.btn:hover {
-  background: #c9a646;
-  color: white;
-}
+.btn:hover { background: #c9a646; color: white; }
 
 /* TITLES */
-.section-title {
-  text-align: center;
-  color: white;
-  font-size: 1.8em;
-  margin-bottom: 25px;
-}
+.section-title { text-align: center; color: #fefcf6; font-size: 1.8em; margin-bottom: 25px; }
 
 /* CARDS */
 .card {
-  background: rgba(255,255,255,0.15);
-  color: white;
+  background: rgba(255,255,255,0.25);
+  color: #fefcf6;
   padding: 25px;
   border-radius: 16px;
   text-align: center;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
   transition: all 0.4s ease;
   opacity: 0;
   transform: translateY(20px);
-  position: relative;
-  overflow: hidden;
 }
 
-.card::after {
-  content: '';
-  position: absolute;
-  top:0; left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,0.1);
-  transform: skewX(-25deg);
-  transition: all 0.5s ease;
-}
+.card:hover { transform: translateY(-5px); border-color: rgba(201,166,70,0.4); }
 
-.card:hover::after {
-  left: 100%;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(201,166,70,0.4);
-}
-
-.grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.grid .card {
-  flex: 1 1 250px;
-}
+/* GRID */
+.grid { display: flex; gap: 20px; flex-wrap: wrap; }
+.grid .card { flex: 1 1 250px; }
 
 /* ABOUT */
-.about-card {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  text-align: left;
-}
-
+.about-card { display: flex; align-items: center; gap: 25px; text-align: left; }
 .about-img {
   width: 130px;
   height: 130px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(201,166,70,0.5);
-  box-shadow: 0 0 25px rgba(201,166,70,0.4);
-  transition: box-shadow 0.3s ease;
 }
+.about-text { flex: 1; }
 
-.about-img:hover {
-  box-shadow: 0 0 35px rgba(201,166,70,0.6);
-}
-
-.about-text {
-  flex: 1;
-}
+/* SERVICES */
+.service-icon { width: 40px; height: 40px; margin: 0 auto 12px auto; }
+.gold-line { width: 40px; height: 2px; background: #c9a646; margin: 6px auto 12px auto; border-radius: 1px; }
+.card h3 { margin-bottom: 8px; font-weight: 600; }
+.card p { font-size: 14px; opacity: 0.95; }
+.card { display: flex; flex-direction: column; justify-content: flex-start; }
 
 /* FLOAT BUTTON */
-.book-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #c9a646;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-size: 13px;
-}
+.book-float { position: fixed; bottom: 20px; right: 20px; background: #c9a646; color: white; padding: 12px 20px; border-radius: 30px; font-size: 13px; }
 
 /* MOBILE */
-@media(max-width:700px) {
+@media(max-width:700px){
   .grid { flex-direction: column; }
   .hero h1 { font-size: 2em; }
-
-  .about-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-img {
-    width: 110px;
-    height: 110px;
-  }
+  .about-card { flex-direction: column; text-align: center; }
+  .about-img { width: 110px; height: 110px; }
 }
 </style>
-
 </head>
+
 <body>
 
 <!-- NAVBAR -->
@@ -259,15 +148,9 @@ section {
 <!-- HERO -->
 <section class="hero">
 <h1>Sports & Relaxation Massage in Doncaster</h1>
-<p>
-Helping you relax, release tension, and recover with professional massage treatments in a calm, private one-to-one setting.
-</p>
-
+<p>Helping you relax, release tension, and recover with professional massage treatments in a calm, private one-to-one setting.</p>
 <a href="#contact" class="btn">Book Your Session</a>
-
-<p style="margin-top:10px; font-size:14px; opacity:0.9;">
-Private studio • By appointment only
-</p>
+<p style="margin-top:10px; font-size:14px; opacity:0.9;">Private studio • By appointment only</p>
 </section>
 
 <!-- ABOUT -->
@@ -276,12 +159,8 @@ Private studio • By appointment only
 <div class="card about-card">
   <img src="Kayla.jpg" alt="Kayla Massage Therapist Doncaster" class="about-img">
   <div class="about-text">
-    <p>
-    KN Wellness Studio is a private massage space in Doncaster designed to help you slow down, reset, and feel your best. Each session combines sports and relaxation massage techniques to ease tension and support recovery.
-    </p>
-    <p>
-    Whether you're dealing with tight muscles, stress, or simply need time to switch off, treatments are tailored to leave you feeling lighter, calmer, and restored.
-    </p>
+    <p>KN Wellness Studio is a private massage space in Doncaster designed to help you slow down, reset, and feel your best. Each session combines sports and relaxation massage techniques to ease tension and support recovery.</p>
+    <p>Whether you're dealing with tight muscles, stress, or simply need time to switch off, treatments are tailored to leave you feeling lighter, calmer, and restored.</p>
   </div>
 </div>
 </section>
@@ -290,9 +169,33 @@ Private studio • By appointment only
 <section class="container" id="services">
 <h2 class="section-title">Treatments</h2>
 <div class="grid">
-<div class="card"><h3>Relaxation Massage</h3><p>Calming treatment to reduce stress and help you fully unwind.</p></div>
-<div class="card"><h3>Sports Massage</h3><p>Targeted techniques to relieve muscle tightness and aid recovery.</p></div>
-<div class="card"><h3>Deep Tissue</h3><p>Firm pressure to release deeper tension and discomfort.</p></div>
+  <div class="card">
+    <svg class="service-icon" viewBox="0 0 64 64" fill="none" stroke="#c9a646" stroke-width="2">
+      <circle cx="32" cy="32" r="30"/>
+      <path d="M32 20v24M20 32h24"/>
+    </svg>
+    <h3>Relaxation Massage</h3>
+    <div class="gold-line"></div>
+    <p>Calming treatment to reduce stress and help you fully unwind.</p>
+  </div>
+  <div class="card">
+    <svg class="service-icon" viewBox="0 0 64 64" fill="none" stroke="#c9a646" stroke-width="2">
+      <circle cx="32" cy="32" r="30"/>
+      <path d="M24 24l16 16M40 24L24 40"/>
+    </svg>
+    <h3>Sports Massage</h3>
+    <div class="gold-line"></div>
+    <p>Targeted techniques to relieve muscle tightness and aid recovery.</p>
+  </div>
+  <div class="card">
+    <svg class="service-icon" viewBox="0 0 64 64" fill="none" stroke="#c9a646" stroke-width="2">
+      <rect x="16" y="16" width="32" height="32"/>
+      <path d="M16 16l32 32M48 16L16 48"/>
+    </svg>
+    <h3>Deep Tissue</h3>
+    <div class="gold-line"></div>
+    <p>Firm pressure to release deeper tension and discomfort.</p>
+  </div>
 </div>
 </section>
 
@@ -306,21 +209,10 @@ Private studio • By appointment only
 </div>
 </section>
 
-<!-- PRICING -->
-<section class="container">
-<h2 class="section-title">Pricing</h2>
-<div class="grid">
-<div class="card"><h3>60 Minutes</h3><p>£60</p></div>
-<div class="card"><h3>90 Minutes</h3><p>£85</p></div>
-</div>
-</section>
-
 <!-- BOOK -->
 <section class="container" id="contact">
 <h2 class="section-title">Book Your Session</h2>
-<p style="text-align:center;color:white;">
-✔ Private one-to-one studio • ✔ Tailored treatments • ✔ Calm environment
-</p>
+<p style="text-align:center;color:white;">✔ Private one-to-one studio • ✔ Tailored treatments • ✔ Calm environment</p>
 <br>
 <iframe src="https://knwellness.setmore.com" width="100%" height="700" frameborder="0"></iframe>
 </section>
@@ -338,8 +230,8 @@ const observer = new IntersectionObserver(entries => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.2 });
-observerTargets.forEach(el => observer.observe(el));
+},{ threshold: 0.2 });
+observerTargets.forEach(el=>observer.observe(el));
 </script>
 
 </body>
