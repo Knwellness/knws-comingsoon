@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KN Wellness Studio</title>
+<title>KN Wellness Studio | Massage in Doncaster</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
@@ -14,8 +14,8 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Lato', sans-serif;
   margin: 0;
-  background: #1f2321;
-  color: #e8e8e8;
+  background: linear-gradient(180deg, #8b9585 0%, #7c8676 40%, #6b705c 100%);
+  color: #333;
   line-height: 1.7;
 }
 
@@ -23,31 +23,31 @@ h1, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
 
+/* LAYOUT */
 .container {
   max-width: 900px;
   margin: auto;
-  padding: 30px 20px;
+  padding: 20px;
 }
 
 section {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 /* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
-  background: rgba(20,20,20,0.6);
-  backdrop-filter: blur(10px);
-  padding: 14px;
+  background: rgba(139,149,133,0.95);
+  padding: 12px;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
   z-index: 1000;
 }
 
 .navbar a {
-  color: #d6d6d6;
+  color: white;
   text-decoration: none;
   font-size: 13px;
   letter-spacing: 1px;
@@ -55,46 +55,45 @@ section {
 }
 
 .navbar a:hover {
-  color: white;
+  opacity: 0.8;
 }
 
 /* LOGO */
 .logo {
   text-align: center;
-  padding: 60px 20px 20px;
+  padding: 40px 20px 10px;
 }
 
 .logo img {
   width: 180px;
-  opacity: 0.9;
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 100px 20px 80px;
+  padding: 70px 20px 50px;
+  color: white;
 }
 
 .hero h1 {
-  font-size: 2.8em;
-  margin-bottom: 20px;
+  font-size: 2.4em;
+  margin-bottom: 15px;
 }
 
 .hero p {
   max-width: 600px;
   margin: auto;
-  opacity: 0.85;
+  margin-bottom: 20px;
 }
 
 /* BUTTON */
 .btn {
   display: inline-block;
-  margin-top: 30px;
-  padding: 14px 34px;
+  padding: 14px 30px;
   border-radius: 30px;
+  border: 1px solid #c9a646;
+  color: #c9a646;
   background: transparent;
-  border: 1px solid #d4af37;
-  color: #d4af37;
   font-size: 13px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -102,33 +101,35 @@ section {
 }
 
 .btn:hover {
-  background: #d4af37;
-  color: #1f2321;
+  background: #c9a646;
+  color: white;
 }
 
 /* TITLES */
 .section-title {
   text-align: center;
+  color: white;
   font-size: 1.8em;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 /* CARDS */
 .card {
-  background: rgba(255,255,255,0.03);
-  padding: 30px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  padding: 25px;
   border-radius: 16px;
   text-align: center;
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(212,175,55,0.5);
+  transform: translateY(-5px);
+  border-color: rgba(201,166,70,0.4);
 }
 
-/* GRID */
 .grid {
   display: flex;
   gap: 20px;
@@ -139,20 +140,20 @@ section {
   flex: 1 1 250px;
 }
 
-/* ABOUT LAYOUT */
+/* ABOUT */
 .about-card {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
   text-align: left;
 }
 
 .about-img {
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(212,175,55,0.6);
+  border: 2px solid rgba(201,166,70,0.5);
 }
 
 .about-text {
@@ -162,14 +163,13 @@ section {
 /* FLOAT BUTTON */
 .book-float {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #d4af37;
-  color: #1f2321;
-  padding: 12px 22px;
+  bottom: 20px;
+  right: 20px;
+  background: #c9a646;
+  color: white;
+  padding: 12px 20px;
   border-radius: 30px;
   font-size: 13px;
-  letter-spacing: 1px;
 }
 
 /* MOBILE */
@@ -183,8 +183,8 @@ section {
   }
 
   .about-img {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
   }
 }
 </style>
@@ -207,12 +207,16 @@ section {
 
 <!-- HERO -->
 <section class="hero">
-<h1>Sports & Relaxation Massage</h1>
+<h1>Sports & Relaxation Massage in Doncaster</h1>
 <p>
-A quiet, private space to slow down, release tension, and restore your body through tailored massage treatments.
+Helping you relax, release tension, and recover with professional massage treatments in a calm, private one-to-one setting.
 </p>
 
 <a href="#contact" class="btn">Book Your Session</a>
+
+<p style="margin-top:10px; font-size:14px; opacity:0.9;">
+Private studio • By appointment only
+</p>
 </section>
 
 <!-- ABOUT -->
@@ -221,15 +225,15 @@ A quiet, private space to slow down, release tension, and restore your body thro
 
 <div class="card about-card">
 
-  <img src="Kayla.jpg" alt="Kayla - Massage Therapist" class="about-img">
+  <img src="Kayla.jpg" alt="Kayla Massage Therapist Doncaster" class="about-img">
 
   <div class="about-text">
     <p>
-    KN Wellness Studio offers a calm, one-to-one environment designed for deep relaxation and effective recovery. Each session blends sports massage and relaxation techniques to ease tension and rebalance the body.
+    KN Wellness Studio is a private massage space in Doncaster designed to help you slow down, reset, and feel your best. Each session combines sports and relaxation massage techniques to ease tension and support recovery.
     </p>
 
     <p>
-    Whether you're looking to switch off, relieve tight muscles, or simply take time for yourself, treatments are tailored to leave you feeling lighter, calmer, and restored.
+    Whether you're dealing with tight muscles, stress, or simply need time to switch off, treatments are tailored to leave you feeling lighter, calmer, and restored.
     </p>
   </div>
 
@@ -243,17 +247,17 @@ A quiet, private space to slow down, release tension, and restore your body thro
 
 <div class="card">
 <h3>Relaxation Massage</h3>
-<p>Slow, calming treatment to ease stress and promote deep relaxation.</p>
+<p>Calming treatment to reduce stress and help you fully unwind.</p>
 </div>
 
 <div class="card">
 <h3>Sports Massage</h3>
-<p>Targeted work to release tight muscles and support recovery.</p>
+<p>Targeted techniques to relieve muscle tightness and aid recovery.</p>
 </div>
 
 <div class="card">
 <h3>Deep Tissue</h3>
-<p>Firm pressure to relieve deeper tension and restore movement.</p>
+<p>Firm pressure to release deeper tension and discomfort.</p>
 </div>
 
 </div>
@@ -265,15 +269,15 @@ A quiet, private space to slow down, release tension, and restore your body thro
 <div class="grid">
 
 <div class="card">
-<p>"Incredible experience — felt completely relaxed after."</p>
+<p>"Fantastic treatment — felt better straight away."</p>
 </div>
 
 <div class="card">
-<p>"Professional and calming. Highly recommend."</p>
+<p>"Very professional and relaxing experience."</p>
 </div>
 
 <div class="card">
-<p>"Best massage I’ve had in London."</p>
+<p>"Best massage I’ve had locally."</p>
 </div>
 
 </div>
@@ -299,12 +303,18 @@ A quiet, private space to slow down, release tension, and restore your body thro
 
 <!-- BOOK -->
 <section class="container" id="contact">
-<h2 class="section-title">Book</h2>
+<h2 class="section-title">Book Your Session</h2>
+
+<p style="text-align:center;color:white;">
+✔ Private one-to-one studio • ✔ Tailored treatments • ✔ Calm environment
+</p>
+
+<br>
 
 <iframe src="https://knwellness.setmore.com" width="100%" height="700" frameborder="0"></iframe>
 </section>
 
-<a href="#contact" class="book-float">Book</a>
+<a href="#contact" class="book-float">Book Now</a>
 
 </body>
 </html>
