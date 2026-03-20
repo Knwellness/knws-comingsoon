@@ -1,49 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About | KN Wellness Studio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | KN Wellness Studio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <!-- Navbar -->
+  <header class="navbar fade-in">
+    <div class="logo">KN Wellness Studio</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="#treatments">Treatments</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#booking">Book</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<div class="navbar">
+  <!-- Hero Section -->
+  <section class="hero fade-in">
+    <div class="hero-content">
+      <h1>About KN Wellness Studio</h1>
+      <p>Your sanctuary for relaxation and sports massage therapies.</p>
+    </div>
+  </section>
 
-<a href="index.html">Home</a>
-<a href="massage.html">Massage</a>
-<a href="about.html">About</a>
-<a href="book.html">Book</a>
+  <!-- About Bio Card -->
+  <section class="about-bio fade-in">
+    <div class="card">
+      <h2>Meet [Your Name]</h2>
+      <p>
+        Welcome to KN Wellness Studio! I’m [Your Name], a certified massage therapist with over [X] years of experience.
+        I specialize in relaxation and sports massage, helping clients relieve stress, recover from injuries, and feel rejuvenated.
+      </p>
+      <p>
+        My approach combines professional techniques with a personalized touch, ensuring each session is tailored to your needs.
+        I am passionate about wellness and committed to helping you feel your best.
+      </p>
+    </div>
+  </section>
 
-</div>
+  <!-- Optional Image + Text Section -->
+  <section class="about-details fade-in">
+    <div class="image-text-grid">
+      <div class="image-container">
+        <img src="images/studio.jpg" alt="KN Wellness Studio interior">
+      </div>
+      <div class="text-container">
+        <h3>Our Studio</h3>
+        <p>
+          KN Wellness Studio is designed for comfort and tranquility. From our calming interiors to our state-of-the-art massage equipment,
+          every detail is aimed at creating a serene and restorative environment.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<div class="logo">
-<img src="your-logo.png">
-</div>
+  <!-- Treatments Summary (Optional) -->
+  <section id="treatments" class="treatments-summary fade-in">
+    <h2>Our Treatments</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Relaxation Massage</h3>
+        <p>Release tension and stress with a soothing massage designed to relax your mind and body.</p>
+      </div>
+      <div class="card">
+        <h3>Sports Massage</h3>
+        <p>Enhance performance, prevent injuries, and recover faster with targeted sports therapy.</p>
+      </div>
+    </div>
+  </section>
 
-<section class="container">
+  <!-- Contact / Booking Section -->
+  <section id="booking" class="booking fade-in">
+    <h2>Book a Session</h2>
+    <p>Ready to prioritize your wellness? Schedule your session today!</p>
+    <iframe src="https://your-booking-iframe-link.com" frameborder="0"></iframe>
+    <a href="#booking" class="btn float-book-btn">Book Now</a>
+  </section>
 
-<h2 class="section-title">About KN Wellness Studio</h2>
+  <!-- Footer -->
+  <footer class="fade-in">
+    <p>&copy; 2026 KN Wellness Studio. All rights reserved.</p>
+  </footer>
 
-<div class="card">
-
-<p>
-Hi, I'm Kayla, founder of KN Wellness Studio.
-My goal is to help people feel better in their bodies through personalised massage treatments delivered in a calm one-to-one setting.
-</p>
-
-</div>
-
-</section>
-
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
-
 </html>
