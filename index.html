@@ -12,8 +12,8 @@
     <div class="logo">KN Wellness Studio</div>
     <nav>
       <ul>
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#treatments" class="nav-link">Treatments</a></li>
         <li><a href="#reviews" class="nav-link">Reviews</a></li>
         <li><a href="#booking" class="nav-link">Book</a></li>
@@ -22,7 +22,7 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero fade-in">
+  <section id="home" class="hero fade-in">
     <div class="hero-content">
       <h1>KN Wellness Studio</h1>
       <p>Your sanctuary for relaxation and sports massage therapies.</p>
@@ -34,9 +34,9 @@
     <div class="card">
       <h2>Meet [Your Name]</h2>
       <p>
-        Certified massage therapist with expertise in relaxation and sports massage, helping clients feel renewed and stress-free.
+        I’m [Your Name], a certified massage therapist specializing in relaxation, sports, and deep tissue massage. 
+        I help clients release tension, recover from injuries, and feel their best.
       </p>
-      <a href="about.html" class="btn">Learn More About Me</a>
     </div>
   </section>
 
@@ -51,6 +51,10 @@
       <div class="card">
         <h3>Sports Massage</h3>
         <p>Enhance performance, prevent injuries, and recover faster with targeted sports therapy.</p>
+      </div>
+      <div class="card">
+        <h3>Deep Tissue Massage</h3>
+        <p>Targets deeper layers of muscle and connective tissue to relieve chronic tension.</p>
       </div>
     </div>
   </section>
@@ -74,7 +78,7 @@
   <section id="booking" class="booking fade-in">
     <h2>Book a Session</h2>
     <iframe src="https://your-booking-iframe-link.com" frameborder="0"></iframe>
-    <a href="#booking" class="btn float-book-btn">Book Now</a>
+    <a href="#booking" class="btn float-book-btn sparkle">Book Now</a>
   </section>
 
   <!-- Footer -->
@@ -84,20 +88,5 @@
 
   <!-- Scripts -->
   <script src="script.js"></script>
-  <script>
-    // Dynamic navbar active link + scroll for homepage
-    const currentPage = window.location.pathname.split("/").pop();
-    document.querySelectorAll(".nav-link").forEach(link => {
-      const linkPage = link.getAttribute("href");
-      if (linkPage === currentPage) link.classList.add("active");
-
-      if (currentPage === "index.html" && linkPage.startsWith("#")) {
-        link.addEventListener("click", e => {
-          e.preventDefault();
-          document.querySelector(linkPage).scrollIntoView({ behavior: "smooth" });
-        });
-      }
-    });
-  </script>
 </body>
 </html>
