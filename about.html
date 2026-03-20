@@ -1,102 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | KN Wellness Studio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | KN Wellness Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar fade-in">
-    <div class="logo">KN Wellness Studio</div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="#treatments" class="nav-link">Treatments</a></li>
-        <li><a href="#reviews" class="nav-link">Reviews</a></li>
-        <li><a href="#booking" class="nav-link">Book</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero fade-in">
-    <div class="hero-content">
-      <h1>About KN Wellness Studio</h1>
-      <p>Your sanctuary for relaxation and sports massage therapies.</p>
-    </div>
-  </section>
+<!-- NAVBAR -->
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active">About</a>
+  <a href="#services">Treatments</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Book</a>
+</div>
 
-  <!-- Detailed About Bio -->
-  <section class="about-bio fade-in">
-    <div class="card">
-      <h2>Meet [Your Name]</h2>
-      <p>
-        Welcome to KN Wellness Studio! I’m [Your Name], a certified massage therapist with over [X] years of experience.
-        I specialize in relaxation and sports massage, helping clients relieve stress, recover from injuries, and feel rejuvenated.
-      </p>
-      <p>
-        My approach combines professional techniques with a personalized touch, ensuring each session is tailored to your needs.
-        I am passionate about wellness and committed to helping you feel your best.
-      </p>
-    </div>
-  </section>
+<!-- LOGO -->
+<div class="logo">
+  <img src="your-logo.png" alt="KN Wellness Studio">
+</div>
 
-  <!-- Image + Text Section -->
-  <section class="about-details fade-in">
-    <div class="image-text-grid">
-      <div class="image-container fade-in">
-        <img src="images/studio.jpg" alt="KN Wellness Studio interior">
-      </div>
-      <div class="text-container fade-in">
-        <h3>Our Studio</h3>
-        <p>
-          KN Wellness Studio is designed for comfort and tranquility. From our calming interiors to our state-of-the-art massage equipment,
-          every detail is aimed at creating a serene and restorative environment.
-        </p>
-      </div>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="hero">
+<h1>About KN Wellness Studio</h1>
+<p>Your sanctuary for relaxation and sports massage therapies in Doncaster. Helping you relax, recover, and feel renewed in a calm, private studio environment.</p>
+</section>
 
-  <!-- Treatments Summary -->
-  <section id="treatments" class="treatments-summary fade-in">
-    <h2>Our Treatments</h2>
-    <div class="card-grid">
-      <div class="card fade-in">
-        <h3>Relaxation Massage</h3>
-        <p>Release tension and stress with a soothing massage designed to relax your mind and body.</p>
-      </div>
-      <div class="card fade-in">
-        <h3>Sports Massage</h3>
-        <p>Enhance performance, prevent injuries, and recover faster with targeted sports therapy.</p>
-      </div>
-    </div>
-  </section>
+<!-- DETAILED BIO -->
+<section class="container" id="about-bio">
+<div class="card about-card">
+  <img src="Kayla.jpg" alt="Kayla Massage Therapist Doncaster" class="about-img">
+  <div class="about-text">
+    <h2>Meet Kayla</h2>
+    <p>Hi, I’m Kayla. I guide clients to unwind, release tension, and recover through personalised sports and relaxation massage sessions in my private Doncaster studio.</p>
+    <p>Each session is tailored to your needs so you leave feeling lighter, restored, and truly refreshed.</p>
+    <p>I’m passionate about wellness, and my goal is to ensure every client leaves feeling better than when they arrived.</p>
+  </div>
+</div>
+</section>
 
-  <!-- Booking Section -->
-  <section id="booking" class="booking fade-in">
-    <h2>Book a Session</h2>
-    <iframe src="https://your-booking-iframe-link.com" frameborder="0"></iframe>
-    <a href="#booking" class="btn float-book-btn sparkle">Book Now</a>
-  </section>
+<!-- IMAGE + TEXT SECTION (optional) -->
+<section class="container" id="studio">
+<div class="card about-card">
+  <img src="studio.jpg" alt="KN Wellness Studio interior" class="about-img">
+  <div class="about-text">
+    <h3>Our Studio</h3>
+    <p>KN Wellness Studio is designed for comfort and tranquility. From calming interiors to professional massage equipment, every detail is created to provide a serene and restorative environment for you.</p>
+  </div>
+</div>
+</section>
 
-  <!-- Footer -->
-  <footer class="fade-in">
-    <p>&copy; 2026 KN Wellness Studio. All rights reserved.</p>
-  </footer>
+<!-- TREATMENTS SUMMARY -->
+<section class="container" id="services">
+<h2 class="section-title">Our Treatments</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Relaxation Massage</h3>
+    <p>Calming treatment to reduce stress and help you fully unwind.</p>
+  </div>
+  <div class="card">
+    <h3>Sports Massage</h3>
+    <p>Targeted techniques to relieve muscle tightness, release deeper tension, and aid recovery.</p>
+  </div>
+</div>
+</section>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
-  <script>
-    // Highlight active navbar link on both pages
-    const currentPage = window.location.pathname.split("/").pop();
-    document.querySelectorAll(".nav-link").forEach(link => {
-      if (link.getAttribute("href") === currentPage) {
-        link.classList.add("active");
-      }
-    });
-  </script>
+<!-- BOOKING -->
+<section class="container" id="contact">
+<h2 class="section-title">Book Your Session</h2>
+<p style="text-align:center;color:white;">✔ Private one-to-one studio • ✔ Tailored treatments • ✔ Calm environment</p>
+<br>
+<iframe src="https://knwellness.setmore.com" width="100%" height="700" frameborder="0"></iframe>
+</section>
+
+<a href="#contact" class="book-float">Book Now</a>
+
+<script src="script.js"></script>
+
 </body>
 </html>
