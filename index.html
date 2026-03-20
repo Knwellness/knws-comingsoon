@@ -1,92 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KN Wellness Studio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KN Wellness Studio | Massage in Doncaster</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- Navbar -->
-  <header class="navbar fade-in">
-    <div class="logo">KN Wellness Studio</div>
-    <nav>
-      <ul>
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#treatments" class="nav-link">Treatments</a></li>
-        <li><a href="#reviews" class="nav-link">Reviews</a></li>
-        <li><a href="#booking" class="nav-link">Book</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero fade-in">
-    <div class="hero-content">
-      <h1>KN Wellness Studio</h1>
-      <p>Your sanctuary for relaxation and sports massage therapies.</p>
-    </div>
-  </section>
+<!-- NAVBAR -->
+<div class="navbar">
+  <a href="#about">About</a>
+  <a href="#services">Treatments</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Book</a>
+</div>
 
-  <!-- Mini About Section -->
-  <section id="about" class="about-bio fade-in">
-    <div class="card">
-      <h2>Meet [Your Name]</h2>
-      <p>
-        I’m [Your Name], a certified massage therapist specializing in relaxation, sports, and deep tissue massage. 
-        I help clients release tension, recover from injuries, and feel their best.
-      </p>
-    </div>
-  </section>
+<!-- LOGO -->
+<div class="logo">
+  <img src="your-logo.png" alt="KN Wellness Studio">
+</div>
 
-  <!-- Treatments Section -->
-  <section id="treatments" class="treatments-summary fade-in">
-    <h2>Our Treatments</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Relaxation Massage</h3>
-        <p>Release tension and stress with a soothing massage designed to relax your mind and body.</p>
-      </div>
-      <div class="card">
-        <h3>Sports Massage</h3>
-        <p>Enhance performance, prevent injuries, and recover faster with targeted sports therapy.</p>
-      </div>
-      <div class="card">
-        <h3>Deep Tissue Massage</h3>
-        <p>Targets deeper layers of muscle and connective tissue to relieve chronic tension.</p>
-      </div>
-    </div>
-  </section>
+<!-- HERO -->
+<section class="hero">
+<h1>Sports & Relaxation Massage in Doncaster</h1>
+<p>Helping you relax, release tension, and recover with professional massage treatments in a calm, private one-to-one setting.</p>
+<a href="#contact" class="btn">Book Your Session</a>
+<p style="margin-top:10px; font-size:14px; opacity:0.9;">Private studio • By appointment only</p>
+</section>
 
-  <!-- Reviews Section -->
-  <section id="reviews" class="reviews fade-in">
-    <h2>Client Reviews</h2>
-    <div class="card-grid">
-      <div class="card">
-        <p>"Absolutely amazing massage! Felt so relaxed afterward."</p>
-        <strong>- Client A</strong>
-      </div>
-      <div class="card">
-        <p>"Professional and caring therapist. Highly recommend."</p>
-        <strong>- Client B</strong>
-      </div>
-    </div>
-  </section>
+<!-- ABOUT -->
+<section class="container" id="about">
+<h2 class="section-title">Welcome</h2>
+<div class="card about-card">
+  <img src="Kayla.jpg" alt="Kayla Massage Therapist Doncaster" class="about-img">
+  <div class="about-text">
+    <p>Hi, I’m Kayla. I help you unwind, release tension, and recover through tailored sports and relaxation massage sessions in my private studio in Doncaster.</p>
+    <p>Every session is designed around your needs so you leave feeling restored and lighter.</p>
+    <a href="about.html" class="btn" style="margin-top:10px;">Learn More About Me</a>
+  </div>
+</div>
+</section>
 
-  <!-- Booking Section -->
-  <section id="booking" class="booking fade-in">
-    <h2>Book a Session</h2>
-    <iframe src="https://your-booking-iframe-link.com" frameborder="0"></iframe>
-    <a href="#booking" class="btn float-book-btn sparkle">Book Now</a>
-  </section>
+<!-- SERVICES -->
+<section class="container" id="services">
+<h2 class="section-title">Treatments</h2>
+<div class="grid">
+  <div class="card">
+    <svg class="service-icon" viewBox="0 0 64 64" fill="none" stroke="#c9a646" stroke-width="2">
+      <circle cx="32" cy="32" r="30"/>
+      <path d="M32 20v24M20 32h24"/>
+    </svg>
+    <h3>Relaxation Massage</h3>
+    <div class="gold-line"></div>
+    <p>Calming treatment to reduce stress and help you fully unwind.</p>
+  </div>
+  <div class="card">
+    <svg class="service-icon" viewBox="0 0 64 64" fill="none" stroke="#c9a646" stroke-width="2">
+      <circle cx="32" cy="32" r="30"/>
+      <path d="M24 24l16 16M40 24L24 40"/>
+    </svg>
+    <h3>Sports Massage</h3>
+    <div class="gold-line"></div>
+    <p>Targeted techniques to relieve muscle tightness and aid recovery.</p>
+  </div>
+  <div class="card">
+    <svg class="service-icon" viewBox="0 0 64 64" fill="none" stroke="#c9a646" stroke-width="2">
+      <rect x="16" y="16" width="32" height="32"/>
+      <path d="M16 16l32 32M48 16L16 48"/>
+    </svg>
+    <h3>Deep Tissue</h3>
+    <div class="gold-line"></div>
+    <p>Firm pressure to release deeper tension and discomfort.</p>
+  </div>
+</div>
+</section>
 
-  <!-- Footer -->
-  <footer class="fade-in">
-    <p>&copy; 2026 KN Wellness Studio. All rights reserved.</p>
-  </footer>
+<!-- REVIEWS -->
+<section class="container" id="reviews">
+<h2 class="section-title">Client Reviews</h2>
+<div class="grid">
+<div class="card"><p>"Fantastic treatment — felt better straight away."</p></div>
+<div class="card"><p>"Very professional and relaxing experience."</p></div>
+<div class="card"><p>"Best massage I’ve had locally."</p></div>
+</div>
+</section>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
+<!-- BOOK -->
+<section class="container" id="contact">
+<h2 class="section-title">Book Your Session</h2>
+<p style="text-align:center;color:white;">✔ Private one-to-one studio • ✔ Tailored treatments • ✔ Calm environment</p>
+<br>
+<iframe src="https://knwellness.setmore.com" width="100%" height="700" frameborder="0"></iframe>
+</section>
+
+<a href="#contact" class="book-float">Book Now</a>
+
+<script src="script.js"></script>
+
 </body>
 </html>
