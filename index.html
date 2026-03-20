@@ -101,28 +101,7 @@
 
 <a href="#contact" class="book-float">Book Now</a>
 
-<script>
-// Fade-in scroll animation + sparkles
-const observerTargets = document.querySelectorAll('section, .card');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0)';
-      observer.unobserve(entry.target);
-      for(let i=0;i<6;i++){
-        const s=document.createElement('div');
-        s.className='sparkle';
-        s.style.left=Math.random()*entry.target.offsetWidth+'px';
-        s.style.top=Math.random()*entry.target.offsetHeight+'px';
-        entry.target.appendChild(s);
-        setTimeout(()=>s.remove(),1500);
-      }
-    }
-  });
-},{ threshold: 0.2 });
-observerTargets.forEach(el=>observer.observe(el));
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
