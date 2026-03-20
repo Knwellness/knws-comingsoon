@@ -12,11 +12,11 @@
     <div class="logo">KN Wellness Studio</div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="#treatments">Treatments</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#booking">Book</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="#treatments" class="nav-link">Treatments</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#booking" class="nav-link">Book</a></li>
       </ul>
     </nav>
   </header>
@@ -29,7 +29,7 @@
     </div>
   </section>
 
-  <!-- About Bio Card -->
+  <!-- Detailed About Bio -->
   <section class="about-bio fade-in">
     <div class="card">
       <h2>Meet [Your Name]</h2>
@@ -44,7 +44,7 @@
     </div>
   </section>
 
-  <!-- Optional Image + Text Section -->
+  <!-- Image + Text Section -->
   <section class="about-details fade-in">
     <div class="image-text-grid">
       <div class="image-container">
@@ -60,7 +60,7 @@
     </div>
   </section>
 
-  <!-- Treatments Summary (Optional) -->
+  <!-- Treatments Summary -->
   <section id="treatments" class="treatments-summary fade-in">
     <h2>Our Treatments</h2>
     <div class="card-grid">
@@ -75,10 +75,9 @@
     </div>
   </section>
 
-  <!-- Contact / Booking Section -->
+  <!-- Booking Section -->
   <section id="booking" class="booking fade-in">
     <h2>Book a Session</h2>
-    <p>Ready to prioritize your wellness? Schedule your session today!</p>
     <iframe src="https://your-booking-iframe-link.com" frameborder="0"></iframe>
     <a href="#booking" class="btn float-book-btn">Book Now</a>
   </section>
@@ -90,5 +89,14 @@
 
   <!-- Scripts -->
   <script src="script.js"></script>
+  <script>
+    // Highlight active navbar link on both pages
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-link").forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  </script>
 </body>
 </html>
