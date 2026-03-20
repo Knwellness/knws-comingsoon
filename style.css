@@ -234,29 +234,11 @@ section {
   opacity: 0.95;
 }
 
-/* REVIEWS LAYOUT */
-.top-row {
-  display: flex;
-  flex-wrap: wrap;
+/* REVIEWS GRID FIX */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  justify-content: center;
-  align-items: flex-start; /* allows cards to have independent heights */
-}
-
-.top-row .card {
-  flex: 0 0 48%; /* two cards side by side */
-  min-height: 140px;
-}
-
-.bottom-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.bottom-row .card {
-  flex: 0 0 100%; /* full width */
-  min-height: 140px;
 }
 
 .review-stars {
@@ -314,9 +296,4 @@ section {
   .about-card { flex-direction: column; text-align: center; }
   .about-img { width: 110px; height: 110px; }
   .logo img { width: 180px; }
-  .top-row .card,
-  .bottom-row .card {
-    flex: 0 0 100%;
-    margin-bottom: 20px;
-  }
 }
