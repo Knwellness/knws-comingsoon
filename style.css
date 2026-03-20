@@ -234,7 +234,7 @@ section {
   opacity: 0.95;
 }
 
-/* REVIEWS SECTION */
+/* REVIEWS LAYOUT */
 
 /* Top row: 2 cards side by side */
 .top-row .card {
@@ -242,13 +242,13 @@ section {
   min-height: 140px;
 }
 
-/* Bottom row: 1 full-width card */
+/* Bottom row: full width */
 .bottom-row .card {
   flex: 1 1 95%;
   min-height: 140px;
 }
 
-/* Review stars */
+/* Review stars above text */
 .review-stars {
   color: #c9a646;
   font-size: 18px;
@@ -256,10 +256,10 @@ section {
   text-align: center;
 }
 
-/* Client initials */
+/* Client initials in fancy italic */
 .review-initials {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
+  font-family: 'Playfair Display', serif !important;
+  font-style: italic !important;
   font-weight: 500;
   font-size: 14px;
   text-align: center;
