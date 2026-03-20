@@ -183,22 +183,33 @@ section {
   min-height: 140px;
 }
 
-/* ABOUT CARDS */
+/* ABOUT CARD LEFT-RIGHT */
 .about-card {
   display: flex;
-  flex-direction: row;      /* left-right by default */
+  flex-direction: row;      /* left-right layout */
+  flex-wrap: nowrap;
   align-items: flex-start;
   gap: 25px;
+  max-width: 900px;         /* container wide enough for side-by-side */
+  margin: auto;
   text-align: left;
-  flex-wrap: nowrap;        /* prevents wrapping on desktop */
 }
 
-/* Text takes remaining space */
+/* Text next to image */
 .about-card .about-text {
   flex: 1;
 }
 
-/* Circular photo (homepage) */
+/* Rectangular image (About page) */
+.about-img-rectangle {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Circular image (homepage) */
 .about-img {
   width: 130px;
   height: 130px;
@@ -211,16 +222,6 @@ section {
 
 .about-img:hover {
   box-shadow: 0 0 35px rgba(201,166,70,0.6);
-}
-
-/* Rectangular photo (About page) */
-.about-img-rectangle {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-right: 25px;
-  flex-shrink: 0;
 }
 
 /* SERVICES */
