@@ -183,14 +183,22 @@ section {
   min-height: 140px;
 }
 
-/* ABOUT */
+/* ABOUT CARDS */
 .about-card {
   display: flex;
-  align-items: center;
+  flex-direction: row;      /* left-right by default */
+  align-items: flex-start;
   gap: 25px;
   text-align: left;
+  flex-wrap: nowrap;        /* prevents wrapping on desktop */
 }
 
+/* Text takes remaining space */
+.about-card .about-text {
+  flex: 1;
+}
+
+/* Circular photo (homepage) */
 .about-img {
   width: 130px;
   height: 130px;
@@ -205,18 +213,13 @@ section {
   box-shadow: 0 0 35px rgba(201,166,70,0.6);
 }
 
-.about-text {
-  flex: 1;
-}
-
-/* ABOUT PAGE RECTANGULAR IMAGE */
+/* Rectangular photo (About page) */
 .about-img-rectangle {
   width: 300px;
-  max-width: 100%;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
-  margin-right: 20px;
+  margin-right: 25px;
   flex-shrink: 0;
 }
 
@@ -281,6 +284,13 @@ section {
   .hero h1 { font-size: 2em; }
   .about-card { flex-direction: column; text-align: center; align-items: center; }
   .about-img { width: 110px; height: 110px; }
-  .about-img-rectangle { width: 80%; max-width: 300px; max-height: 180px; margin-right: 0; margin-bottom: 15px; }
+  .about-img-rectangle {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+    max-height: 180px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
   .logo img { width: 180px; }
 }
