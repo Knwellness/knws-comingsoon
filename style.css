@@ -235,13 +235,27 @@ section {
 }
 
 /* REVIEWS LAYOUT */
+.top-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start; /* allows cards to have independent heights */
+}
+
 .top-row .card {
-  flex: 1 1 45%;
+  flex: 0 0 48%; /* two cards side by side */
   min-height: 140px;
 }
 
+.bottom-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .bottom-row .card {
-  flex: 1 1 95%;
+  flex: 0 0 100%; /* full width */
   min-height: 140px;
 }
 
@@ -302,7 +316,7 @@ section {
   .logo img { width: 180px; }
   .top-row .card,
   .bottom-row .card {
-    flex: 1 1 100%;
+    flex: 0 0 100%;
     margin-bottom: 20px;
   }
 }
