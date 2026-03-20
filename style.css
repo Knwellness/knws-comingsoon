@@ -235,20 +235,16 @@ section {
 }
 
 /* REVIEWS LAYOUT */
-
-/* Top row: 2 cards side by side */
 .top-row .card {
   flex: 1 1 45%;
   min-height: 140px;
 }
 
-/* Bottom row: full width */
 .bottom-row .card {
   flex: 1 1 95%;
   min-height: 140px;
 }
 
-/* Review stars above text */
 .review-stars {
   color: #c9a646;
   font-size: 18px;
@@ -256,7 +252,6 @@ section {
   text-align: center;
 }
 
-/* Client initials in fancy italic */
 .review-initials {
   font-family: 'Playfair Display', serif !important;
   font-style: italic !important;
