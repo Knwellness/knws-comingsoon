@@ -126,10 +126,10 @@ img {
 
 /* CARD */
 .card {
-  background: #E3EBE4; /* Medium Sage Tint */
+  background: #E8E1D6; /* Deeper Beige */
   padding: 18px;
   border-radius: 16px;
-  border: 1px solid #6F7F6A; /* Thin Deep Sage Border */
+  border: 1.5px solid #6F7F6A; /* Deep Sage Border */
   position: relative;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
