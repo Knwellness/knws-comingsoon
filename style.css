@@ -4,6 +4,10 @@
 }
 
 /* GLOBAL */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
@@ -15,6 +19,20 @@ body {
 img {
   max-width: 100%;
   display: block;
+}
+
+/* FADE-IN ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* NAVBAR */
