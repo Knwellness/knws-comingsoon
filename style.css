@@ -1,3 +1,6 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
 /* GLOBAL */
 html {
   scroll-behavior: smooth;
@@ -5,7 +8,11 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.1px;
+  font-size: 1.05rem;
   background: #F4EFE7; /* Beige A */
   color: #2E2E2E; /* Charcoal */
   text-align: center;
@@ -45,6 +52,7 @@ img {
   text-decoration: none;
   color: #2E2E2E;
   font-weight: 500;
+  font-family: 'Inter', sans-serif;
 }
 
 .navbar a:hover {
@@ -73,15 +81,19 @@ img {
 }
 
 .hero h1 {
-  font-size: 1.7rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 1.15;
+  letter-spacing: 0.3px;
   margin: 8px 0 10px 0;
-  line-height: 1.2;
   color: #6F7F6A; /* Deep Sage */
 }
 
 .hero p {
   margin: 6px 0;
-  line-height: 1.35;
+  line-height: 1.55;
+  font-weight: 300;
 }
 
 .hero-note {
@@ -98,7 +110,11 @@ img {
 }
 
 .section-title {
-  font-size: 1.8rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
   margin-bottom: 15px;
   color: #6F7F6A; /* Deep Sage */
   border-bottom: 2px solid #8FA58C; /* Soft Sage underline */
@@ -190,6 +206,8 @@ img {
   border-radius: 28px;
   text-decoration: none;
   font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.4px;
   transition: 0.3s;
 }
 
