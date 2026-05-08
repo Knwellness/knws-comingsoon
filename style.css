@@ -345,12 +345,14 @@ a:hover {
    FOOTER
 ---------------------------------------------------- */
 .footer {
-  padding: 20px;
-  background: #fff;
+  background: #F4EFE7; /* same beige as the site */
+  border-top: 1px solid #8FA58C; /* soft sage divider */
+  padding: 25px 20px 20px;
   margin-top: 20px;
   font-size: 0.9rem;
   color: #444;
 }
+
 .contact-link {
   color: #6F7F6A;
   font-weight: 600;
@@ -360,7 +362,4 @@ a:hover {
 .contact-link:hover {
   color: #8FA58C;
 }
-.footer {
-  border-top: 1px solid #8FA58C;
-  padding-top: 25px;
-}
+
