@@ -1,8 +1,3 @@
-/* RESET OLD LOGO RULES */
-.logo {
-  width: 100% !important;
-}
-
 /* GLOBAL */
 html {
   scroll-behavior: smooth;
@@ -11,8 +6,8 @@ html {
 body {
   margin: 0;
   font-family: 'Inter', system-ui, sans-serif;
-  background: #f6f1e8;
-  color: #2b2b2b;
+  background: #F4EFE7; /* Beige A */
+  color: #2E2E2E; /* Charcoal */
   text-align: center;
 }
 
@@ -21,7 +16,7 @@ img {
   display: block;
 }
 
-/* SCROLL FADE ANIMATION */
+/* SCROLL FADE */
 .fade {
   opacity: 0;
   transform: translateY(25px);
@@ -48,33 +43,31 @@ img {
 
 .navbar a {
   text-decoration: none;
-  color: #333;
+  color: #2E2E2E;
   font-weight: 500;
 }
 
 .navbar a:hover {
-  color: #6f7f6a;
+  color: #8FA58C; /* Soft Sage */
 }
 
-/* LOGO — LARGE & CENTRED */
+/* LOGO */
 .logo-header {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 10px 0; /* tightened */
+  padding: 10px 0;
 }
 
 .logo-img {
   width: 300px;
   max-width: 85vw;
   height: auto;
-  margin: 0 auto;
 }
 
 /* HERO */
 .hero {
-  padding: 15px 20px; /* tightened */
+  padding: 15px 20px;
   max-width: 900px;
   margin: auto;
 }
@@ -83,6 +76,7 @@ img {
   font-size: 1.7rem;
   margin: 8px 0 10px 0;
   line-height: 1.2;
+  color: #6F7F6A; /* Deep Sage */
 }
 
 .hero p {
@@ -98,7 +92,7 @@ img {
 
 /* SECTIONS */
 .section {
-  padding: 30px 20px; /* tightened */
+  padding: 30px 20px;
   max-width: 1100px;
   margin: auto;
 }
@@ -106,6 +100,10 @@ img {
 .section-title {
   font-size: 1.8rem;
   margin-bottom: 15px;
+  color: #6F7F6A; /* Deep Sage */
+  border-bottom: 2px solid #8FA58C; /* Soft Sage underline */
+  display: inline-block;
+  padding-bottom: 4px;
 }
 
 .section-intro,
@@ -116,20 +114,22 @@ img {
 
 .highlight {
   font-weight: 600;
+  color: #6F7F6A; /* Deep Sage */
 }
 
 /* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 15px; /* tightened */
+  gap: 15px;
 }
 
 /* CARD */
 .card {
-  background: white;
-  padding: 18px; /* tightened */
+  background: #E3EBE4; /* Medium Sage Tint */
+  padding: 18px;
   border-radius: 16px;
+  border: 1px solid #6F7F6A; /* Thin Deep Sage Border */
   position: relative;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
@@ -140,26 +140,11 @@ img {
   transform: translateY(-3px);
 }
 
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -150%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(111,127,106,0.2), transparent);
-  transition: 1.4s;
-}
-
-.card:hover::before {
-  left: 150%;
-}
-
 /* ABOUT */
 .about-card {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* tightened */
+  gap: 15px;
   text-align: left;
 }
 
@@ -187,6 +172,7 @@ img {
 .review-stars {
   font-size: 1.3rem;
   margin-bottom: 6px;
+  color: #6F7F6A; /* Deep Sage */
 }
 
 .review-text {
@@ -199,7 +185,7 @@ img {
 .btn-primary {
   display: inline-block;
   padding: 10px 20px;
-  background: #6f7f6a;
+  background: #6F7F6A; /* Deep Sage */
   color: white;
   border-radius: 28px;
   text-decoration: none;
@@ -217,7 +203,7 @@ img {
   position: fixed;
   bottom: 18px;
   right: 18px;
-  background: #6f7f6a;
+  background: #6F7F6A;
   color: white;
   padding: 12px 20px;
   border-radius: 40px;
@@ -225,6 +211,15 @@ img {
   font-weight: 600;
   box-shadow: 0 6px 20px rgba(0,0,0,0.2);
   z-index: 999;
+}
+
+/* LINKS */
+a {
+  color: #8FA58C; /* Soft Sage */
+}
+
+a:hover {
+  color: #6F7F6A; /* Deep Sage */
 }
 
 /* FOOTER */
