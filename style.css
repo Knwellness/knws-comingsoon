@@ -45,29 +45,105 @@ img {
 
 
 /* ----------------------------------------------------
-   NAVBAR
+   NAVBAR (DESKTOP)
 ---------------------------------------------------- */
 .navbar {
-  display: flex;
-  justify-content: center;
-  gap: 22px;
-  padding: 14px 20px;
   background: #fff;
   position: sticky;
   top: 0;
   z-index: 999;
   border-bottom: 1px solid #e5e5e5;
+  padding: 12px 20px;
 }
 
-.navbar a {
+.nav-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
   text-decoration: none;
   color: #2E2E2E;
   font-weight: 500;
   font-family: 'Inter', sans-serif;
 }
 
-.navbar a:hover {
+.nav-links a:hover {
   color: #8FA58C;
+}
+
+
+/* ----------------------------------------------------
+   HAMBURGER MENU (MOBILE)
+---------------------------------------------------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  position: absolute;
+  left: 10px;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #6F7F6A;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* ----------------------------------------------------
+   MOBILE NAV
+---------------------------------------------------- */
+@media (max-width: 700px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 50px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 1rem;
+  }
 }
 
 
@@ -85,6 +161,12 @@ img {
   width: 300px;
   max-width: 85vw;
   height: auto;
+}
+
+@media (max-width: 700px) {
+  .logo-img {
+    width: 200px;
+  }
 }
 
 
@@ -236,10 +318,6 @@ img {
 
   .about-right {
     text-align: center;
-  }
-
-  .logo-img {
-    width: 200px;
   }
 }
 
