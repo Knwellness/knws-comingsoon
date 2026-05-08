@@ -1,6 +1,6 @@
 body{
   margin:0;
-  font-family: Inter, sans-serif;
+  font-family: Inter;
   background:#f6f1e8;
   color:#2b2b2b;
   text-align:center;
@@ -17,9 +17,7 @@ body{
   top:0;
 }
 
-.logo{
-  width:120px;
-}
+.logo{width:120px;}
 
 .nav-links a{
   margin:0 10px;
@@ -27,7 +25,7 @@ body{
   color:#333;
 }
 
-.btn-small{
+.btn-nav{
   background:#6f7f6a;
   color:white;
   padding:8px 14px;
@@ -35,24 +33,18 @@ body{
 }
 
 /* HERO */
-.hero{
-  padding:80px 20px;
-}
-
-.hero h1{
-  font-family:"Playfair Display";
-  font-size:42px;
-}
-
-.hero p{
-  max-width:600px;
-  margin:auto;
+.hero-inner{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  padding:60px 20px;
 }
 
 .hero-image img{
-  width:260px;
+  width:280px;
   border-radius:20px;
-  margin-top:30px;
 }
 
 /* SECTIONS */
@@ -65,11 +57,11 @@ body{
 /* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
 
-/* CARDS */
+/* CARD */
 .card{
   background:white;
   padding:25px;
@@ -80,7 +72,7 @@ body{
   transition:0.4s;
 }
 
-/* SLOW LUXURY FLASH */
+/* SLOW SAGE FLASH */
 .card::before{
   content:"";
   position:absolute;
@@ -89,21 +81,17 @@ body{
   width:50%;
   height:100%;
   background:linear-gradient(120deg,transparent,rgba(111,127,106,0.25),transparent);
-  transition:1.5s;
+  transition:1.6s;
 }
 
 .card:hover::before{
   left:150%;
 }
 
-.card:hover{
-  transform:translateY(-6px);
-}
-
-/* ABOUT IMAGE */
+/* PROFILE IMAGE */
 .profile{
-  width:120px;
-  height:120px;
+  width:110px;
+  height:110px;
   border-radius:50%;
   object-fit:cover;
   margin-bottom:15px;
@@ -112,7 +100,7 @@ body{
 /* BUTTON */
 .btn-primary{
   display:inline-block;
-  margin-top:20px;
+  margin-top:15px;
   padding:12px 20px;
   background:#6f7f6a;
   color:white;
@@ -121,7 +109,7 @@ body{
 }
 
 /* BOOKING */
-.booking{
+.booking-box{
   min-height:300px;
   background:white;
   border-radius:15px;
