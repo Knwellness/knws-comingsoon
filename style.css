@@ -21,14 +21,14 @@ img {
   display: block;
 }
 
-/* FADE-IN ANIMATIONS */
-.fade-in {
+/* SCROLL FADE ANIMATION */
+.fade {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  transform: translateY(30px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
 
-.fade-in.visible {
+.fade.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -59,18 +59,16 @@ img {
 /* LOGO — LARGE & CENTRED */
 .logo-header {
   width: 100%;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 60px 0;
-  text-align: center;
 }
 
 .logo-img {
-  width: 320px !important;
+  width: 320px;
   max-width: 90vw;
   height: auto;
-  display: block;
   margin: 0 auto;
 }
 
