@@ -16,7 +16,7 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar" aria-label="Main navigation">
+  <nav class="navbar fade-in" aria-label="Main navigation">
     <a href="#about">About</a>
     <a href="#services">Treatments</a>
     <a href="#pricing">Prices</a>
@@ -25,14 +25,14 @@
   </nav>
 
   <!-- LOGO -->
-  <header class="logo-header">
-    <img src="your-logo.png" alt="KN Wellness Studio" class="logo-img">
+  <header class="logo-header fade-in">
+    <img src="your-logo.png" alt="KN Wellness Studio" class="logo-img" loading="lazy">
   </header>
 
   <main>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero fade-in">
       <h1>Massage Therapy in Doncaster Tailored to You</h1>
 
       <p>
@@ -51,11 +51,11 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="section" id="about">
+    <section class="section fade-in" id="about">
       <h2 class="section-title">Welcome to KN Wellness Studio</h2>
 
-      <div class="card about-card">
-        <img src="Kayla.jpg" alt="Kayla, massage therapist at KN Wellness Studio in Doncaster" class="about-img">
+      <div class="card about-card scroll-fade">
+        <img src="Kayla.jpg" alt="Kayla, massage therapist at KN Wellness Studio in Doncaster" class="about-img" loading="lazy">
 
         <div class="about-text">
           <h3 class="section-title">About Me</h3>
@@ -88,21 +88,21 @@
     </section>
 
     <!-- SERVICES -->
-    <section class="section" id="services">
+    <section class="section fade-in" id="services">
       <h2 class="section-title">Treatments</h2>
 
       <div class="grid">
-        <div class="card">
+        <div class="card scroll-fade">
           <h3>Relaxation Massage</h3>
           <p>Slow, flowing techniques to calm the nervous system, reduce stress, and release full-body tension.</p>
         </div>
 
-        <div class="card">
+        <div class="card scroll-fade">
           <h3>Sports Massage</h3>
           <p>Deep tissue work targeting tight muscles, improving mobility, and supporting recovery and pain relief.</p>
         </div>
 
-        <div class="card">
+        <div class="card scroll-fade">
           <h3>Hot Stone Massage</h3>
           <p>Heated stones melt deep muscle tension, improve circulation, and create full-body relaxation.</p>
         </div>
@@ -110,7 +110,7 @@
     </section>
 
     <!-- PRICING -->
-    <section class="section" id="pricing">
+    <section class="section fade-in" id="pricing">
       <h2 class="section-title">Treatment Prices</h2>
 
       <p class="section-intro">
@@ -118,14 +118,14 @@
       </p>
 
       <div class="grid">
-        <div class="card">
+        <div class="card scroll-fade">
           <h3>Relaxation / Sports Massage</h3>
           <p>30 min – £30</p>
           <p>60 min – £55</p>
           <p>90 min – £75</p>
         </div>
 
-        <div class="card">
+        <div class="card scroll-fade">
           <h3>Hot Stone Massage</h3>
           <p>60 min – £60</p>
           <p>90 min – £85</p>
@@ -139,24 +139,24 @@
     </section>
 
     <!-- REVIEWS -->
-    <section class="section" id="reviews">
+    <section class="section fade-in" id="reviews">
       <h2 class="section-title">What Clients Are Saying</h2>
 
       <div class="grid reviews-grid">
 
-        <div class="card review-card">
+        <div class="card review-card scroll-fade">
           <p class="review-stars">★★★★★</p>
           <p class="review-text">"Lovely massage, feel fab after. No more tight shoulders or legs, definitely will be returning"</p>
           <p class="review-initials">Stacey • Doncaster</p>
         </div>
 
-        <div class="card review-card">
+        <div class="card review-card scroll-fade">
           <p class="review-stars">★★★★★</p>
           <p class="review-text">"Great experience with Kayla. She understood exactly what I needed and made me feel very comfortable."</p>
           <p class="review-initials">Carrie • Doncaster</p>
         </div>
 
-        <div class="card review-card">
+        <div class="card review-card scroll-fade">
           <p class="review-stars">★★★★★</p>
           <p class="review-text">"My back and shoulders feel so much better. Very relaxing and professional throughout."</p>
           <p class="review-initials">Marie • Doncaster</p>
@@ -166,7 +166,7 @@
     </section>
 
     <!-- BOOKING -->
-    <section class="section" id="contact">
+    <section class="section fade-in" id="contact">
       <h2 class="section-title">Book Your Session</h2>
 
       <div class="trust-bar">
@@ -185,12 +185,27 @@
   </main>
 
   <!-- FLOAT BUTTON -->
-  <a href="#contact" class="book-float">Book Now</a>
+  <a href="#contact" class="book-float fade-in">Book Now</a>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    © 2025 KN Wellness Studio — Doncaster
+  <footer class="footer fade-in">
+    © 2026 KN Wellness Studio — Doncaster
   </footer>
+
+  <!-- SCROLL FADE SCRIPT -->
+  <script>
+    const scrollElements = document.querySelectorAll(".scroll-fade");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    scrollElements.forEach(el => observer.observe(el));
+  </script>
 
 </body>
 </html>
