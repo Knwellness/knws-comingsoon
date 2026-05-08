@@ -18,8 +18,8 @@ body {
   line-height: 1.55;
   letter-spacing: 0.1px;
   font-size: 1.05rem;
-  background: #F4EFE7;
-  color: #2E2E2E;
+  background: #F4EFE7; /* Beige A */
+  color: #2E2E2E; /* Charcoal */
   text-align: center;
 }
 
@@ -45,105 +45,29 @@ img {
 
 
 /* ----------------------------------------------------
-   NAVBAR (DESKTOP)
+   NAVBAR
 ---------------------------------------------------- */
 .navbar {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  padding: 14px 20px;
   background: #fff;
   position: sticky;
   top: 0;
   z-index: 999;
   border-bottom: 1px solid #e5e5e5;
-  padding: 12px 20px;
 }
 
-.nav-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.nav-links {
-  display: flex;
-  gap: 22px;
-}
-
-.nav-links a {
+.navbar a {
   text-decoration: none;
   color: #2E2E2E;
   font-weight: 500;
   font-family: 'Inter', sans-serif;
 }
 
-.nav-links a:hover {
-  color: #8FA58C;
-}
-
-
-/* ----------------------------------------------------
-   HAMBURGER MENU (MOBILE)
----------------------------------------------------- */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  position: absolute;
-  left: 10px;
-}
-
-.hamburger span {
-  width: 26px;
-  height: 3px;
-  background: #6F7F6A;
-  border-radius: 3px;
-  transition: 0.3s;
-}
-
-/* Hamburger animation */
-.hamburger.active span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-
-/* ----------------------------------------------------
-   MOBILE NAV
----------------------------------------------------- */
-@media (max-width: 700px) {
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    width: 100%;
-    padding: 15px 0;
-    border-bottom: 1px solid #e5e5e5;
-    margin-top: 50px;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: 10px 0;
-    font-size: 1rem;
-  }
+.navbar a:hover {
+  color: #8FA58C; /* Soft Sage */
 }
 
 
@@ -163,12 +87,6 @@ img {
   height: auto;
 }
 
-@media (max-width: 700px) {
-  .logo-img {
-    width: 200px;
-  }
-}
-
 
 /* ----------------------------------------------------
    HERO
@@ -186,7 +104,7 @@ img {
   line-height: 1.15;
   letter-spacing: 0.3px;
   margin: 8px 0 10px 0;
-  color: #6F7F6A;
+  color: #6F7F6A; /* Deep Sage */
 }
 
 .hero p {
@@ -218,8 +136,8 @@ img {
   line-height: 1.2;
   letter-spacing: 0.3px;
   margin-bottom: 15px;
-  color: #6F7F6A;
-  border-bottom: 2px solid #8FA58C;
+  color: #6F7F6A; /* Deep Sage */
+  border-bottom: 2px solid #8FA58C; /* Soft Sage underline */
   display: inline-block;
   padding-bottom: 4px;
 }
@@ -232,7 +150,7 @@ img {
 
 .highlight {
   font-weight: 600;
-  color: #6F7F6A;
+  color: #6F7F6A; /* Deep Sage */
 }
 
 
@@ -250,10 +168,10 @@ img {
    CARD
 ---------------------------------------------------- */
 .card {
-  background: #E8E1D6;
+  background: #E8E1D6; /* Deeper Beige */
   padding: 18px;
   border-radius: 16px;
-  border: 1.5px solid #6F7F6A;
+  border: 1.5px solid #6F7F6A; /* Deep Sage Border */
   position: relative;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
@@ -266,35 +184,26 @@ img {
 
 
 /* ----------------------------------------------------
-   ABOUT — IMPROVED LAYOUT
+   ABOUT
 ---------------------------------------------------- */
 .about-card {
   display: flex;
-  flex-direction: row;
-  gap: 30px;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
   text-align: left;
 }
 
-.about-left {
-  flex: 0 0 160px;
-  display: flex;
-  justify-content: center;
-}
-
-.about-right {
-  flex: 1;
-}
-
 .about-img {
-  width: 160px;
-  height: 160px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
+  margin: auto;
 }
 
 .about-text {
   max-width: 750px;
+  margin: auto;
 }
 
 .about-list {
@@ -305,59 +214,13 @@ img {
 }
 
 
-/* MOBILE ABOUT LAYOUT */
-@media (max-width: 700px) {
-  .about-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .about-left {
-    margin-bottom: 10px;
-  }
-
-  .about-right {
-    text-align: center;
-  }
-}
-
-
-/* ----------------------------------------------------
-   SERVICES — SYMPTOM LINES
----------------------------------------------------- */
-.best-for {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  color: #6F7F6A;
-  opacity: 0.9;
-}
-
-.best-for span {
-  font-weight: 500;
-  color: #6F7F6A;
-}
-
-.best-for b {
-  font-weight: 600;
-  color: #6F7F6A;
-  text-decoration: underline;
-  text-decoration-color: #8FA58C;
-  text-underline-offset: 3px;
-}
-
-.service-btn {
-  margin-top: 12px;
-  display: inline-block;
-}
-
-
 /* ----------------------------------------------------
    REVIEWS
 ---------------------------------------------------- */
 .review-stars {
   font-size: 1.3rem;
   margin-bottom: 6px;
-  color: #6F7F6A;
+  color: #6F7F6A; /* Deep Sage */
 }
 
 .review-text {
@@ -373,7 +236,7 @@ img {
 .btn-primary {
   display: inline-block;
   padding: 10px 20px;
-  background: #6F7F6A;
+  background: #6F7F6A; /* Deep Sage */
   color: white;
   border-radius: 28px;
   text-decoration: none;
@@ -411,11 +274,11 @@ img {
    LINKS
 ---------------------------------------------------- */
 a {
-  color: #8FA58C;
+  color: #8FA58C; /* Soft Sage */
 }
 
 a:hover {
-  color: #6F7F6A;
+  color: #6F7F6A; /* Deep Sage */
 }
 
 
@@ -428,4 +291,18 @@ a:hover {
   margin-top: 20px;
   font-size: 0.9rem;
   color: #444;
+}
+
+
+/* ----------------------------------------------------
+   RESPONSIVE
+---------------------------------------------------- */
+@media (max-width: 700px) {
+  .about-card {
+    text-align: center;
+  }
+
+  .logo-img {
+    width: 200px;
+  }
 }
