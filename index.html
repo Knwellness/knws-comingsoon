@@ -54,7 +54,7 @@
     <section class="section fade-in" id="about">
       <h2 class="section-title">Welcome to KN Wellness Studio</h2>
 
-      <div class="card about-card scroll-fade">
+      <div class="card about-card fade-in">
         <img src="Kayla.jpg" alt="Kayla, massage therapist at KN Wellness Studio in Doncaster" class="about-img" loading="lazy">
 
         <div class="about-text">
@@ -92,17 +92,17 @@
       <h2 class="section-title">Treatments</h2>
 
       <div class="grid">
-        <div class="card scroll-fade">
+        <div class="card fade-in">
           <h3>Relaxation Massage</h3>
           <p>Slow, flowing techniques to calm the nervous system, reduce stress, and release full-body tension.</p>
         </div>
 
-        <div class="card scroll-fade">
+        <div class="card fade-in">
           <h3>Sports Massage</h3>
           <p>Deep tissue work targeting tight muscles, improving mobility, and supporting recovery and pain relief.</p>
         </div>
 
-        <div class="card scroll-fade">
+        <div class="card fade-in">
           <h3>Hot Stone Massage</h3>
           <p>Heated stones melt deep muscle tension, improve circulation, and create full-body relaxation.</p>
         </div>
@@ -118,14 +118,14 @@
       </p>
 
       <div class="grid">
-        <div class="card scroll-fade">
+        <div class="card fade-in">
           <h3>Relaxation / Sports Massage</h3>
           <p>30 min – £30</p>
           <p>60 min – £55</p>
           <p>90 min – £75</p>
         </div>
 
-        <div class="card scroll-fade">
+        <div class="card fade-in">
           <h3>Hot Stone Massage</h3>
           <p>60 min – £60</p>
           <p>90 min – £85</p>
@@ -144,19 +144,19 @@
 
       <div class="grid reviews-grid">
 
-        <div class="card review-card scroll-fade">
+        <div class="card review-card fade-in">
           <p class="review-stars">★★★★★</p>
           <p class="review-text">"Lovely massage, feel fab after. No more tight shoulders or legs, definitely will be returning"</p>
           <p class="review-initials">Stacey • Doncaster</p>
         </div>
 
-        <div class="card review-card scroll-fade">
+        <div class="card review-card fade-in">
           <p class="review-stars">★★★★★</p>
           <p class="review-text">"Great experience with Kayla. She understood exactly what I needed and made me feel very comfortable."</p>
           <p class="review-initials">Carrie • Doncaster</p>
         </div>
 
-        <div class="card review-card scroll-fade">
+        <div class="card review-card fade-in">
           <p class="review-stars">★★★★★</p>
           <p class="review-text">"My back and shoulders feel so much better. Very relaxing and professional throughout."</p>
           <p class="review-initials">Marie • Doncaster</p>
@@ -194,12 +194,12 @@
 
   <!-- SCROLL FADE SCRIPT -->
   <script>
-    const scrollElements = document.querySelectorAll(".scroll-fade");
+    const scrollElements = document.querySelectorAll(".fade-in");
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in");
+          entry.target.classList.add("visible");
         }
       });
     }, { threshold: 0.2 });
