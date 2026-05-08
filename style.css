@@ -191,6 +191,10 @@ body {
   text-decoration-color: #8FA58C;
   text-underline-offset: 3px;
 }
+.service-btn {
+  margin-top: 12px;
+  display: inline-block;
+}
 
 
 /* ----------------------------------------------------
