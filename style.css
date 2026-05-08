@@ -1,35 +1,46 @@
 /* ----------------------------------------------------
-   GOOGLE FONTS
+   GOOGLE FONTS — MUST BE FIRST
 ---------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
 
 
 /* ----------------------------------------------------
    GLOBAL
 ---------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #F4EFE7;
-  color: #2E2E2E;
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 0.1px;
+  font-size: 1.05rem;
+  background: #F4EFE7; /* Beige A */
+  color: #2E2E2E; /* Charcoal */
   text-align: center;
 }
 
-.section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: auto;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.section-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #6F7F6A;
-  border-bottom: 2px solid #8FA58C;
-  display: inline-block;
-  padding-bottom: 4px;
-  margin-bottom: 25px;
+
+/* ----------------------------------------------------
+   SCROLL FADE
+---------------------------------------------------- */
+.fade {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -39,23 +50,24 @@ body {
 .navbar {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  padding: 15px 0;
-  background: #E8E1D6;
-  border-bottom: 1px solid #6F7F6A;
+  gap: 22px;
+  padding: 14px 20px;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .navbar a {
   text-decoration: none;
   color: #2E2E2E;
   font-weight: 500;
+  font-family: 'Inter', sans-serif;
 }
 
-.navbar .btn {
-  background: #6F7F6A;
-  color: white;
-  padding: 8px 18px;
-  border-radius: 20px;
+.navbar a:hover {
+  color: #8FA58C; /* Soft Sage */
 }
 
 
@@ -63,11 +75,15 @@ body {
    LOGO
 ---------------------------------------------------- */
 .logo-header {
-  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
 }
 
 .logo-img {
-  width: 140px;
+  width: 300px;
+  max-width: 85vw;
   height: auto;
 }
 
@@ -76,34 +92,65 @@ body {
    HERO
 ---------------------------------------------------- */
 .hero {
-  padding: 60px 20px;
+  padding: 15px 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
 .hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
   font-size: 2.2rem;
-  color: #6F7F6A;
-  margin-bottom: 15px;
+  line-height: 1.15;
+  letter-spacing: 0.3px;
+  margin: 8px 0 10px 0;
+  color: #6F7F6A; /* Deep Sage */
 }
 
 .hero p {
-  max-width: 650px;
-  margin: 10px auto;
+  margin: 6px 0;
+  line-height: 1.55;
+  font-weight: 300;
 }
 
 .hero-note {
-  margin-top: 15px;
-  font-size: 0.9rem;
+  margin-top: 8px;
+  font-size: 0.95rem;
   opacity: 0.8;
 }
 
-.btn-primary {
+
+/* ----------------------------------------------------
+   SECTIONS
+---------------------------------------------------- */
+.section {
+  padding: 30px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+  margin-bottom: 15px;
+  color: #6F7F6A; /* Deep Sage */
+  border-bottom: 2px solid #8FA58C; /* Soft Sage underline */
   display: inline-block;
-  margin-top: 15px;
-  padding: 12px 24px;
-  background: #6F7F6A;
-  color: white;
-  border-radius: 25px;
-  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+.section-intro,
+.section-note {
+  max-width: 700px;
+  margin: 0 auto 15px;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #6F7F6A; /* Deep Sage */
 }
 
 
@@ -113,30 +160,26 @@ body {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  gap: 15px;
 }
 
 
 /* ----------------------------------------------------
-   CARDS
+   CARD
 ---------------------------------------------------- */
 .card {
-  background: #E8E1D6;
-  padding: 22px;
+  background: #E8E1D6; /* Deeper Beige */
+  padding: 18px;
   border-radius: 16px;
-  border: 1.5px solid #6F7F6A;
+  border: 1.5px solid #6F7F6A; /* Deep Sage Border */
+  position: relative;
+  overflow: hidden;
   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-3px);
-}
-
-.card h3 {
-  font-size: 1.4rem;
-  color: #6F7F6A;
-  margin-bottom: 10px;
 }
 
 
@@ -146,54 +189,28 @@ body {
 .about-card {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+  text-align: left;
 }
 
 .about-img {
-  width: 100%;
-  border-radius: 12px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto;
 }
 
 .about-text {
-  text-align: left;
+  max-width: 750px;
+  margin: auto;
 }
 
 .about-list {
   list-style: none;
   padding: 0;
-  margin: 15px 0;
-}
-
-.about-list li {
-  margin: 6px 0;
-}
-
-
-/* ----------------------------------------------------
-   SERVICES — SYMPTOM LINES
----------------------------------------------------- */
-.best-for {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  color: #6F7F6A;
-  opacity: 0.9;
-}
-
-.best-for span {
-  font-weight: 500;
-  color: #6F7F6A;
-}
-
-.best-for b {
-  font-weight: 600;
-  color: #6F7F6A;
-  text-decoration: underline;
-  text-decoration-color: #8FA58C;
-  text-underline-offset: 3px;
-}
-.service-btn {
-  margin-top: 12px;
-  display: inline-block;
+  margin: 10px 0;
+  line-height: 1.5;
 }
 
 
@@ -201,32 +218,37 @@ body {
    REVIEWS
 ---------------------------------------------------- */
 .review-stars {
-  font-size: 1.2rem;
-  color: #6F7F6A;
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  color: #6F7F6A; /* Deep Sage */
 }
 
 .review-text {
   font-style: italic;
-  margin: 10px 0;
-}
-
-.review-initials {
-  font-size: 0.9rem;
-  opacity: 0.8;
+  margin-bottom: 6px;
 }
 
 
 /* ----------------------------------------------------
-   BOOKING
+   BUTTONS
 ---------------------------------------------------- */
-.trust-bar {
-  margin: 10px 0 20px;
+.btn,
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #6F7F6A; /* Deep Sage */
+  color: white;
+  border-radius: 28px;
+  text-decoration: none;
   font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.4px;
+  transition: 0.3s;
 }
 
-.highlight {
-  color: #6F7F6A;
-  font-weight: 600;
+.btn:hover,
+.btn-primary:hover {
+  background: #556653;
 }
 
 
@@ -235,14 +257,28 @@ body {
 ---------------------------------------------------- */
 .book-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 18px;
+  right: 18px;
   background: #6F7F6A;
   color: white;
-  padding: 12px 22px;
-  border-radius: 30px;
+  padding: 12px 20px;
+  border-radius: 40px;
   text-decoration: none;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+
+/* ----------------------------------------------------
+   LINKS
+---------------------------------------------------- */
+a {
+  color: #8FA58C; /* Soft Sage */
+}
+
+a:hover {
+  color: #6F7F6A; /* Deep Sage */
 }
 
 
@@ -251,22 +287,22 @@ body {
 ---------------------------------------------------- */
 .footer {
   padding: 20px;
-  background: #E8E1D6;
-  border-top: 1px solid #6F7F6A;
-  margin-top: 40px;
+  background: #fff;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #444;
 }
 
 
 /* ----------------------------------------------------
-   SCROLL FADE ANIMATION
+   RESPONSIVE
 ---------------------------------------------------- */
-.fade {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.6s ease-out;
-}
+@media (max-width: 700px) {
+  .about-card {
+    text-align: center;
+  }
 
-.fade.visible {
-  opacity: 1;
-  transform: translateY(0);
+  .logo-img {
+    width: 200px;
+  }
 }
