@@ -1,3 +1,8 @@
+/* RESET OLD LOGO RULES */
+.logo {
+  width: 100% !important;
+}
+
 /* GLOBAL */
 body {
   margin: 0;
@@ -35,7 +40,7 @@ img {
   color: #6f7f6a;
 }
 
-/* LOGO — FORCE CENTRE + LARGE */
+/* LOGO — LARGE & CENTRED */
 .logo-header {
   width: 100%;
   display: flex !important;
@@ -46,13 +51,12 @@ img {
 }
 
 .logo-img {
-  width: 320px !important;   /* Bigger logo */
+  width: 320px !important;
   max-width: 90vw;
   height: auto;
   display: block;
-  margin: 0 auto;            /* Forces centering */
+  margin: 0 auto;
 }
-
 
 /* HERO */
 .hero {
@@ -219,6 +223,6 @@ img {
   }
 
   .logo-img {
-    width: 220px; /* Slightly smaller on mobile */
+    width: 220px;
   }
 }
