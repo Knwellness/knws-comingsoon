@@ -24,8 +24,8 @@ img {
 /* SCROLL FADE ANIMATION */
 .fade {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+  transform: translateY(25px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade.visible {
@@ -37,8 +37,8 @@ img {
 .navbar {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  padding: 18px 20px;
+  gap: 22px;
+  padding: 14px 20px;
   background: #fff;
   position: sticky;
   top: 0;
@@ -62,50 +62,54 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 0; /* reduced from 60px */
+  padding: 20px 0; /* reduced again */
 }
 
 .logo-img {
-  width: 320px;
-  max-width: 90vw;
+  width: 300px;
+  max-width: 85vw;
   height: auto;
   margin: 0 auto;
 }
 
 /* HERO */
 .hero {
-  padding: 40px 20px; /* reduced from 60px */
+  padding: 30px 20px; /* reduced again */
   max-width: 900px;
   margin: auto;
 }
 
 .hero h1 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* reduced */
+}
+
+.hero p {
+  margin-bottom: 12px; /* reduced */
 }
 
 .hero-note {
-  margin-top: 20px;
+  margin-top: 15px;
   font-size: 0.95rem;
   opacity: 0.8;
 }
 
 /* SECTIONS */
 .section {
-  padding: 50px 20px; /* reduced from 80px */
+  padding: 40px 20px; /* reduced from 50px */
   max-width: 1100px;
   margin: auto;
 }
 
 .section-title {
   font-size: 1.8rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* reduced */
 }
 
 .section-intro,
 .section-note {
   max-width: 700px;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px; /* reduced */
 }
 
 .highlight {
@@ -116,22 +120,22 @@ img {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  gap: 20px; /* reduced */
 }
 
 /* CARD */
 .card {
   background: white;
-  padding: 25px;
-  border-radius: 18px;
+  padding: 20px; /* reduced */
+  border-radius: 16px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: 0.4s;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 .card::before {
@@ -141,8 +145,8 @@ img {
   left: -150%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(111,127,106,0.25), transparent);
-  transition: 1.6s;
+  background: linear-gradient(120deg, transparent, rgba(111,127,106,0.2), transparent);
+  transition: 1.4s;
 }
 
 .card:hover::before {
@@ -153,13 +157,13 @@ img {
 .about-card {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px; /* reduced */
   text-align: left;
 }
 
 .about-img {
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
   margin: auto;
@@ -173,29 +177,29 @@ img {
 .about-list {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
-  line-height: 1.8;
+  margin: 15px 0; /* reduced */
+  line-height: 1.6; /* slightly tighter */
 }
 
 /* REVIEWS */
 .review-stars {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
 }
 
 .review-text {
   font-style: italic;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 /* BUTTONS */
 .btn,
 .btn-primary {
   display: inline-block;
-  padding: 12px 22px;
+  padding: 10px 20px; /* reduced */
   background: #6f7f6a;
   color: white;
-  border-radius: 30px;
+  border-radius: 28px;
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
@@ -209,11 +213,11 @@ img {
 /* FLOATING BUTTON */
 .book-float {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 18px;
+  right: 18px;
   background: #6f7f6a;
   color: white;
-  padding: 14px 22px;
+  padding: 12px 20px;
   border-radius: 40px;
   text-decoration: none;
   font-weight: 600;
@@ -223,9 +227,9 @@ img {
 
 /* FOOTER */
 .footer {
-  padding: 40px;
+  padding: 30px; /* reduced */
   background: #fff;
-  margin-top: 40px; /* slightly reduced */
+  margin-top: 30px; /* reduced */
   font-size: 0.9rem;
   color: #444;
 }
@@ -237,6 +241,6 @@ img {
   }
 
   .logo-img {
-    width: 220px;
+    width: 200px;
   }
 }
