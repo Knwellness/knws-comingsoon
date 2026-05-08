@@ -1,205 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>KN Wellness Studio | Massage in Doncaster</title>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KN Wellness Studio Doncaster | Sports Massage Relaxation Hot Stone</title>
+  <meta name="description" content="Private one-to-one massage studio in Doncaster offering sports, relaxation and hot stone treatments. Book from £30. Limited weekly availability.">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://knwellness.studio/">
+  <meta property="og:title" content="KN Wellness Studio Doncaster | Massage">
+  <meta property="og:description" content="Private one-to-one massage studio in Doncaster. Sports, relaxation and hot stone treatments. Book from £30.">
+  <meta property="og:image" content="/images/studio-og.jpg">
 </head>
-
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
+  <!-- NAV -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
     <a href="#about">About</a>
     <a href="#services">Treatments</a>
     <a href="#pricing">Prices</a>
     <a href="#reviews">Reviews</a>
-    <a href="#contact">Book</a>
+    <a href="#contact" class="nav-book">Book</a>
   </nav>
 
-  <!-- LOGO -->
-  <header class="logo">
-    <img src="your-logo.png" alt="KN Wellness Studio">
+  <!-- HERO -->
+  <header class="hero" role="banner" aria-label="KN Wellness Studio hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>Doncaster Massage for Recovery and Deep Relaxation</h1>
+        <p class="lead">Sports, relaxation and hot stone treatments tailored to your body. Private one-to-one studio — book from <strong>£30</strong>.</p>
+
+        <div class="hero-ctas">
+          <a href="#contact" class="btn primary" id="book-now-cta">Book Now — Check Availability</a>
+          <a href="#services" class="btn secondary">View Treatments & Prices</a>
+        </div>
+
+        <p class="trustline">Private studio • Tailored treatments • Rated <strong>5.0</strong> stars</p>
+
+        <ul class="hero-features" aria-hidden="false">
+          <li>One-to-one private studio</li>
+          <li>Experienced therapist: Kayla</li>
+          <li>Card payments and online booking</li>
+        </ul>
+      </div>
+
+      <figure class="hero-image">
+        <img src="/images/kayla-studio.jpg" alt="Kayla in the KN Wellness private studio" width="560" height="420" loading="lazy">
+      </figure>
+    </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Massage Therapy in Doncaster Tailored to You</h1>
-
-<p>
-Sports, relaxation and hot stone massage tailored to reduce muscle tension, ease stress, and support recovery.
-</p>
-
-<p>
-A calm one-to-one space — no busy clinic, no distractions, just focused treatment.
-</p>
-
-    <a href="#contact" class="btn">Book Your Appointment</a>
-
-    <p class="hero-note">
-      Private one-to-one studio • By appointment only • From £30
-    </p>
-  </section>
-
   <!-- ABOUT -->
-  <section class="container" id="about">
-    <h2 class="section-title">Welcome to KN Wellness Studio</h2>
+  <section class="container" id="about" aria-labelledby="about-heading">
+    <h2 id="about-heading" class="section-title">Welcome</h2>
 
     <div class="card about-card">
-      <img src="Kayla.jpg" alt="Kayla Massage Therapist Doncaster" class="about-img">
-
+      <img src="/images/kayla-portrait.jpg" alt="Kayla massage therapist Doncaster" class="about-img" loading="lazy">
       <div class="about-text">
-
-<h2 class="section-title">About Me</h2>
-
-<p>
-Hi, I’m Kayla, a massage therapist based in Doncaster. I specialise in sports, relaxation, and hot stone massage, working with clients who experience muscle tension, stress, stiffness, or general discomfort from everyday life or physical activity.
-</p>
-
-<p>
-My approach is focused and intuitive — I take time to understand what your body needs on the day and adapt each treatment accordingly. No two sessions are the same, because no two people feel the same when they walk in.
-</p>
-
-<p>
-I’ve always been interested in how the body holds tension and how massage can help restore movement, reduce pain, and support both physical and mental wellbeing. My goal is to create a calm, comfortable space where you feel listened to and properly looked after.
-</p>
-
-<p>
-Appointments are one-to-one and completely tailored, allowing you to switch off and fully benefit from your treatment.
-</p>
-
-<ul>
-  <li>✔ ITEC Qualified Massage Therapist</li>
-  <li>✔ Fully insured for professional treatments</li>
-  <li>✔ Client comfort and communication are always prioritised</li>
-</ul>
-
-        <a href="#contact" class="btn">Book Your Session</a>
+        <p><strong>Hi, I’m Kayla.</strong> I offer personalised massage treatments designed to help you unwind, release tension, and feel physically and mentally restored.</p>
+        <p>Every session is adapted to your body on the day—whether you need deep muscle work or complete relaxation. I hold professional qualifications, public liability insurance, and maintain strict hygiene standards.</p>
+        <a href="#contact" class="btn primary">Book Your Session</a>
       </div>
     </div>
   </section>
 
   <!-- SERVICES -->
-  <section class="container" id="services">
-    <h2 class="section-title">Treatments</h2>
+  <section class="container" id="services" aria-labelledby="services-heading">
+    <h2 id="services-heading" class="section-title">Treatments</h2>
 
-    <div class="grid">
-      <!-- SERVICES -->
-<section class="container" id="services">
-  <h2 class="section-title">Treatments</h2>
+    <div class="grid services-grid">
 
-  <div class="grid">
+      <article class="card service-card" aria-labelledby="relaxation-title">
+        <h3 id="relaxation-title">Relaxation Massage</h3>
+        <p class="service-benefit">Calm the nervous system and reduce everyday stress.</p>
+        <p class="service-who"><strong>Best for:</strong> clients wanting rest, improved sleep and gentle tension release.</p>
+      </article>
 
-    <div class="card">
-      <h3>Relaxation Massage</h3>
-      <p>Slow, flowing techniques to calm the nervous system and release tension.</p>
+      <article class="card service-card" aria-labelledby="sports-title">
+        <h3 id="sports-title">Sports Massage</h3>
+        <p class="service-benefit">Targeted deep work to speed recovery and improve mobility.</p>
+        <p class="service-who"><strong>Best for:</strong> active people, runners, gym users and weekend warriors.</p>
+      </article>
 
-      <p><strong>Helps with:</strong> stress, anxiety, poor sleep, and general tension.</p>
+      <article class="card service-card" aria-labelledby="hotstone-title">
+        <h3 id="hotstone-title">Hot Stone Massage</h3>
+        <p class="service-benefit">Heated stones melt deep tension for full-body relaxation and recovery.</p>
+        <p class="service-who"><strong>Best for:</strong> chronic tightness, stress relief and deep relaxation seekers.</p>
+      </article>
 
-      <p><strong>Choose this if:</strong> you feel overwhelmed, struggle to switch off, or want to fully relax.</p>
     </div>
-
-    <div class="card">
-      <h3>Sports Massage</h3>
-      <p>Deep tissue work to target tight muscles, improve mobility, and support recovery.</p>
-
-      <p><strong>Helps with:</strong> muscle pain, stiffness, injuries, and restricted movement.</p>
-
-      <p><strong>Choose this if:</strong> you train regularly, sit for long periods, or have chronic tension.</p>
-    </div>
-
-    <div class="card">
-      <h3>Hot Stone Massage</h3>
-      <p>Heated stones melt deep muscle tension and promote full-body relaxation.</p>
-
-      <p><strong>Helps with:</strong> deep tension, stress relief, and physical relaxation.</p>
-
-      <p><strong>Choose this if:</strong> you want to fully unwind and prefer a soothing heat-based treatment.</p>
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <!-- PRICING -->
-  <section class="container" id="pricing">
-    <h2 class="section-title">Treatment Prices</h2>
+  <section class="container" id="pricing" aria-labelledby="pricing-heading">
+    <h2 id="pricing-heading" class="section-title">Treatment Prices</h2>
 
-    <p class="section-intro">
-      Choose the treatment length that best suits your needs — longer sessions allow for deeper, more effective muscle release.
-    </p>
+    <div class="pricing-grid">
 
-    <div class="grid">
-      <div class="card">
-        <h3>Relaxation / Sports Massage</h3>
-        <p>30 min – £30</p>
-        <p>60 min – £55</p>
-        <p>90 min – £75</p>
+      <div class="card price-card">
+        <h3>Relaxation or Sports Massage</h3>
+        <table class="price-table" role="table" aria-label="Relaxation and sports massage prices">
+          <tr><td>30 min</td><td>£30</td></tr>
+          <tr><td>60 min</td><td>£55</td></tr>
+          <tr><td>90 min</td><td>£75</td></tr>
+        </table>
+        <p class="package">Package: <strong>3×60 min</strong> sessions — <strong>£148</strong> (save £17)</p>
       </div>
 
-      <div class="card">
+      <div class="card price-card">
         <h3>Hot Stone Massage</h3>
-        <p>60 min – £60</p>
-        <p>90 min – £85</p>
-        <p>120 min – £105</p>
+        <table class="price-table" role="table" aria-label="Hot stone massage prices">
+          <tr><td>60 min</td><td>£60</td></tr>
+          <tr><td>90 min</td><td>£85</td></tr>
+          <tr><td>120 min</td><td>£105</td></tr>
+        </table>
+        <p class="package">Package: <strong>3×90 min</strong> sessions — <strong>£230</strong> (save £25)</p>
       </div>
+
     </div>
 
-    <p class="section-note">
-      All sessions include a short personalised consultation before treatment.
-    </p>
+    <p class="pricing-note">All session times include a short personalised consultation prior to treatment.</p>
   </section>
 
   <!-- REVIEWS -->
-  <section class="container" id="reviews">
-    <h2 class="section-title">What Clients Are Saying</h2>
+  <section class="container" id="reviews" aria-labelledby="reviews-heading">
+    <h2 id="reviews-heading" class="section-title">Client Reviews</h2>
 
-    <div class="grid reviews-grid">
+    <div class="reviews-wrap">
+      <div class="star-average">★★★★★ <span class="sr-only">5 out of 5 stars</span> <strong>5.0</strong></div>
 
-      <div class="card review-card">
-        <p class="review-stars">★★★★★</p>
-        <p class="review-text">"Lovely massage, feel fab after. No more tight shoulders or legs, definitely will be returning"</p>
-        <p class="review-initials">Stacey • Doncaster</p>
+      <div class="carousel" id="testimonials" role="region" aria-label="Client testimonials">
+        <div class="carousel-track">
+          <blockquote class="card review-card">
+            <p class="review-text">"Lovely massage, feel fab after. No more tight shoulders or legs, definitely will be returning"</p>
+            <footer class="review-meta">— Stacey, Doncaster</footer>
+          </blockquote>
+
+          <blockquote class="card review-card">
+            <p class="review-text">"Had a great experience with Kayla! She took time to understand what I wanted from the session. She was knowledgeable, kind and talented."</p>
+            <footer class="review-meta">— Carrie, Doncaster</footer>
+          </blockquote>
+
+          <blockquote class="card review-card">
+            <p class="review-text">"Made to feel very comfortable in tranquil surroundings. My back and shoulders feel so much better. Thank you Kayla"</p>
+            <footer class="review-meta">— Marie, Doncaster</footer>
+          </blockquote>
+        </div>
+
+        <div class="carousel-controls" aria-hidden="false">
+          <button class="carousel-prev" aria-label="Previous testimonial">‹</button>
+          <button class="carousel-next" aria-label="Next testimonial">›</button>
+        </div>
       </div>
 
-      <div class="card review-card">
-        <p class="review-stars">★★★★★</p>
-        <p class="review-text">"Great experience with Kayla. She understood exactly what I needed and made me feel very comfortable."</p>
-        <p class="review-initials">Carrie • Doncaster</p>
-      </div>
-
-      <div class="card review-card">
-        <p class="review-stars">★★★★★</p>
-        <p class="review-text">"My back and shoulders feel so much better. Very relaxing and professional throughout."</p>
-        <p class="review-initials">Marie • Doncaster</p>
-      </div>
-
+      <p class="leave-review">Loved your session? <a href="https://g.page/r/CUSTOM_REVIEW_LINK" target="_blank" rel="noopener">Leave a Google review</a></p>
     </div>
   </section>
 
   <!-- BOOKING -->
-  <section class="container" id="contact">
-    <h2 class="section-title">Book Your Session</h2>
+  <section class="container" id="contact" aria-labelledby="booking-heading">
+    <h2 id="booking-heading" class="section-title">Book Your Session</h2>
 
-    <div class="trust-bar">
-      ✔ Private one-to-one studio &nbsp; ✔ Tailored treatments &nbsp; ✔ Calm environment
+    <p class="booking-highlights">✔ Private one-to-one studio • ✔ Tailored treatments • ✔ Calm environment</p>
+    <p class="booking-note">Limited weekly availability — book early to secure your preferred time</p>
+
+    <div class="booking-wrapper" style="max-width:900px;margin:0 auto;">
+      <div id="square-booking" aria-live="polite" aria-busy="false">
+        <div class="booking-placeholder">
+          <p>Loading availability…</p>
+          <a href="#contact" class="btn primary" id="open-booking-manual">Open booking</a>
+        </div>
+      </div>
     </div>
 
-    <p class="section-note highlight">
-      Limited weekly availability — book early to secure your preferred time
-    </p>
-
-    <div id="square-booking"></div>
-
-    <script src="https://square.site/appointments/buyer/widget/k8rgckhr11g7dq/LXZBCPRFNZQW5.js"></script>
+    <p class="booking-info">Payment: card and cash accepted. Cancellation: please give 24 hours notice to avoid a fee.</p>
   </section>
 
-  <!-- FLOAT BUTTON -->
-  <a href="#contact" class="book-float">Book Now</a>
+  <a href="#contact" class="book-float" aria-label="Book now">Book Now</a>
 
-  <script src="script.js"></script>
+  <!-- FAQ -->
+  <section class="container" id="faq" aria-labelledby="faq-heading">
+    <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+
+    <div class="faq-grid">
+      <div class="card faq-item">
+        <h3>What should I wear?</h3>
+        <p>Wear comfortable clothing. You will be draped appropriately for privacy during the treatment.</p>
+      </div>
+
+      <div class="card faq-item">
+        <h3>How early should I arrive?</h3>
+        <p>Please arrive 5 minutes early for a short consultation so the session can start on time.</p>
+      </div>
+
+      <div class="card faq-item">
+        <h3>What payment methods do you accept?</h3>
+        <p>Card and cash accepted. Online prepayment is available via the booking widget.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <img src="/images/your-logo.png" alt="KN Wellness Studio logo" class="footer-logo" loading="lazy">
+        <p>KN Wellness Studio • Doncaster</p>
+        <p><strong>Phone:</strong> <a href="tel:+447700000000">+44 7700 000000</a></p>
+      </div>
+      <div class="footer-right">
+        <p><a href="#contact">Book</a> • <a href="#services">Treatments</a> • <a href="#pricing">Prices</a></p>
+        <p>© <span id="year"></span> KN Wellness Studio</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Square widget lazy loader -->
+  <script>
+  (function(){
+    var loaded = false;
+    function loadWidget(){
+      if(loaded) return;
+      loaded = true;
+      var s = document.createElement('script');
+      s.src = "https://square.site/appointments/buyer/widget/k8rgckhr11g7dq/LXZBCPRFNZQW5.js";
+      s.async = true;
+      document.getElementById('square-booking').appendChild(s);
+      document.getElementById('square-booking').setAttribute('aria-busy','true');
+      s.onload = function(){ document.getElementById('square-booking').setAttribute('aria-busy','false'); };
+    }
+
+    if('IntersectionObserver' in window){
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting) { loadWidget(); obs.disconnect(); }
+        });
+      }, {rootMargin: '200px'});
+      var el = document.getElementById('square-booking');
+      if(el) obs.observe(el);
+    } else {
+      window.addEventListener('scroll', function onScroll(){
+        if(window.scrollY > 200){ loadWidget(); window.removeEventListener('scroll', onScroll); }
+      });
+    }
+
+    document.getElementById('open-booking-manual').addEventListener('click', function(e){
+      e.preventDefault();
+      loadWidget();
+      this.style.display = 'none';
+    });
+
+    // Simple carousel controls
+    var track, slides, index = 0;
+    function initCarousel(){
+      track = document.querySelector('.carousel-track');
+      if(!track) return;
+      slides = track.children;
+      function show(i){
+        index = (i + slides.length) % slides.length;
+        track.style.transform = 'translateX(' + (-index * 100) + '%)';
+      }
+      document.querySelector('.carousel-next').addEventListener('click', function(){ show(index+1); });
+      document.querySelector('.carousel-prev').addEventListener('click', function(){ show(index-1); });
+      // auto-rotate
+      setInterval(function(){ show(index+1); }, 7000);
+    }
+    document.addEventListener('DOMContentLoaded', initCarousel);
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+  </script>
+
+  <!-- JSON-LD LocalBusiness and FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"HealthAndBeautyBusiness",
+        "name":"KN Wellness Studio",
+        "image":["https://knwellness.studio/images/studio-og.jpg"],
+        "@id":"https://knwellness.studio",
+        "url":"https://knwellness.studio",
+        "telephone":"+44 7700 000000",
+        "address":{
+          "@type":"PostalAddress",
+          "streetAddress":"[Your Street Address]",
+          "addressLocality":"Doncaster",
+          "postalCode":"[Your Postcode]",
+          "addressCountry":"GB"
+        },
+        "priceRange":"£30 - £105",
+        "openingHours":["Mo-Fr 09:00-18:00","Sa 09:00-14:00"],
+        "aggregateRating":{
+          "@type":"AggregateRating",
+          "ratingValue":"5.0",
+          "reviewCount":"12"
+        }
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"What should I wear?",
+            "acceptedAnswer":{"@type":"Answer","text":"Wear comfortable clothing. You will be draped appropriately for privacy during the treatment."}
+          },
+          {
+            "@type":"Question",
+            "name":"How early should I arrive?",
+            "acceptedAnswer":{"@type":"Answer","text":"Please arrive 5 minutes early for a short consultation so the session can start on time."}
+          },
+          {
+            "@type":"Question",
+            "name":"What payment methods do you accept?",
+            "acceptedAnswer":{"@type":"Answer","text":"Card and cash accepted. Online prepayment is available via the booking widget."}
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
 </body>
 </html>
