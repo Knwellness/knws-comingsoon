@@ -358,6 +358,10 @@ a:hover {
   font-weight: 600;
   text-decoration: none;
 }
+.footer p {
+  margin: 2px 0;
+  line-height: 1.25;
+}
 
 .contact-link:hover {
   color: #8FA58C;
