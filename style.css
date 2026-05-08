@@ -35,19 +35,24 @@ img {
   color: #6f7f6a;
 }
 
-/* LOGO — LARGE & CENTRED */
+/* LOGO — FORCE CENTRE + LARGE */
 .logo-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   padding: 60px 0;
+  text-align: center;
 }
 
 .logo-img {
-  width: 280px;        /* Large logo */
-  max-width: 90vw;     /* Responsive */
+  width: 320px !important;   /* Bigger logo */
+  max-width: 90vw;
   height: auto;
+  display: block;
+  margin: 0 auto;            /* Forces centering */
 }
+
 
 /* HERO */
 .hero {
