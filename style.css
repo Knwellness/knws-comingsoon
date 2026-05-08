@@ -351,3 +351,12 @@ a:hover {
   font-size: 0.9rem;
   color: #444;
 }
+.contact-link {
+  color: #6F7F6A;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: #8FA58C;
+}
