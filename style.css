@@ -360,3 +360,7 @@ a:hover {
 .contact-link:hover {
   color: #8FA58C;
 }
+.footer {
+  border-top: 1px solid #8FA58C;
+  padding-top: 25px;
+}
