@@ -244,3 +244,77 @@ img {
     width: 200px;
   }
 }
+/* FINAL SPACING FIX — OVERRIDES EVERYTHING */
+
+/* Reduce space under logo */
+.logo-header {
+  padding: 15px 0 !important;
+}
+
+/* Reduce hero spacing */
+.hero {
+  padding: 25px 20px !important;
+}
+
+.hero h1 {
+  margin-bottom: 10px !important;
+}
+
+.hero p {
+  margin: 8px 0 !important;
+}
+
+.hero-note {
+  margin-top: 10px !important;
+}
+
+/* Reduce section spacing */
+.section {
+  padding: 30px 20px !important;
+}
+
+/* Reduce spacing inside sections */
+.section-title {
+  margin-bottom: 15px !important;
+}
+
+.section-intro,
+.section-note {
+  margin-bottom: 15px !important;
+}
+
+/* Reduce card spacing */
+.card {
+  padding: 18px !important;
+  margin: 0 !important;
+}
+
+/* Reduce grid spacing */
+.grid {
+  gap: 15px !important;
+}
+
+/* Reduce about section spacing */
+.about-card {
+  gap: 15px !important;
+}
+
+.about-list {
+  margin: 10px 0 !important;
+  line-height: 1.5 !important;
+}
+
+/* Reduce review spacing */
+.review-stars {
+  margin-bottom: 6px !important;
+}
+
+.review-text {
+  margin-bottom: 6px !important;
+}
+
+/* Reduce footer spacing */
+.footer {
+  padding: 20px !important;
+  margin-top: 20px !important;
+}
