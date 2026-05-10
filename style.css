@@ -362,7 +362,7 @@ a:hover {
   margin: 2px 0;
   line-height: 1.25;
 }
-/* =========================
-   PACKAGE STYLING (FIXED SIZE)
-   ========================= */
 
+.contact-link:hover {
+  color: #8FA58C;
+}
