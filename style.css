@@ -362,7 +362,41 @@ a:hover {
   margin: 2px 0;
   line-height: 1.25;
 }
+/* =========================
+   PACKAGE STYLING (FIXED SIZE)
+   ========================= */
 
+.package-info,
+.package-summary {
+  max-width: 650px;
+  margin: 20px auto 0 auto;
+  padding: 16px 18px;
+  text-align: center;
+  font-size: 0.95rem;
+  opacity: 0.95;
+  border-radius: 12px;
+}
+
+.package-info h3,
+.package-summary h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.package-info p,
+.package-summary p {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+/* make them feel secondary, not dominant */
+.package-info {
+  background: rgba(255,255,255,0.6);
+}
+
+.package-summary {
+  background: rgba(255,255,255,0.7);
+}
 .contact-link:hover {
   color: #8FA58C;
 }
