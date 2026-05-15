@@ -190,7 +190,7 @@ img {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  align-items: flex-start;
+  align-items: center;
   text-align: left;
 }
 
