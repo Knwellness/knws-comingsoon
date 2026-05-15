@@ -362,6 +362,17 @@ a:hover {
   margin: 2px 0;
   line-height: 1.25;
 }
+/* ----------------------------------------------------
+   CARD BUTTON ALIGNMENT FIX
+---------------------------------------------------- */
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-btn {
+  margin-top: auto;
+}
 
 .contact-link:hover {
   color: #8FA58C;
