@@ -402,3 +402,7 @@ a:hover {
     scrollbar-width: none;
   }
 }
+.medical-note {
+  font-size: calc(0.95rem - 2px);
+  opacity: 0.9;
+}
