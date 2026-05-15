@@ -375,5 +375,54 @@ a:hover {
 }
 
 .contact-link:hover {
+   /* ----------------------------------------------------
+   PREMIUM SPA HIERARCHY TIGHTENING
+---------------------------------------------------- */
+
+/* smoother section rhythm */
+.section {
+  padding: 45px 20px;
+}
+
+/* reduce visual noise between blocks */
+.section p {
+  margin: 8px 0;
+}
+
+/* tighter but elegant section titles */
+.section-title {
+  margin-bottom: 18px;
+  letter-spacing: 0.4px;
+}
+
+/* intro text feels more intentional */
+.section-intro {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* cards feel more “contained” and less airy chaos */
+.card {
+  padding: 20px;
+}
+
+/* subtle spacing inside cards */
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* improves readability flow */
+.card p {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+/* packages feel slightly more premium by spacing hierarchy */
+#packages .card {
+  padding: 22px;
+}
   color: #8FA58C;
 }
