@@ -377,3 +377,28 @@ a:hover {
 .contact-link:hover {
   color: #8FA58C;
 }
+/* ----------------------------------------------------
+   MOBILE NAVBAR SCROLL FIX
+---------------------------------------------------- */
+@media (max-width: 700px) {
+  .navbar {
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+  }
+
+  .navbar a {
+    flex: 0 0 auto;
+  }
+
+  /* hide scrollbar (clean spa aesthetic) */
+  .navbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar {
+    scrollbar-width: none;
+  }
+}
