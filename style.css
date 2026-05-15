@@ -102,14 +102,12 @@ img {
   font-weight: 600;
   font-size: 2.2rem;
   line-height: 1.15;
-  letter-spacing: 0.3px;
   margin: 8px 0 10px 0;
   color: #6F7F6A;
 }
 
 .hero p {
   margin: 6px 0;
-  line-height: 1.55;
   font-weight: 300;
 }
 
@@ -133,8 +131,6 @@ img {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
   font-size: 1.9rem;
-  line-height: 1.2;
-  letter-spacing: 0.3px;
   margin-bottom: 15px;
   color: #6F7F6A;
   border-bottom: 2px solid #8FA58C;
@@ -165,16 +161,17 @@ img {
 
 
 /* ----------------------------------------------------
-   CARD
+   CARD (FIXED — BUTTON ALIGNMENT)
 ---------------------------------------------------- */
 .card {
   background: #E8E1D6;
   padding: 18px;
   border-radius: 16px;
   border: 1.5px solid #6F7F6A;
-  position: relative;
-  overflow: hidden;
   box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+
+  display: flex;
+  flex-direction: column;
   transition: 0.3s;
 }
 
@@ -182,26 +179,35 @@ img {
   transform: translateY(-3px);
 }
 
+.service-btn {
+  margin-top: auto;
+  display: inline-block;
+}
+
 
 /* ----------------------------------------------------
-   ABOUT — IMPROVED LAYOUT
+   ABOUT — FIXED PROPERLY
 ---------------------------------------------------- */
 .about-card {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  align-items: center;
   text-align: left;
+  align-items: stretch;
 }
 
 .about-left {
   flex: 0 0 160px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .about-right {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about-img {
@@ -209,10 +215,6 @@ img {
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
-}
-
-.about-text {
-  max-width: 750px;
 }
 
 .about-list {
@@ -223,7 +225,7 @@ img {
 }
 
 
-/* MOBILE ABOUT LAYOUT */
+/* MOBILE ABOUT */
 @media (max-width: 700px) {
   .about-card {
     flex-direction: column;
@@ -245,7 +247,7 @@ img {
 
 
 /* ----------------------------------------------------
-   SERVICES — SYMPTOM LINES
+   SERVICES
 ---------------------------------------------------- */
 .best-for {
   margin-top: 10px;
@@ -256,35 +258,13 @@ img {
 
 .best-for span {
   font-weight: 500;
-  color: #6F7F6A;
 }
 
 .best-for b {
   font-weight: 600;
-  color: #6F7F6A;
   text-decoration: underline;
   text-decoration-color: #8FA58C;
   text-underline-offset: 3px;
-}
-
-.service-btn {
-  margin-top: 12px;
-  display: inline-block;
-}
-
-
-/* ----------------------------------------------------
-   REVIEWS
----------------------------------------------------- */
-.review-stars {
-  font-size: 1.3rem;
-  margin-bottom: 6px;
-  color: #6F7F6A;
-}
-
-.review-text {
-  font-style: italic;
-  margin-bottom: 6px;
 }
 
 
@@ -300,8 +280,6 @@ img {
   border-radius: 28px;
   text-decoration: none;
   font-weight: 500;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: 0.4px;
   transition: 0.3s;
 }
 
@@ -312,7 +290,7 @@ img {
 
 
 /* ----------------------------------------------------
-   FLOATING BUTTON
+   FLOAT BUTTON
 ---------------------------------------------------- */
 .book-float {
   position: fixed;
@@ -345,9 +323,9 @@ a:hover {
    FOOTER
 ---------------------------------------------------- */
 .footer {
-  background: #F4EFE7; /* same beige as the site */
-  border-top: 1px solid #8FA58C; /* soft sage divider */
-  padding: 25px 20px 20px;
+  background: #F4EFE7;
+  border-top: 1px solid #8FA58C;
+  padding: 25px 20px;
   margin-top: 20px;
   font-size: 0.9rem;
   color: #444;
@@ -357,21 +335,6 @@ a:hover {
   color: #6F7F6A;
   font-weight: 600;
   text-decoration: none;
-}
-.footer p {
-  margin: 2px 0;
-  line-height: 1.25;
-}
-/* ----------------------------------------------------
-   CARD BUTTON ALIGNMENT FIX
----------------------------------------------------- */
-.card {
-  display: flex;
-  flex-direction: column;
-}
-
-.service-btn {
-  margin-top: auto;
 }
 
 .contact-link:hover {
