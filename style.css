@@ -406,3 +406,7 @@ a:hover {
   font-size: calc(0.95rem - 2px);
   opacity: 0.9;
 }
+.cancel-note {
+  font-size: 0.88rem;
+  opacity: 0.9;
+}
