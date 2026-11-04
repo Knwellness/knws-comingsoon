@@ -477,3 +477,55 @@ a:hover {
   font-size: 0.9rem;
   line-height: 1.5;
 }
+
+/* FIRST VISIT OFFER STRIP */
+
+.first-visit-offer {
+  background-color: #64785d;
+  color: #ffffff;
+  text-align: center;
+  padding: 16px 12px;
+  margin: 0 auto 20px;
+  width: 100%;
+}
+
+.first-visit-offer .offer-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 4px;
+  color: #ffffff;
+}
+
+.first-visit-offer .offer-subtitle {
+  font-size: 0.9rem;
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+
+.first-visit-offer .offer-link {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.first-visit-offer .offer-link:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .first-visit-offer {
+    padding: 13px 10px;
+  }
+
+  .first-visit-offer .offer-title {
+    font-size: 1.1rem;
+  }
+
+  .first-visit-offer .offer-subtitle {
+    font-size: 0.82rem;
+  }
+}
