@@ -431,6 +431,7 @@ a:hover {
 
 /* COMPACT FAQ SECTION */
 
+
 .faq-card {
   max-width: 800px;
   margin: 0 auto;
@@ -454,8 +455,9 @@ a:hover {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
+  text-align: left;
 }
 
 .faq-card summary::-webkit-details-marker {
@@ -466,6 +468,7 @@ a:hover {
   content: "+";
   font-size: 19px;
   font-weight: 400;
+  flex-shrink: 0;
 }
 
 .faq-card details[open] summary::after {
@@ -477,6 +480,7 @@ a:hover {
   font-size: 0.9rem;
   line-height: 1.5;
 }
+
 
 /* FIRST VISIT OFFER STRIP */
 
