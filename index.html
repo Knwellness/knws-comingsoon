@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -11,38 +11,96 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Navigation and logo */
+    .navbar {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.2rem;
+    }
+
+    .navbar .navbar-brand {
+      display: inline-flex;
+      align-items: center;
+      margin-right: auto;
+      padding: 0;
+      background: transparent;
+      border: 0;
+    }
+
+    .navbar-logo {
+      display: block;
+      width: auto;
+      height: 48px;
+      max-width: 150px;
+      object-fit: contain;
+    }
+
+    /* Footer logo */
+    .footer-logo {
+      display: block;
+      width: auto;
+      height: 58px;
+      max-width: 180px;
+      object-fit: contain;
+      margin: 0 auto 0.75rem;
+    }
+
+    /* Mobile navigation */
+    @media (max-width: 650px) {
+      .navbar {
+        justify-content: center;
+        gap: 0.65rem 0.9rem;
+      }
+
+      .navbar .navbar-brand {
+        width: 100%;
+        justify-content: center;
+        margin-right: 0;
+      }
+
+      .navbar-logo {
+        height: 42px;
+      }
+    }
+  </style>
+
 </head>
 
-<body>
+<body id="top">
 
   <!-- NAVBAR -->
   <nav class="navbar fade" aria-label="Main navigation">
+
+    <a href="#top" class="navbar-brand" aria-label="KN Wellness Studio home">
+      <img src="your-logo.png" alt="KN Wellness Studio" class="navbar-logo">
+    </a>
+
     <a href="#about">About</a>
     <a href="#services">Treatments</a>
     <a href="#packages">Packages</a>
     <a href="#pricing">Prices</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact" class="btn">Book</a>
+
   </nav>
 
-  <!-- LOGO -->
-  <header class="logo-header fade">
-    <img src="your-logo.png" alt="KN Wellness Studio" class="logo-img" loading="lazy">
-  </header>
-
   <!-- STUDIO BANNER -->
-<div class="studio-banner">
-  <img
-    src="https://knwellness.studio/Studio.png"
-    alt="KN Wellness Studio treatment room"
-    loading="eager"
-  >
-</div>
+  <div class="studio-banner">
+    <img
+      src="https://knwellness.studio/Studio.png"
+      alt="KN Wellness Studio treatment room"
+      loading="eager"
+    >
+  </div>
 
   <main>
 
     <!-- HERO -->
     <section class="hero fade">
+
       <h1>Massage Therapy in Doncaster, tailored to you</h1>
 
       <p>
@@ -56,12 +114,14 @@
       <a href="#contact" class="btn btn-primary">Book Your Appointment</a>
 
       <p class="hero-note">
-       Private one-to-one studio • By appointment only • From £30
+        Private one-to-one studio • By appointment only • From £30
       </p>
+
     </section>
 
     <!-- ABOUT -->
     <section class="section fade" id="about">
+
       <h2 class="section-title">Welcome to KN Wellness Studio</h2>
 
       <div class="card about-card fade">
@@ -71,6 +131,7 @@
         </div>
 
         <div class="about-right about-text">
+
           <h3 class="section-title">About Me</h3>
 
           <p>
@@ -97,18 +158,21 @@
           </ul>
 
           <p class="section-note">
-            If you have any questions or concerns before booking, please feel free to  
+            If you have any questions or concerns before booking, please feel free to
             <a href="https://wa.me/447368582502" class="contact-link">message me on WhatsApp</a>.
           </p>
 
           <a href="#contact" class="btn btn-primary">Book Your Session</a>
+
         </div>
 
       </div>
+
     </section>
 
     <!-- SERVICES -->
     <section class="section fade" id="services">
+
       <h2 class="section-title">Treatments</h2>
 
       <div class="grid">
@@ -141,6 +205,7 @@
         </div>
 
       </div>
+
     </section>
 
     <!-- PACKAGES -->
@@ -155,9 +220,12 @@
       <div class="grid">
 
         <div class="card fade">
+
           <h3>Recovery & Relaxation Package</h3>
 
-          <p class="highlight"><strong>SAVE 10% - £135.00 </strong></p>
+          <p class="highlight">
+            <strong>SAVE 10% - £135.00</strong>
+          </p>
 
           <p>
             Includes <strong>three 60-minute sessions</strong>, tailored to your needs with a choice of sports or relaxation massage.
@@ -172,12 +240,16 @@
           </p>
 
           <a href="#contact" class="btn btn-primary service-btn">Book First Session</a>
+
         </div>
 
         <div class="card fade">
+
           <h3>Total Wellness Package</h3>
 
-          <p class="highlight"><strong>SAVE 10% - £245.00 </strong></p>
+          <p class="highlight">
+            <strong>SAVE 10% - £245.00</strong>
+          </p>
 
           <p>
             This premium plan includes <strong>five 1-hour sessions</strong>,
@@ -194,6 +266,7 @@
           </p>
 
           <a href="#contact" class="btn btn-primary service-btn">Book First Session</a>
+
         </div>
 
       </div>
@@ -202,6 +275,7 @@
 
     <!-- PRICING -->
     <section class="section fade" id="pricing">
+
       <h2 class="section-title">Treatment Prices</h2>
 
       <p class="section-intro">
@@ -231,18 +305,24 @@
       </p>
 
       <div class="policy-block fade cancel-note">
+
         <h3>Cancellation & Late Arrival Policy</h3>
+
         <p>
           I kindly ask for at least 24 hours’ notice for cancellations. Late cancellations or missed appointments may be charged up to 50% of the treatment cost.
         </p>
+
         <p>
           Please arrive on time. If you arrive late, your treatment may need to be shortened to avoid affecting the next client, and the full session fee will still apply.
         </p>
+
       </div>
+
     </section>
 
     <!-- REVIEWS -->
     <section class="section fade" id="reviews">
+
       <h2 class="section-title">What Clients Are Saying</h2>
 
       <div class="grid reviews-grid">
@@ -266,10 +346,12 @@
         </div>
 
       </div>
+
     </section>
 
     <!-- BOOKING -->
     <section class="section fade" id="contact">
+
       <h2 class="section-title">Book Your Session</h2>
 
       <div class="trust-bar">
@@ -280,33 +362,43 @@
         Limited weekly availability — book early to secure your preferred time
       </p>
 
-      <!-- DISCLAIMER SECTION -->
+      <!-- HEALTH & WELLBEING -->
       <div class="policy-block fade medical-note">
+
         <h3>Health & Wellbeing</h3>
+
         <p>
           Your wellbeing is my priority. Please do not book an appointment if you are currently experiencing any serious or contagious medical conditions, or if you have recently undergone surgery, unless you have received clearance from your GP or healthcare provider.
         </p>
+
         <p>
           If you have any injuries, medical conditions, or are pregnant, please let me know before your appointment so your treatment can be safely adapted to your individual needs.
         </p>
+
         <p>
           Massage is a complementary therapy and does not replace medical advice or treatment.
         </p>
+
       </div>
 
       <div id="square-booking"></div>
 
       <script src="https://square.site/appointments/buyer/widget/k8rgckhr11g7dq/LXZBCPRFNZQW5.js"></script>
+
     </section>
 
   </main>
 
-  <!-- FLOAT BUTTON -->
+  <!-- FLOATING BOOK BUTTON -->
   <a href="#contact" class="book-float fade">Book Now</a>
 
   <!-- FOOTER -->
   <footer class="footer fade">
+
+    <img src="your-logo.png" alt="KN Wellness Studio" class="footer-logo" loading="lazy">
+
     <p><strong>KN Wellness Studio</strong></p>
+
     <p>Private studio in New Rossington, Doncaster</p>
 
     <p>
@@ -316,21 +408,28 @@
     </p>
 
     <p>© 2026 KN Wellness Studio — Doncaster</p>
+
   </footer>
 
   <!-- SCROLL FADE SCRIPT -->
   <script>
+
     const elements = document.querySelectorAll(".fade");
 
     const observer = new IntersectionObserver((entries) => {
+
       entries.forEach(entry => {
+
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
         }
+
       });
+
     }, { threshold: 0.2 });
 
     elements.forEach(el => observer.observe(el));
+
   </script>
 
 </body>
