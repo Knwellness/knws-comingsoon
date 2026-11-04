@@ -1,19 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>KN Wellness Studio | Massage in Doncaster</title>
+  <meta name="description" content="Personalised sports, relaxation and hot stone massage at KN Wellness Studio, a private garden studio in New Rossington, Doncaster.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Navigation and logo */
+    /* NAVIGATION LOGO */
+
     .navbar {
       display: flex;
       align-items: center;
@@ -38,17 +41,115 @@
       object-fit: contain;
     }
 
-    /* Footer logo */
+    /* FIRST VISIT OFFER */
+
+    .first-visit-offer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: #edf1e9;
+      border: 1px solid #c6d2bf;
+      border-radius: 8px;
+      max-width: 420px;
+      width: calc(100% - 32px);
+      margin: 14px auto 22px;
+      padding: 10px 15px;
+      box-sizing: border-box;
+    }
+
+    .offer-content h2 {
+      color: #435b43;
+      font-size: 1.55rem;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .offer-content p {
+      color: #435b43;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin: 3px 0 0;
+    }
+
+    .first-visit-offer .offer-link {
+      background: #64785d;
+      color: #ffffff;
+      padding: 10px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .first-visit-offer .offer-link:hover {
+      background: #52664d;
+    }
+
+    /* FAQ */
+
+    .faq-card {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px 18px;
+    }
+
+    .faq-card details {
+      padding: 9px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .faq-card details:last-child {
+      border-bottom: none;
+    }
+
+    .faq-card summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #526b5b;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .faq-card summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-card summary::after {
+      content: "+";
+      font-size: 19px;
+      font-weight: 400;
+    }
+
+    .faq-card details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-card details p {
+      margin: 7px 0 2px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* FOOTER LOGO */
+
     .footer-logo {
       display: block;
       width: auto;
       height: 58px;
       max-width: 180px;
       object-fit: contain;
-      margin: 0 auto 0.75rem;
+      margin: 0 auto 12px;
     }
 
-    /* Mobile navigation */
+    /* MOBILE */
+
     @media (max-width: 650px) {
       .navbar {
         justify-content: center;
@@ -65,13 +166,33 @@
         height: 42px;
       }
     }
-  </style>
 
+    @media (max-width: 400px) {
+      .first-visit-offer {
+        gap: 8px;
+        padding: 9px 10px;
+      }
+
+      .offer-content h2 {
+        font-size: 1.3rem;
+      }
+
+      .offer-content p {
+        font-size: 0.78rem;
+      }
+
+      .first-visit-offer .offer-link {
+        padding: 9px 10px;
+        font-size: 0.75rem;
+      }
+    }
+  </style>
 </head>
 
 <body id="top">
 
-  <!-- NAVBAR -->
+  <!-- NAVIGATION -->
+
   <nav class="navbar fade" aria-label="Main navigation">
 
     <a href="#top" class="navbar-brand" aria-label="KN Wellness Studio home">
@@ -88,28 +209,36 @@
 
   </nav>
 
+
   <!-- STUDIO BANNER -->
+
   <div class="studio-banner">
     <img
-      src="https://knwellness.studio/studio.png"
+      src="https://knwellness.studio/Studio.png"
       alt="KN Wellness Studio treatment room"
       loading="eager"
     >
   </div>
 
-<!-- FIRST VISIT OFFER -->
-<div class="first-visit-offer">
-  <p class="offer-title">20% OFF YOUR FIRST VISIT</p>
-  <p class="offer-subtitle">
-    A little welcome treat from KN Wellness Studio
-  </p>
-  <a href="#contact" class="offer-link">Book Your First Massage</a>
-</div>
-<!-- END FIRST VISIT OFFER -->
+
+  <!-- FIRST VISIT OFFER -->
+
+  <div class="first-visit-offer">
+
+    <div class="offer-content">
+      <h2>20% OFF</h2>
+      <p>YOUR FIRST VISIT</p>
+    </div>
+
+    <a href="#contact" class="offer-link">BOOK NOW</a>
+
+  </div>
+
 
   <main>
 
     <!-- HERO -->
+
     <section class="hero fade">
 
       <h1>Massage Therapy in Doncaster, tailored to you</h1>
@@ -119,7 +248,9 @@
       </p>
 
       <p>
-        <strong>A peaceful private garden studio offering one-to-one treatments, with no busy clinic, no distractions and no rushed appointments. Just focused time for you.</strong>
+        <strong>
+          A peaceful private garden studio offering one-to-one treatments, with no busy clinic, no distractions and no rushed appointments. Just focused time for you.
+        </strong>
       </p>
 
       <a href="#contact" class="btn btn-primary">Book Your Appointment</a>
@@ -130,7 +261,9 @@
 
     </section>
 
+
     <!-- ABOUT -->
+
     <section class="section fade" id="about">
 
       <h2 class="section-title">Welcome to KN Wellness Studio</h2>
@@ -138,7 +271,12 @@
       <div class="card about-card fade">
 
         <div class="about-left">
-          <img src="Kayla.jpg" alt="Kayla, massage therapist at KN Wellness Studio in Doncaster" class="about-img" loading="lazy">
+          <img
+            src="Kayla.jpg"
+            alt="Kayla, massage therapist at KN Wellness Studio in Doncaster"
+            class="about-img"
+            loading="lazy"
+          >
         </div>
 
         <div class="about-right about-text">
@@ -146,7 +284,7 @@
           <h3 class="section-title">About Me</h3>
 
           <p>
-            <strong>Hi, I’m Kayla, a massage therapist based in Doncaster.</strong>
+            <strong>Hi, I'm Kayla, a massage therapist based in Doncaster.</strong>
             I specialise in sports, relaxation, and hot stone massage, working with clients who experience muscle tension, stress, stiffness, or general discomfort from everyday life or physical activity.
           </p>
 
@@ -155,11 +293,13 @@
           </p>
 
           <p>
-            <strong>I’m fascinated by how the body holds tension</strong> and how massage can restore movement, reduce pain, and support both physical and mental wellbeing. My goal is to create a calm, comfortable space where you feel listened to and properly looked after.
+            <strong>I'm fascinated by how the body holds tension</strong>
+            and how massage can restore movement, reduce pain, and support both physical and mental wellbeing. My goal is to create a calm, comfortable space where you feel listened to and properly looked after.
           </p>
 
           <p>
-            <strong>Appointments are one-to-one and fully tailored</strong>, allowing you to switch off and get the most from your treatment.
+            <strong>Appointments are one-to-one and fully tailored</strong>,
+            allowing you to switch off and get the most from your treatment.
           </p>
 
           <ul class="about-list">
@@ -181,7 +321,9 @@
 
     </section>
 
-    <!-- SERVICES -->
+
+    <!-- TREATMENTS -->
+
     <section class="section fade" id="services">
 
       <h2 class="section-title">Treatments</h2>
@@ -189,37 +331,62 @@
       <div class="grid">
 
         <div class="card fade">
+
           <h3>Relaxation Massage</h3>
-          <p>A calming full-body massage designed to ease tension and support deep rest.</p>
+
+          <p>
+            A calming full-body massage designed to ease tension and support deep rest.
+          </p>
+
           <p class="best-for">
             If you experience: <span>stress, tension, or a busy mind</span> — <b>book this</b>.
           </p>
+
           <a href="#contact" class="btn btn-primary service-btn">Book Now</a>
+
         </div>
 
+
         <div class="card fade">
+
           <h3>Sports Massage</h3>
-          <p>Targeted work to support recovery, mobility, and performance.</p>
+
+          <p>
+            Targeted work to support recovery, mobility, and performance.
+          </p>
+
           <p class="best-for">
             If you experience: <span>tight muscles, activity-related aches, or reduced movement</span> — <b>book this</b>.
           </p>
+
           <a href="#contact" class="btn btn-primary service-btn">Book Now</a>
+
         </div>
 
+
         <div class="card fade">
+
           <h3>Hot Stone Massage</h3>
-          <p>Warm basalt stones combined with flowing massage for deep comfort.</p>
+
+          <p>
+            Warm basalt stones combined with flowing massage for deep comfort.
+          </p>
+
           <p class="best-for">
             If you experience: <span>tension, burnout, or difficulty relaxing deeply</span> — <b>book this</b>.
           </p>
+
           <a href="#contact" class="btn btn-primary service-btn">Book Now</a>
+
         </div>
 
       </div>
 
     </section>
 
+
     <!-- PACKAGES -->
+
     <section class="section fade" id="packages">
 
       <h2 class="section-title">Packages</h2>
@@ -254,6 +421,7 @@
 
         </div>
 
+
         <div class="card fade">
 
           <h3>Total Wellness Package</h3>
@@ -263,13 +431,13 @@
           </p>
 
           <p>
-            This premium plan includes <strong>five 1-hour sessions</strong>,
-            combining <strong>two hot stone massages</strong> & <strong>three relaxation massages</strong>.
+            This plan includes <strong>five 60-minute sessions</strong>,
+            combining <strong>two hot stone massages</strong> and <strong>three relaxation massages</strong>.
           </p>
 
           <p>
             Designed for deeper, ongoing support, focusing on restoring balance,
-            reducing accumulated stress and improving overall physical & mental wellbeing.
+            reducing accumulated stress and improving overall physical and mental wellbeing.
           </p>
 
           <p class="best-for">
@@ -284,7 +452,9 @@
 
     </section>
 
+
     <!-- PRICING -->
+
     <section class="section fade" id="pricing">
 
       <h2 class="section-title">Treatment Prices</h2>
@@ -296,17 +466,24 @@
       <div class="grid">
 
         <div class="card fade">
+
           <h3>Relaxation / Sports Massage</h3>
+
           <p>30 min – £30</p>
           <p>60 min – £50</p>
           <p>90 min – £75</p>
+
         </div>
 
+
         <div class="card fade">
+
           <h3>Hot Stone Massage</h3>
+
           <p>60 min – £60</p>
           <p>90 min – £85</p>
           <p>120 min – £105</p>
+
         </div>
 
       </div>
@@ -315,12 +492,13 @@
         All sessions include a short personalised consultation before treatment.
       </p>
 
+
       <div class="policy-block fade cancel-note">
 
         <h3>Cancellation & Late Arrival Policy</h3>
 
         <p>
-          I kindly ask for at least 24 hours’ notice for cancellations. Late cancellations or missed appointments may be charged up to 50% of the treatment cost.
+          I kindly ask for at least 24 hours' notice for cancellations. Late cancellations or missed appointments may be charged up to 50% of the treatment cost.
         </p>
 
         <p>
@@ -331,7 +509,9 @@
 
     </section>
 
+
     <!-- REVIEWS -->
+
     <section class="section fade" id="reviews">
 
       <h2 class="section-title">What Clients Are Saying</h2>
@@ -340,19 +520,27 @@
 
         <div class="card review-card fade">
           <p class="review-stars">★★★★★</p>
-          <p class="review-text">"Lovely massage, feel fab after. No more tight shoulders or legs, definitely will be returning"</p>
+          <p class="review-text">
+            "Lovely massage, feel fab after. No more tight shoulders or legs, definitely will be returning"
+          </p>
           <p class="review-initials">Stacey • Doncaster</p>
         </div>
 
-        <div class="card review-card fade">
-          <p class="review-stars">★★★★★</p>
-          <p class="review-text">"Great experience with Kayla. She understood exactly what I needed and made me feel very comfortable."</p>
-          <p class="review-initials">Carrie • Doncaster</p>
-        </div>
 
         <div class="card review-card fade">
           <p class="review-stars">★★★★★</p>
-          <p class="review-text">"My back and shoulders feel so much better. Very relaxing and professional throughout."</p>
+          <p class="review-text">
+            "Great experience with Kayla. She understood exactly what I needed and made me feel very comfortable."
+          </p>
+          <p class="review-initials">Carrie • Doncaster</p>
+        </div>
+
+
+        <div class="card review-card fade">
+          <p class="review-stars">★★★★★</p>
+          <p class="review-text">
+            "My back and shoulders feel so much better. Very relaxing and professional throughout."
+          </p>
           <p class="review-initials">Marie • Doncaster</p>
         </div>
 
@@ -360,81 +548,68 @@
 
     </section>
 
-    
-<!-- FAQ SECTION -->
-<section class="section fade" id="faq">
 
-  <h2 class="section-title">A Few Questions You Might Have</h2>
+    <!-- FAQ -->
 
-  <p class="section-intro">
-    Everything you need to know before your appointment at KN Wellness Studio.
-  </p>
+    <section class="section fade" id="faq">
 
-  <div class="card faq-card">
+      <h2 class="section-title">A Few Questions You Might Have</h2>
 
-    <details>
-      <summary>Where is the studio?</summary>
-      <p>
-        KN Wellness Studio is a private garden studio in New Rossington, Doncaster.
-        Full directions will be provided when your appointment is confirmed.
+      <p class="section-intro">
+        Everything you need to know before your appointment.
       </p>
-    </details>
 
-    <details>
-      <summary>Is there parking available?</summary>
-      <p>
-        Parking is available around the property but it is limited to street parking only.
-      </p>
-    </details>
+      <div class="card faq-card">
 
-<details>
-      <summary>Where do i go when i arrive?</summary>
-      <p>
-       One you arrive at the address please use the side gate to enter the rear garden and make your way down to the studio.
-  A sign will be on the garage directing you and i will be ready and waiting to welcome you. 
-      
-      </p>
-    </details>
-    
-    <details>
-      <summary>What should I wear?</summary>
-      <p>
-        Wear something comfortable. You'll be given privacy to get ready,
-        and you'll remain appropriately covered throughout your massage.
-      </p>
-    </details>
+        <details>
+          <summary>Where is the studio?</summary>
+          <p>
+            KN Wellness Studio is a private garden studio in New Rossington, Doncaster. Full directions will be provided when your appointment is confirmed.
+          </p>
+        </details>
 
-    <details>
-      <summary>Do I need to bring anything?</summary>
-      <p>
-        No, everything needed for your treatment is provided.
-        Just arrive ready to relax.
-      </p>
-    </details>
+        <details>
+          <summary>Is there parking available?</summary>
+          <p>
+            Please contact me before your appointment for information about parking and arrival.
+          </p>
+        </details>
 
-    <details>
-      <summary>Can I choose the massage pressure?</summary>
-      <p>
-        Absolutely. Your treatment is tailored to you, and you can ask
-        for lighter or firmer pressure at any time.
-      </p>
-    </details>
+        <details>
+          <summary>What should I wear?</summary>
+          <p>
+            Wear something comfortable. You'll be given privacy to get ready, and you'll remain appropriately covered throughout your massage.
+          </p>
+        </details>
 
-    <details>
-      <summary>What if I've never had a massage before?</summary>
-      <p>
-        That's absolutely fine. I'll talk you through everything beforehand
-        and make sure you feel comfortable.
-      </p>
-    </details>
+        <details>
+          <summary>Do I need to bring anything?</summary>
+          <p>
+            No, everything needed for your treatment is provided. Just arrive ready to relax.
+          </p>
+        </details>
 
-  </div>
+        <details>
+          <summary>Can I choose the massage pressure?</summary>
+          <p>
+            Absolutely. Your treatment is tailored to you, and you can ask for lighter or firmer pressure at any time.
+          </p>
+        </details>
 
-</section>
-<!-- END FAQ SECTION -->
+        <details>
+          <summary>What if I've never had a massage before?</summary>
+          <p>
+            That's absolutely fine. I'll talk you through everything beforehand and make sure you feel comfortable.
+          </p>
+        </details>
 
-    
+      </div>
+
+    </section>
+
+
     <!-- BOOKING -->
+
     <section class="section fade" id="contact">
 
       <h2 class="section-title">Book Your Session</h2>
@@ -447,12 +622,16 @@
         Limited weekly availability — book early to secure your preferred time
       </p>
 
-  </main>
 
-  <!-- FLOATING BOOK BUTTON -->
-  <a href="#contact" class="book-float fade">Book Now</a>
+      <!-- SQUARE BOOKING -->
 
-  <!-- HEALTH & WELLBEING -->
+      <div id="square-booking"></div>
+
+      <script src="https://square.site/appointments/buyer/widget/k8rgckhr11g7dq/LXZBCPRFNZQW5.js"></script>
+
+
+      <!-- HEALTH & WELLBEING - NOW BELOW BOOKING -->
+
       <div class="policy-block fade medical-note">
 
         <h3>Health & Wellbeing</h3>
@@ -471,32 +650,44 @@
 
       </div>
 
-      <div id="square-booking"></div>
-
-      <script src="https://square.site/appointments/buyer/widget/k8rgckhr11g7dq/LXZBCPRFNZQW5.js"></script>
-
     </section>
 
+  </main>
+
+
+  <!-- FLOATING BOOK BUTTON -->
+
+  <a href="#contact" class="book-float fade">Book Now</a>
+
+
   <!-- FOOTER -->
+
   <footer class="footer fade">
 
-    <img src="your-logo.png" alt="KN Wellness Studio" class="footer-logo" loading="lazy">
+    <img
+      src="your-logo.png"
+      alt="KN Wellness Studio"
+      class="footer-logo"
+      loading="lazy"
+    >
 
     <p><strong>KN Wellness Studio</strong></p>
 
     <p>Private studio in New Rossington, Doncaster</p>
 
     <p>
-      <a href="https://wa.me/447368582502" class="contact-link">📞 WhatsApp</a>
+      <a href="https://wa.me/447368582502" class="contact-link">WhatsApp</a>
       &nbsp;•&nbsp;
-      <a href="mailto:hello@knwellness.studio" class="contact-link">✉️ Email</a>
+      <a href="mailto:hello@knwellness.studio" class="contact-link">Email</a>
     </p>
 
     <p>© 2026 KN Wellness Studio — Doncaster</p>
 
   </footer>
 
+
   <!-- SCROLL FADE SCRIPT -->
+
   <script>
 
     const elements = document.querySelectorAll(".fade");
@@ -507,6 +698,7 @@
 
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
         }
 
       });
